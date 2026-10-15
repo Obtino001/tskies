@@ -13,7 +13,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Rings, cuffs & necklaces</p>",
+            "text": "Rings, cuffs & necklaces",
             "text_style": "body"
           }
         },
@@ -58,7 +58,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Know the hands that made it</p>",
+            "text": "Know the hands that made it",
             "text_style": "body"
           }
         },
@@ -103,7 +103,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Sterling silver & real turquoise</p>",
+            "text": "Sterling silver & real turquoise",
             "text_style": "body"
           }
         },
@@ -148,7 +148,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Inspired by Mother Earth</p>",
+            "text": "Inspired by Mother Earth",
             "text_style": "body"
           }
         },
@@ -193,7 +193,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Stackable handstamped jewelry</p>",
+            "text": "Stackable handstamped jewelry",
             "text_style": "body"
           }
         },
@@ -238,7 +238,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>T.Skies is a turquoise jewelry studio and gallery in Albuquerque, New Mexico. We sell two kinds of work: our own Southwest jewelry designs, and Native American jewelry by named artists, sold under the maker\u00e2\u20ac\u2122s name. Ask about any stone and we\u00e2\u20ac\u2122ll tell you whether it\u00e2\u20ac\u2122s natural or stabilized.</p>"
+            "text": "<p>T.Skies is a turquoise jewelry studio and gallery in Albuquerque, New Mexico. We sell two kinds of work: our own Southwest jewelry designs, and Native American jewelry by named artists, sold under the maker’s name. Ask about any stone and we’ll tell you whether it’s natural or stabilized.</p>"
           }
         },
         "button_turquoise": {
@@ -404,7 +404,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Gallery Jewelry",
-        "description": "Just in, handmade by artisans",
+        "description": "<p>Just in, handmade by artisans</p>",
         "show_description": true,
         "description_style": "body",
         "collection": "one-of-a-kind-styles",
@@ -428,7 +428,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Jewelry Sets",
-        "description": "Shop coordinated sets",
+        "description": "<p>Shop coordinated sets</p>",
         "show_description": true,
         "collection": "jewelry-sets",
         "products_to_show": 12,
