@@ -1436,6 +1436,35 @@
       },
       {
         "type": "header",
+        "content": "Free shipping progress"
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free shipping threshold",
+        "info": "Cart subtotal, in your store's primary currency, that qualifies for free shipping. Leave blank to hide the progress bar. This only controls the message; it does not change shipping rates, which are set in Shopify shipping settings."
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_progress_message",
+        "label": "Progress message",
+        "info": "Use [amount] for the remaining amount.",
+        "default": "[amount] away from free shipping"
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_success_message",
+        "label": "Success message",
+        "default": "You have unlocked free shipping!"
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_progress_label",
+        "label": "Progress bar accessibility label",
+        "default": "Free shipping progress"
+      },
+      {
+        "type": "header",
         "content": "t:settings_schema.cart.settings.cart_drawer.header"
       },
       {

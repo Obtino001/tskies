@@ -1,0 +1,36 @@
+{%- doc -%}
+  Renders the free-shipping progress message and bar for the cart drawer.
+  Nothing is rendered unless the merchant sets a threshold in Theme settings > Cart.
+  Progress is computed from `cart.total_price`, so it follows every cart re-render.
+
+  @example
+  {% render 'cart-free-shipping-bar' %}
+{%- enddoc -%}
+{%- assign threshold_units = settings.free_shipping_threshold | plus: 0 -%}
+{%- if threshold_units > 0 -%}
+  {%- assign threshold_cents = threshold_units | times: 100 -%}
+  {%- assign remaining_cents = threshold_cents | minus: cart.total_price -%}
+  {%- assign progress = cart.total_price | times: 100 | divided_by: threshold_cents -%}
+  {%- if progress > 100 -%}{%- assign progress = 100 -%}{%- endif -%}
+  <div class="cart-free-shipping" data-free-shipping-threshold="{{ threshold_cents }}">
+    <p class="cart-free-shipping__message" role="status">
+      {%- if remaining_cents > 0 -%}
+        {%- assign remaining_money = remaining_cents | money -%}
+        {{- settings.free_shipping_progress_message | default: '[amount] away from free shipping' | replace: '[amount]', remaining_money | escape -}}
+      {%- else -%}
+        {{- settings.free_shipping_success_message | default: 'You have unlocked free shipping!' | escape -}}
+      {%- endif -%}
+    </p>
+    <div
+      class="cart-free-shipping__track"
+      role="progressbar"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="{{ progress }}"
+      aria-label="{{ settings.free_shipping_progress_label | default: 'Free shipping progress' | escape }}"
+    >
+      <div class="cart-free-shipping__fill" style="width: {{ progress }}%"></div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="{{ 'component-cart-free-shipping.css' | asset_url }}">
+{%- endif -%}

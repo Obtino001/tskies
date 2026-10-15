@@ -15,6 +15,7 @@
 {%- if section.settings.menu_type_desktop == 'mega' -%}
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
+<link rel="stylesheet" href="{{ 'component-header-promo-tiles.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <style>
   header-drawer {
@@ -679,6 +680,22 @@
     }
   ],
   "blocks": [
+    {
+      "type": "promo_tile",
+      "name": "Menu promo tile",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_item",
+          "label": "Menu item",
+          "info": "Title of the top-level menu item this tile appears under, e.g. Collections. Desktop tiles show in the mega menu; mobile tiles show in the menu drawer."
+        },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "text", "id": "button_label", "label": "Button label", "info": "Leave blank to hide." }
+      ]
+    },
     {
       "type": "@app"
     }

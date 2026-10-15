@@ -12,7 +12,10 @@
   {% render 'product-disclosures', product: product, heading: 'Product information', heading_size: 'h2', open_by_default: false, block: block, surface: 'product_page' %}
 {%- enddoc -%}
 {%- assign disclosure_surface = surface | default: 'product_page' -%}
+{%- # `applicable_disclosures` is a Shopify platform filter newer than the bundled Theme Check dictionary. -%}
+{%- # theme-check-disable UnknownFilter -%}
 {%- assign disclosures = product.metafields.shopify.disclosure.value | applicable_disclosures -%}
+{%- # theme-check-enable UnknownFilter -%}
 {%- assign summary_html = '' -%}
 {%- assign details_html = '' -%}
 {%- assign rendered_disclosures_count = 0 -%}

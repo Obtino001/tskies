@@ -1,0 +1,47 @@
+{%- doc -%}
+  Renders the header promo tiles configured for one top-level menu item.
+
+  @param {string} parent_title - Title of the top-level menu item the tiles belong to. Matched case-insensitively against each tile's "Menu item" setting.
+  @param {string} [context] - `mega` (desktop mega menu, default) or `drawer` (mobile menu drawer).
+
+  @example
+  {% render 'header-promo-tiles', parent_title: link.title, context: 'mega' %}
+{%- enddoc -%}
+{%- assign tile_context = context | default: 'mega' -%}
+{%- assign parent_key = parent_title | downcase | strip -%}
+{%- capture tiles_html -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'promo_tile' and block.settings.menu_item != blank -%}
+      {%- assign tile_key = block.settings.menu_item | downcase | strip -%}
+      {%- if tile_key == parent_key -%}
+        {%- assign tile_link = block.settings.link | default: routes.collections_url -%}
+        {%- assign tile_heading = block.settings.heading -%}
+        <li class="header-promo-tile" {{ block.shopify_attributes }}>
+          <a href="{{ tile_link }}" class="header-promo-tile__link link link--text focus-inset">
+            <span class="header-promo-tile__media">
+              {%- if block.settings.image != blank -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 480
+                  | image_tag: loading: 'lazy', widths: '240, 360, 480', sizes: '(min-width: 990px) 16vw, 40vw', alt: block.settings.image.alt | default: tile_heading
+                }}
+              {%- endif -%}
+            </span>
+            {%- if tile_heading != blank -%}
+              <span class="header-promo-tile__heading">{{ tile_heading | escape }}</span>
+            {%- endif -%}
+            {%- if block.settings.button_label != blank -%}
+              <span class="header-promo-tile__button">{{ block.settings.button_label | escape }}</span>
+            {%- endif -%}
+          </a>
+        </li>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- if tiles_html contains 'header-promo-tile' -%}
+  <ul class="header-promo-tiles header-promo-tiles--{{ tile_context }} list-unstyled" role="list">
+    {{ tiles_html }}
+  </ul>
+{%- endif -%}

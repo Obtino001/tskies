@@ -2,6 +2,8 @@
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  .collection-hero__breadcrumbs { display: flex; gap: 0.6rem; margin-bottom: 1rem; }
+  .collection-hero__breadcrumbs a { text-decoration: none; }
   @media screen and (max-width: 749px) {
     .collection-hero--with-image .collection-hero__inner {
       padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
@@ -12,6 +14,13 @@
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <div class="collection-hero__text-wrapper">
+      {%- if section.settings.show_breadcrumbs -%}
+        <nav class="collection-hero__breadcrumbs caption" aria-label="{{ section.settings.breadcrumb_label | escape }}">
+          <a href="{{ routes.root_url }}" class="link">{{ section.settings.breadcrumb_home_label | escape }}</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{{ collection.title | escape }}</span>
+        </nav>
+      {%- endif -%}
       <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
@@ -53,6 +62,24 @@
     {
       "type": "paragraph",
       "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "default": true,
+      "label": "Show breadcrumbs"
+    },
+    {
+      "type": "text",
+      "id": "breadcrumb_home_label",
+      "default": "Home",
+      "label": "Breadcrumb home label"
+    },
+    {
+      "type": "text",
+      "id": "breadcrumb_label",
+      "default": "Breadcrumb",
+      "label": "Breadcrumb accessibility label"
     },
     {
       "type": "checkbox",

@@ -9,7 +9,10 @@
 {% enddoc %}
 
 {%- liquid
+  # `applicable_disclosures` is a Shopify platform filter newer than the bundled Theme Check dictionary.
+  # theme-check-disable UnknownFilter
   assign disclosures = product.metafields.shopify.disclosure.value | applicable_disclosures
+  # theme-check-enable UnknownFilter
   assign cart_disclosures_count = 0
 
   if disclosures != blank

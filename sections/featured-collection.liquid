@@ -128,6 +128,7 @@
                   skip_styles: skip_card_product_styles,
                   section_id: section.id,
                   quick_add: section.settings.quick_add,
+                  savings_badge_text: section.settings.savings_badge_text,
                   product_view_context: 'collection'
                 %}
               </li>
@@ -448,6 +449,12 @@
       "default": false,
       "label": "t:sections.featured-collection.settings.show_rating.label",
       "info": "t:sections.featured-collection.settings.show_rating.info"
+    },
+    {
+      "type": "text",
+      "id": "savings_badge_text",
+      "label": "Savings badge wording",
+      "info": "Use [amount] for the saved amount, e.g. Save [amount]. Only shown on products with a compare-at price above the price. Leave blank for the standard Sale badge."
     },
     {
       "type": "select",
