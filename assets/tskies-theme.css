@@ -1,0 +1,60 @@
+/* T.Skies brand layer: values taken from the live tskies.com theme CSS (Roboto, uppercase headings/buttons/nav). */
+
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5,
+.title, .card__heading, .footer-block__heading, .header__menu-item, .list-menu__item--link,
+.button, .shopify-challenge__button, .customer button, .shopify-payment-button__button--unbranded {
+  text-transform: uppercase;
+}
+
+/* Product titles and prices read as sentence-case in the reference grid. */
+.card__heading, .card__heading a { text-transform: none; }
+
+.button, .shopify-payment-button__button--unbranded {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  min-width: 9rem;
+}
+
+.footer-block__heading {
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+}
+
+.tskies-subtitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.36rem;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.tskies-subtitle--center, .tskies-title--center { text-align: center; }
+
+.tskies-title-link {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 2px;
+}
+
+/* Hero slideshow: bottom-left text, 70px title (35px mobile), outlined white button. */
+.slideshow .banner__heading { font-size: 3.5rem; line-height: 1.2; margin-bottom: 0; }
+.slideshow .banner__text { margin-top: 0.5rem; font-size: 1.36rem; letter-spacing: 0.2em; text-transform: uppercase; }
+.slideshow .banner__buttons .button {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  --color-button: 255, 255, 255;
+}
+.slideshow .banner__buttons .button::before,
+.slideshow .banner__buttons .button::after { box-shadow: none; }
+.slideshow .banner__buttons .button:hover { background: #fff; color: #000; }
+@media screen and (min-width: 750px) {
+  .slideshow .banner__heading { font-size: 7rem; }
+}
+
+/* Product card meta: price slightly smaller than body text. */
+.card-information .price { font-size: 1.44rem; }

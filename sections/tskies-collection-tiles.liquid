@@ -1,0 +1,90 @@
+{%- style -%}
+  .tskies-tiles-{{ section.id }} { padding: {{ section.settings.padding_top | times: 0.75 | round }}px 0 {{ section.settings.padding_bottom | times: 0.75 | round }}px; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: {{ section.settings.gap }}px; list-style: none; margin: 0; padding: 0; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__item { grid-column: span 1; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__item--wide { grid-column: span 2; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__link { position: relative; display: block; overflow: hidden; color: #fff; text-decoration: none; background: rgba(var(--color-foreground), 0.06); }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__media { display: block; aspect-ratio: 1 / 1; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__item--wide .tskies-tiles__media { aspect-ratio: 2 / 1; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__media img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__link::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}), rgba(0, 0, 0, 0) 55%); pointer-events: none; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__title { position: absolute; z-index: 1; left: 12.5px; bottom: 12.5px; right: 12.5px; margin: 0; text-transform: uppercase; font-size: {{ section.settings.title_size_mobile }}px; line-height: 1.2; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__title span { background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat; transition: background-size 0.4s ease; padding-bottom: 2px; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__link:hover .tskies-tiles__title span,
+  .tskies-tiles-{{ section.id }} .tskies-tiles__link:focus-visible .tskies-tiles__title span { background-size: 100% 2px; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__link:hover .tskies-tiles__media img { transform: scale(1.03); }
+  @media (max-width: 749px) {
+    .tskies-tiles-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.5 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round }}px; }
+    .tskies-tiles-{{ section.id }} .tskies-tiles__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .tskies-tiles-{{ section.id }} .tskies-tiles__item--wide { grid-column: span 2; }
+  }
+  @media (min-width: 750px) {
+    .tskies-tiles-{{ section.id }} .tskies-tiles__title { font-size: {{ section.settings.title_size }}px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tskies-tiles-{{ section.id }} .tskies-tiles__media img, .tskies-tiles-{{ section.id }} .tskies-tiles__title span { transition: none; }
+    .tskies-tiles-{{ section.id }} .tskies-tiles__link:hover .tskies-tiles__media img { transform: none; }
+  }
+{%- endstyle -%}
+<div class="tskies-tiles-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="title inline-richtext">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <ul class="tskies-tiles__grid" role="list">
+      {%- for block in section.blocks -%}
+        {%- assign target = block.settings.collection -%}
+        {%- assign label = block.settings.title | default: target.title -%}
+        {%- assign img = block.settings.image | default: target.featured_image -%}
+        <li class="tskies-tiles__item{% if block.settings.wide %} tskies-tiles__item--wide{% endif %}" {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.link | default: target.url | default: routes.collections_url }}" class="tskies-tiles__link">
+            <span class="tskies-tiles__media">
+              {%- if img != blank -%}
+                {%- if block.settings.wide -%}
+                  {{ img | image_url: width: 1500 | image_tag: loading: 'lazy', widths: '600, 900, 1200, 1500', sizes: '(min-width: 750px) 50vw, 100vw', alt: img.alt | default: label }}
+                {%- else -%}
+                  {{ img | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360, 540, 720, 900', sizes: '(min-width: 750px) 25vw, 50vw', alt: img.alt | default: label }}
+                {%- endif -%}
+              {%- endif -%}
+            </span>
+            <span class="tskies-tiles__title h4"><span>{{ label | escape }}</span></span>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "T.Skies collection tiles",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "info": "Optional." },
+    { "type": "range", "id": "gap", "min": 0, "max": 24, "step": 2, "unit": "px", "default": 0, "label": "Gap between tiles" },
+    { "type": "range", "id": "overlay_opacity", "min": 0, "max": 80, "step": 5, "unit": "%", "default": 25, "label": "Bottom overlay opacity", "info": "Darkens the bottom of each image so the title stays readable." },
+    { "type": "range", "id": "title_size", "min": 14, "max": 40, "step": 1, "unit": "px", "default": 25, "label": "Title size (desktop)" },
+    { "type": "range", "id": "title_size_mobile", "min": 12, "max": 32, "step": 1, "unit": "px", "default": 16, "label": "Title size (mobile)" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 0, "label": "Top padding" },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 0, "label": "Bottom padding" }
+  ],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Tile",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "image_picker", "id": "image", "label": "Image", "info": "Defaults to the collection image." },
+        { "type": "text", "id": "title", "label": "Title", "info": "Defaults to the collection title." },
+        { "type": "url", "id": "link", "label": "Custom link", "info": "Overrides the collection link." },
+        { "type": "checkbox", "id": "wide", "label": "Double-width tile", "default": false }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    { "name": "T.Skies collection tiles", "blocks": [{ "type": "tile" }, { "type": "tile" }, { "type": "tile" }, { "type": "tile" }] }
+  ]
+}
+{% endschema %}

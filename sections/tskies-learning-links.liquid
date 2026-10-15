@@ -5,11 +5,23 @@
   .tskies-learning-{{ section.id }} .tskies-learning__card img { display:block; width:100%; aspect-ratio:{{ section.settings.image_ratio }}; object-fit:cover; }
   .tskies-learning-{{ section.id }} h3 { margin:1rem 0 0; }
   @media(max-width:749px) { .tskies-learning-{{ section.id }} { padding-top:{{ section.settings.padding_top | times: 0.5 | round }}px; padding-bottom:{{ section.settings.padding_bottom | times: 0.5 | round }}px; } .tskies-learning-{{ section.id }} .tskies-learning__grid { grid-template-columns:repeat({{ section.settings.columns_mobile }},minmax(0,1fr)); gap:1.2rem; } }
+  .tskies-learning-{{ section.id }} .tskies-learning__links { display:flex; flex-wrap:wrap; justify-content:center; gap:0.8rem 1.8rem; font-size:1.5rem; }
+  .tskies-learning-{{ section.id }} .tskies-learning__links a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+  {%- if section.settings.layout == 'links' -%} .tskies-learning-{{ section.id }} .title { text-align:center; } {%- endif -%}
 {% endstyle %}
 <section class="tskies-learning-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width">
     {% if section.settings.heading != blank %}<h2 class="title inline-richtext">{{ section.settings.heading }}</h2>{% endif %}
     {% if section.settings.description != blank %}<div class="rte">{{ section.settings.description }}</div>{% endif %}
+    {%- if section.settings.layout == 'links' -%}
+      <nav class="tskies-learning__links" aria-label="{{ section.settings.heading | strip_html | escape }}">
+        {%- for block in section.blocks -%}
+          {%- assign learning_link = block.settings.link -%}
+          {%- if learning_link == blank and block.settings.page != blank -%}{%- assign learning_link = block.settings.page.url -%}{%- endif -%}
+          <a href="{{ learning_link | default: routes.root_url }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</a>
+        {%- endfor -%}
+      </nav>
+    {%- else -%}
     <div class="tskies-learning__grid">
       {% for block in section.blocks %}
         {% assign learning_link = block.settings.link %}{% if learning_link == blank and block.settings.page != blank %}{% assign learning_link = block.settings.page.url %}{% endif %}
@@ -20,6 +32,7 @@
         </a>
       {% endfor %}
     </div>
+    {%- endif -%}
   </div>
 </section>
 {% schema %}
@@ -30,6 +43,7 @@
   "settings": [
     { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Learn About Turquoise & the Artists" },
     { "type": "richtext", "id": "description", "label": "Description" },
+    { "type": "select", "id": "layout", "label": "Layout", "options": [{"value":"links","label":"Text links"},{"value":"cards","label":"Image cards"}], "default": "links" },
     { "type": "range", "id": "columns_desktop", "min": 2, "max": 4, "step": 1, "default": 4, "label": "Desktop columns" },
     { "type": "select", "id": "columns_mobile", "options": [{"value":"1","label":"1"},{"value":"2","label":"2"}], "default": "2", "label": "Mobile columns" },
     { "type": "select", "id": "image_ratio", "options": [{"value":"1/1","label":"Square"},{"value":"4/3","label":"Landscape"},{"value":"3/4","label":"Portrait"}], "default": "4/3", "label": "Image ratio" },

@@ -73,9 +73,16 @@
     data-id="{{ section.id }}"
   >
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+      {%- if section.settings.subtitle != blank -%}
+        <p class="tskies-subtitle{% if section.settings.center_title %} tskies-subtitle--center{% endif %}">{{ section.settings.subtitle | escape }}</p>
+      {%- endif -%}
       {%- if section.settings.title != blank -%}
-        <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-          {{ section.settings.title }}
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if section.settings.center_title %} tskies-title--center{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {%- if section.settings.link_title and section.settings.collection != blank -%}
+            <a href="{{ section.settings.collection.url }}" class="tskies-title-link">{{ section.settings.title }}</a>
+          {%- else -%}
+            {{ section.settings.title }}
+          {%- endif -%}
         </h2>
       {%- endif -%}
       {%- if section.settings.description != blank
@@ -276,6 +283,23 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle (above heading)"
+    },
+    {
+      "type": "checkbox",
+      "id": "center_title",
+      "label": "Center heading",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "link_title",
+      "label": "Link heading to collection",
+      "default": false
     },
     {
       "type": "richtext",
