@@ -1,89 +1,627 @@
 {
   "sections": {
     "hero": {
-      "type": "slideshow",
+      "type": "image-banner",
       "blocks": {
-        "turquoise_jewelry": { "type": "slide", "settings": { "heading": "Real Turquoise Jewelry", "heading_size": "h1", "subheading": "Rings, cuffs & necklaces", "button_label": "Shop Turquoise Jewelry", "link": "shopify://collections/all", "button_style_secondary": true, "show_text_box": false, "box_align": "bottom-left", "text_alignment": "left", "text_alignment_mobile": "center", "color_scheme": "scheme-3" } },
-        "native_american": { "type": "slide", "settings": { "heading": "Authentic Native American Jewelry", "heading_size": "h1", "subheading": "Know the hands that made it", "button_label": "Shop Native American Jewelry", "link": "shopify://collections/native-american-jewelry", "button_style_secondary": true, "show_text_box": false, "box_align": "bottom-left", "text_alignment": "left", "text_alignment_mobile": "center", "color_scheme": "scheme-3" } },
-        "rings": { "type": "slide", "settings": { "heading": "Turquoise Rings", "heading_size": "h1", "subheading": "Sterling silver & real turquoise", "button_label": "Shop Turquoise Rings", "link": "shopify://collections/rings", "button_style_secondary": true, "show_text_box": false, "box_align": "bottom-left", "text_alignment": "left", "text_alignment_mobile": "center", "color_scheme": "scheme-3" } },
-        "radiante": { "type": "slide", "settings": { "heading": "Radiante", "heading_size": "h1", "subheading": "Inspired by Mother Earth", "button_label": "Shop the Collection", "link": "shopify://collections/radiante", "button_style_secondary": true, "show_text_box": false, "box_align": "bottom-left", "text_alignment": "left", "text_alignment_mobile": "center", "color_scheme": "scheme-3" } },
-        "stamp_dancer": { "type": "slide", "settings": { "heading": "Stamp Dancer", "heading_size": "h1", "subheading": "Stackable handstamped jewelry", "button_label": "Shop the Collection", "link": "shopify://collections/stamp-dancer", "button_style_secondary": true, "show_text_box": false, "box_align": "bottom-left", "text_alignment": "left", "text_alignment_mobile": "center", "color_scheme": "scheme-3" } }
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Turquoise Jewelry",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rings, cuffs & necklaces</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Turquoise Jewelry",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
       },
-      "block_order": ["turquoise_jewelry", "native_american", "rings", "radiante", "stamp_dancer"],
-      "settings": { "layout": "full_bleed", "slide_height": "large", "slider_visual": "dots", "auto_rotate": false, "change_slides_speed": 5, "image_behavior": "none", "show_text_below": false, "accessibility_info": "T.Skies jewelry collections" }
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_overlay_opacity": 20,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "banner_native_american": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Authentic Native American Jewelry",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Know the hands that made it</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Native American Jewelry",
+            "button_link_1": "shopify://collections/native-american-jewelry",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_overlay_opacity": 20,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "banner_rings": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Turquoise Rings",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sterling silver & real turquoise</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Turquoise Rings",
+            "button_link_1": "shopify://collections/rings",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_overlay_opacity": 20,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "banner_radiante": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Radiante",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspired by Mother Earth</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop the Collection",
+            "button_link_1": "shopify://collections/radiante",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_overlay_opacity": 20,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "banner_stamp_dancer": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stamp Dancer",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stackable handstamped jewelry</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop the Collection",
+            "button_link_1": "shopify://collections/stamp-dancer",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_overlay_opacity": 20,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
     },
     "brand_intro": {
       "type": "rich-text",
       "blocks": {
-        "heading": { "type": "heading", "settings": { "heading": "Real Turquoise Jewelry & Native American Jewelry", "heading_size": "h1" } },
-        "text": { "type": "text", "settings": { "text": "<p>T.Skies is a turquoise jewelry studio and gallery in Albuquerque, New Mexico. We sell two kinds of work: our own Southwest jewelry designs, and Native American jewelry by named artists, sold under the maker’s name. Ask about any stone and we’ll tell you whether it’s natural or stabilized.</p>" } },
-        "button_turquoise": { "type": "button", "settings": { "button_label": "Turquoise Jewelry", "button_link": "shopify://collections/all" } },
-        "button_native": { "type": "button", "settings": { "button_label": "Native American Jewelry", "button_link": "shopify://collections/native-american-jewelry", "button_style_secondary": true } }
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Turquoise Jewelry & Native American Jewelry",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>T.Skies is a turquoise jewelry studio and gallery in Albuquerque, New Mexico. We sell two kinds of work: our own Southwest jewelry designs, and Native American jewelry by named artists, sold under the maker\u00e2\u20ac\u2122s name. Ask about any stone and we\u00e2\u20ac\u2122ll tell you whether it\u00e2\u20ac\u2122s natural or stabilized.</p>"
+          }
+        },
+        "button_turquoise": {
+          "type": "button",
+          "settings": {
+            "button_label": "Turquoise Jewelry",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "button_native": {
+          "type": "button",
+          "settings": {
+            "button_label": "Native American Jewelry",
+            "button_link": "shopify://collections/native-american-jewelry",
+            "button_style_secondary": true
+          }
+        }
       },
-      "block_order": ["heading", "text", "button_turquoise", "button_native"],
-      "settings": { "desktop_content_position": "center", "content_alignment": "center", "color_scheme": "scheme-1", "full_width": false, "padding_top": 36, "padding_bottom": 36 }
+      "block_order": [
+        "heading",
+        "text",
+        "button_turquoise",
+        "button_native"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "categories": {
       "type": "collection-list",
       "blocks": {
-        "rings": { "type": "featured_collection", "settings": { "collection": "rings" } },
-        "bracelets": { "type": "featured_collection", "settings": { "collection": "bracelets" } },
-        "necklaces": { "type": "featured_collection", "settings": { "collection": "necklaces" } },
-        "earrings": { "type": "featured_collection", "settings": { "collection": "earrings" } }
+        "rings": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings"
+          }
+        },
+        "bracelets": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        },
+        "necklaces": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "necklaces"
+          }
+        },
+        "earrings": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        }
       },
-      "block_order": ["rings", "bracelets", "necklaces", "earrings"],
-      "settings": { "title": "Shop by Category", "heading_size": "h2", "image_ratio": "square", "columns_desktop": 4, "color_scheme": "scheme-1", "show_view_all": false, "columns_mobile": "2", "padding_top": 20, "padding_bottom": 36 }
+      "block_order": [
+        "rings",
+        "bracelets",
+        "necklaces",
+        "earrings"
+      ],
+      "settings": {
+        "title": "Shop by Category",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
     },
     "best_sellers": {
       "type": "featured-collection",
-      "settings": { "title": "Best Sellers", "heading_size": "h2", "collection": "best-sellers", "products_to_show": 12, "columns_desktop": 4, "color_scheme": "scheme-1", "show_view_all": true, "view_all_style": "solid", "enable_desktop_slider": false, "image_ratio": "square", "show_secondary_image": true, "show_vendor": false, "show_rating": false, "quick_add": "standard", "columns_mobile": "2", "padding_top": 36, "padding_bottom": 36 }
+      "settings": {
+        "title": "Best Sellers",
+        "heading_size": "h2",
+        "collection": "best-sellers",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "designer_collections": {
       "type": "collection-list",
       "blocks": {
-        "desert_blossom": { "type": "featured_collection", "settings": { "collection": "desert-blossom" } },
-        "enchantment": { "type": "featured_collection", "settings": { "collection": "enchantment" } },
-        "bead_maiden": { "type": "featured_collection", "settings": { "collection": "bead-maiden" } },
-        "radiante": { "type": "featured_collection", "settings": { "collection": "radiante" } },
-        "skyweaver": { "type": "featured_collection", "settings": { "collection": "skyweaver" } },
-        "stamp_dancer": { "type": "featured_collection", "settings": { "collection": "stamp-dancer" } }
+        "desert_blossom": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "desert-blossom"
+          }
+        },
+        "enchantment": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "enchantment"
+          }
+        },
+        "bead_maiden": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bead-maiden"
+          }
+        },
+        "radiante": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "radiante"
+          }
+        },
+        "skyweaver": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "skyweaver"
+          }
+        },
+        "stamp_dancer": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "stamp-dancer"
+          }
+        }
       },
-      "block_order": ["desert_blossom", "enchantment", "bead_maiden", "radiante", "skyweaver", "stamp_dancer"],
-      "settings": { "title": "Shop Our Collections", "heading_size": "h2", "image_ratio": "square", "columns_desktop": 6, "color_scheme": "scheme-1", "show_view_all": false, "columns_mobile": "2", "padding_top": 28, "padding_bottom": 28 }
+      "block_order": [
+        "desert_blossom",
+        "enchantment",
+        "bead_maiden",
+        "radiante",
+        "skyweaver",
+        "stamp_dancer"
+      ],
+      "settings": {
+        "title": "Shop Our Collections",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 6,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
     },
     "gallery_jewelry": {
       "type": "featured-collection",
-      "settings": { "title": "Gallery Jewelry", "description": "Just in, handmade by artisans", "show_description": true, "description_style": "body", "collection": "one-of-a-kind-styles", "products_to_show": 16, "columns_desktop": 4, "color_scheme": "scheme-1", "show_view_all": true, "view_all_style": "solid", "enable_desktop_slider": false, "image_ratio": "square", "show_secondary_image": true, "show_vendor": false, "show_rating": false, "quick_add": "standard", "columns_mobile": "2", "padding_top": 36, "padding_bottom": 36 }
+      "settings": {
+        "title": "Gallery Jewelry",
+        "description": "Just in, handmade by artisans",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "one-of-a-kind-styles",
+        "products_to_show": 16,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "jewelry_sets": {
       "type": "featured-collection",
-      "settings": { "title": "Jewelry Sets", "description": "Shop coordinated sets", "show_description": true, "collection": "jewelry-sets", "products_to_show": 12, "columns_desktop": 4, "color_scheme": "scheme-1", "show_view_all": true, "view_all_style": "solid", "enable_desktop_slider": false, "image_ratio": "square", "show_secondary_image": true, "show_vendor": false, "show_rating": false, "quick_add": "standard", "columns_mobile": "2", "padding_top": 36, "padding_bottom": 36 }
+      "settings": {
+        "title": "Jewelry Sets",
+        "description": "Shop coordinated sets",
+        "show_description": true,
+        "collection": "jewelry-sets",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "brand_story": {
       "type": "image-with-text",
       "blocks": {
-        "heading": { "type": "heading", "settings": { "heading": "Crafted by Hand. Infused with Spirit.", "heading_size": "h1" } },
-        "text": { "type": "text", "settings": { "text": "<p>In the Southwest, the tradition of making, wearing and trading real turquoise jewelry is embedded in our way of life. At T.Skies, we honor the artistry and craftsmanship of this timeless art form. We create pieces that feel like you.</p>" } },
-        "button": { "type": "button", "settings": { "button_label": "Learn More About Us", "button_link": "shopify://pages/about-us" } }
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Crafted by Hand. Infused with Spirit.",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In the Southwest, the tradition of making, wearing and trading real turquoise jewelry is embedded in our way of life. At T.Skies, we honor the artistry and craftsmanship of this timeless art form. We create pieces that feel like you.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More About Us",
+            "button_link": "shopify://pages/about-us"
+          }
+        }
       },
-      "block_order": ["heading", "text", "button"],
-      "settings": { "height": "adapt", "desktop_image_width": "medium", "layout": "image_first", "desktop_content_position": "middle", "desktop_content_alignment": "left", "content_layout": "no-overlap", "color_scheme": "scheme-2", "image_behavior": "none", "mobile_content_alignment": "left", "padding_top": 36, "padding_bottom": 36 }
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "artist_video": {
       "type": "video",
-      "settings": { "heading": "Congrats to our KITA Scholarship Winner Karolina Chapo!", "heading_size": "h2", "video_url": "https://www.youtube.com/watch?v=a-xWD0KOWXk", "description": "This year's KITA Scholarship has been awarded to Navajo dancer Karolina Chapo. Watch her story to see how she's preserving Indigenous traditions through the art of dance.", "color_scheme": "scheme-1", "padding_top": 36, "padding_bottom": 36 }
+      "settings": {
+        "heading": "Congrats to our KITA Scholarship Winner Karolina Chapo!",
+        "heading_size": "h2",
+        "video_url": "https://www.youtube.com/watch?v=a-xWD0KOWXk",
+        "description": "This year's KITA Scholarship has been awarded to Navajo dancer Karolina Chapo. Watch her story to see how she's preserving Indigenous traditions through the art of dance.",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "learning_links": {
       "type": "tskies-learning-links",
       "blocks": {
-        "mines": { "type": "article", "settings": { "heading": "Turquoise Mines", "page": "shopify://pages/turquoise-mines" } },
-        "artists": { "type": "article", "settings": { "heading": "Meet the Silversmiths", "page": "shopify://pages/silversmiths" } },
-        "real_turquoise": { "type": "article", "settings": { "heading": "How to Tell Real Turquoise", "page": "shopify://pages/how-to-tell-real-turquoise" } },
-        "guide": { "type": "article", "settings": { "heading": "Southwest Jewelry Guide", "page": "shopify://pages/southwest-jewelry-guide" } }
+        "mines": {
+          "type": "article",
+          "settings": {
+            "heading": "Turquoise Mines",
+            "page": "shopify://pages/turquoise-mines"
+          }
+        },
+        "artists": {
+          "type": "article",
+          "settings": {
+            "heading": "Meet the Silversmiths",
+            "page": "shopify://pages/silversmiths"
+          }
+        },
+        "real_turquoise": {
+          "type": "article",
+          "settings": {
+            "heading": "How to Tell Real Turquoise",
+            "page": "shopify://pages/how-to-tell-real-turquoise"
+          }
+        },
+        "guide": {
+          "type": "article",
+          "settings": {
+            "heading": "Southwest Jewelry Guide",
+            "page": "shopify://pages/southwest-jewelry-guide"
+          }
+        }
       },
-      "block_order": ["mines", "artists", "real_turquoise", "guide"],
-      "settings": { "heading": "Learn About Turquoise & the Artists", "columns_desktop": 4, "columns_mobile": "2", "image_ratio": "4/3", "color_scheme": "scheme-1", "padding_top": 36, "padding_bottom": 36 }
+      "block_order": [
+        "mines",
+        "artists",
+        "real_turquoise",
+        "guide"
+      ],
+      "settings": {
+        "heading": "Learn About Turquoise & the Artists",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "image_ratio": "4/3",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "category_links": {
+      "type": "tskies-category-links",
+      "blocks": {
+        "best_sellers": {
+          "type": "link",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "gallery": {
+          "type": "link",
+          "settings": {
+            "collection": "one-of-a-kind-styles"
+          }
+        },
+        "rings": {
+          "type": "link",
+          "settings": {
+            "collection": "rings"
+          }
+        },
+        "bracelets": {
+          "type": "link",
+          "settings": {
+            "collection": "bracelets"
+          }
+        },
+        "necklaces": {
+          "type": "link",
+          "settings": {
+            "collection": "necklaces"
+          }
+        },
+        "earrings": {
+          "type": "link",
+          "settings": {
+            "collection": "earrings"
+          }
+        }
+      },
+      "block_order": [
+        "best_sellers",
+        "gallery",
+        "rings",
+        "bracelets",
+        "necklaces",
+        "earrings"
+      ],
+      "settings": {
+        "circle_size": 96,
+        "circle_size_mobile": 64,
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
     }
   },
-  "order": ["hero", "brand_intro", "categories", "best_sellers", "designer_collections", "gallery_jewelry", "jewelry_sets", "brand_story", "artist_video", "learning_links"]
+  "order": [
+    "category_links",
+    "hero",
+    "banner_native_american",
+    "banner_rings",
+    "banner_radiante",
+    "banner_stamp_dancer",
+    "brand_intro",
+    "categories",
+    "best_sellers",
+    "designer_collections",
+    "gallery_jewelry",
+    "jewelry_sets",
+    "brand_story",
+    "artist_video",
+    "learning_links"
+  ]
 }
