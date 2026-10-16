@@ -1,0 +1,10 @@
+# Reference assets archive (upload these to Shopify Admin > Content > Files)
+reference-assets/
+
+# Local build, scratch, and cache directories
+scratch/
+.shopifyignore
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
