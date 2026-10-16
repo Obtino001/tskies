@@ -360,3 +360,15 @@ h1, h2, h3, h4, h5, h6,
   background-color: #ceb498;
   transition: width 0.3s ease;
 }
+
+/* Collection & Category Tiles White Text on Image */
+.tskies-tiles__link,
+.tskies-tiles__link:hover,
+.tskies-tiles__link:focus,
+.tskies-tiles__link:visited,
+.tskies-tiles__title,
+.tskies-tiles__title.h4,
+.tskies-tiles__title span {
+  color: #ffffff !important;
+}
+
