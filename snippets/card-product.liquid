@@ -599,26 +599,32 @@
         assign jewelry_img = 'spirit_trinity_ring_1.png'
         assign jewelry_title = 'Spirit Turquoise Trinity Silver Ring'
         assign jewelry_price = '$198.00'
+        assign jewelry_url = routes.collections_url | append: '/rings'
       when 2
         assign jewelry_img = 'radiante_vista_ring_1.png'
         assign jewelry_title = 'Radiante Vista Turquoise Silver Ring'
         assign jewelry_price = '$148.00'
+        assign jewelry_url = routes.collections_url | append: '/rings'
       when 3
         assign jewelry_img = 'stamp_dancer_attune_cuff_1.png'
         assign jewelry_title = 'Stamp Dancer Attune Silver Cuff'
         assign jewelry_price = '$220.00'
+        assign jewelry_url = routes.collections_url | append: '/bracelets'
       when 4
         assign jewelry_img = 'enchantment_zia_earrings_1.png'
         assign jewelry_title = 'Enchantment Turquoise Post Earrings'
         assign jewelry_price = '$95.00'
+        assign jewelry_url = routes.collections_url | append: '/earrings'
       when 5
         assign jewelry_img = 'gallery_row_bracelet_1.png'
         assign jewelry_title = '9-Stone Square Turquoise Row Bracelet'
         assign jewelry_price = '$450.00'
+        assign jewelry_url = routes.collections_url | append: '/bracelets'
       else
         assign jewelry_img = 'sets_enchantment_zia_set_1.png'
         assign jewelry_title = 'Enchantment Zia Necklace & Earrings Set'
         assign jewelry_price = '$245.00'
+        assign jewelry_url = routes.collections_url | append: '/sets'
     endcase
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
@@ -634,7 +640,7 @@
         <div
           class="card__media"
         >
-          <div class="media media--transparent">
+          <div class="media media--transparent media--hover-effect">
             <img
               src="{{ jewelry_img | asset_url }}"
               alt="{{ jewelry_title | escape }}"
@@ -649,7 +655,7 @@
       <div class="card__content">
         <div class="card__information">
           <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
-            <a role="link" class="full-unstyled-link">
+            <a href="{{ jewelry_url | default: routes.all_products_collection_url }}" class="full-unstyled-link">
               {{ jewelry_title | escape }}
             </a>
           </h3>
