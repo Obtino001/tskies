@@ -357,6 +357,7 @@
         "stamp_dancer"
       ],
       "settings": {
+        "columns_desktop": 3,
         "gap": 0,
         "overlay_opacity": 25,
         "title_size": 25,

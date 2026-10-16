@@ -1,37 +1,125 @@
-/* T.Skies brand layer: values taken from the live tskies.com theme CSS (Roboto, uppercase headings/buttons/nav). */
+/* T.Skies Brand Stylesheet — Exact reference implementation */
 
+/* Base Typography: Marcellus for Headings, Navigation & Product Titles; Roboto for Body, Subtitles & Buttons */
 h1, h2, h3, h4, h5, h6,
-.h0, .h1, .h2, .h3, .h4, .h5,
-.title, .card__heading, .footer-block__heading, .header__menu-item, .list-menu__item--link,
-.button, .shopify-challenge__button, .customer button, .shopify-payment-button__button--unbranded {
-  text-transform: uppercase;
+.h0, .h1, .h2, .h3, .h4, .h5, .h6,
+.title, .section-header__title,
+.banner__heading,
+.rich-text__heading,
+.product__title,
+.card__heading,
+.card__heading a,
+.header-promo-tile__heading,
+.tskies-story__heading {
+  font-family: "TS Numerals", Marcellus, serif !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
 }
 
-/* Product titles and prices read as sentence-case in the reference grid. */
-.card__heading, .card__heading a { text-transform: none; }
-
-.button, .shopify-payment-button__button--unbranded {
-  font-size: 1.6rem;
-  letter-spacing: 0;
-  min-width: 9rem;
+/* Announcement Bar — Reference Gold #ceb498 with white Roboto text */
+.announcement-bar,
+.announcement-bar-slider,
+.shopify-section-group-header-group .announcement-bar {
+  background-color: #ceb498 !important;
+  color: #ffffff !important;
+  text-align: center;
 }
 
+.announcement-bar__message {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  color: #ffffff !important;
+  text-transform: none !important;
+}
+
+/* Header & Navigation */
+.header__menu-item,
+.list-menu__item,
+.site-nav__link,
+.mega-menu__link,
+.header__menu-item span,
+.list-menu__item span {
+  font-family: Marcellus, serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: #1c1d1d;
+}
+
+.mega-menu__link--level-2 {
+  font-family: Marcellus, serif !important;
+  font-weight: 400 !important;
+  font-size: 1.6rem !important;
+}
+
+/* Mega menu layout with promo tiles */
+.mega-menu__wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+.mega-menu__wrapper .mega-menu__list {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap !important;
+  max-height: 36rem !important;
+  flex: 1 1 auto !important;
+  gap: 0.6rem 5rem !important;
+  padding-right: 4rem !important;
+  list-style: none !important;
+  margin: 0 !important;
+}
+
+.mega-menu__promo-container {
+  flex: 0 0 auto !important;
+}
+
+.header-promo-tiles--mega {
+  display: flex !important;
+  gap: 2.8rem !important;
+}
+
+.header-promo-tiles--mega .header-promo-tile {
+  width: 26rem !important;
+  text-align: center !important;
+}
+
+.header-promo-tile__heading {
+  font-family: "TS Numerals", Marcellus, serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  margin-top: 1rem !important;
+  color: #1c1d1d !important;
+  text-align: center !important;
+}
+
+/* Subtitles and Eyebrow Text */
+.tskies-subtitle,
+.subheading,
+.tskies-story__eyebrow,
+.slideshow .banner__text,
 .footer-block__heading {
-  font-size: 1.8rem;
-  letter-spacing: 0.2em;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1.36rem !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
 }
 
-.tskies-subtitle {
-  margin: 0 0 0.5rem;
-  font-size: 1.36rem;
-  letter-spacing: 0.2em;
-  line-height: 1.6;
-  text-transform: uppercase;
+.tskies-subtitle--center,
+.tskies-title--center {
+  text-align: center;
 }
 
-.tskies-subtitle--center, .tskies-title--center { text-align: center; }
-
-.tskies-title-link {
+.tskies-title-link,
+.skrim__underline-me {
   position: relative;
   display: inline-block;
   color: inherit;
@@ -40,21 +128,235 @@ h1, h2, h3, h4, h5, h6,
   padding-bottom: 2px;
 }
 
-/* Hero slideshow: bottom-left text, 70px title (35px mobile), outlined white button. */
-.slideshow .banner__heading { font-size: 3.5rem; line-height: 1.2; margin-bottom: 0; }
-.slideshow .banner__text { margin-top: 0.5rem; font-size: 1.36rem; letter-spacing: 0.2em; text-transform: uppercase; }
-.slideshow .banner__buttons .button {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  --color-button: 255, 255, 255;
-}
-.slideshow .banner__buttons .button::before,
-.slideshow .banner__buttons .button::after { box-shadow: none; }
-.slideshow .banner__buttons .button:hover { background: #fff; color: #000; }
-@media screen and (min-width: 750px) {
-  .slideshow .banner__heading { font-size: 7rem; }
+/* Buttons */
+.button,
+.btn,
+.shopify-challenge__button,
+.customer button,
+.shopify-payment-button__button--unbranded {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  border-radius: 0;
+  min-width: 9rem;
 }
 
-/* Product card meta: price slightly smaller than body text. */
-.card-information .price { font-size: 1.44rem; }
+/* Primary Accent Buttons (Gold #ceb498) */
+.button--primary,
+.button:not(.button--secondary):not(.slideshow .banner__buttons .button) {
+  background-color: #ceb498;
+  color: #ffffff;
+  border: 1px solid #ceb498;
+}
+
+.button--primary:hover,
+.button:not(.button--secondary):not(.slideshow .banner__buttons .button):hover {
+  background-color: #c6a787;
+  border-color: #c6a787;
+}
+
+/* Hero Slideshow Banner */
+.slideshow .banner__heading {
+  font-family: "TS Numerals", Marcellus, serif !important;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 0;
+  font-weight: 400 !important;
+  color: #ffffff;
+  text-transform: none !important;
+}
+
+.slideshow .banner__text {
+  margin-top: 0.8rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.36rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.slideshow .banner__buttons .button {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 0;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  text-transform: none;
+}
+
+.slideshow .banner__buttons .button:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.slideshow .banner__buttons .button::before,
+.slideshow .banner__buttons .button::after {
+  box-shadow: none !important;
+}
+
+@media screen and (min-width: 750px) {
+  .slideshow .banner__heading {
+    font-size: 7rem !important;
+  }
+  .slideshow .banner__text {
+    font-size: 1.888rem !important;
+  }
+}
+
+/* Category Circle Story Blocks */
+@media screen and (min-width: 769px) {
+  .story_blocks,
+  .tskies-catlinks-section--mobile-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tskies-catlinks__list {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 1.6rem !important;
+    padding: 1rem 1.6rem !important;
+    scrollbar-width: none;
+  }
+  .tskies-catlinks__list::-webkit-scrollbar {
+    display: none;
+  }
+  .tskies-catlinks__item {
+    flex: 0 0 auto !important;
+    scroll-snap-align: start;
+    width: 6.8rem !important;
+  }
+  .tskies-catlinks__image {
+    width: 6rem !important;
+    height: 6rem !important;
+    border-radius: 50% !important;
+    border: 2px solid #000000 !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+  }
+  .tskies-catlinks__label {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #000000 !important;
+    margin-top: 0.6rem !important;
+  }
+}
+
+/* Product Cards */
+.card__heading,
+.card__heading a {
+  font-family: "TS Numerals", Marcellus, serif !important;
+  font-size: 1.888rem !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  color: #1c1d1d !important;
+  text-transform: none !important;
+}
+
+.card-information .price,
+.price .price-item {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1.44rem !important;
+  color: #1c1d1d;
+  font-weight: 400;
+}
+
+.price--on-sale .price-item--regular {
+  color: #707070 !important;
+  text-decoration: line-through;
+  font-size: 1.3rem !important;
+}
+
+/* Sale & Savings Badges */
+.badge,
+.badge--sale {
+  background-color: #79c7d3 !important;
+  color: #ffffff !important;
+  border-radius: 0 !important;
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.05em !important;
+  padding: 0.3rem 0.8rem !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #f0f1f3 !important;
+  color: #000000 !important;
+  border-top: 1px solid #e8e8e1;
+}
+
+.footer-block__heading {
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.47rem !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+  color: #000000 !important;
+  margin-bottom: 1.6rem !important;
+}
+
+.footer-block__details-content .list-menu__item--link {
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.488rem !important;
+  color: #000000 !important;
+  line-height: 2 !important;
+  text-transform: none !important;
+}
+
+.footer-block__details-content .list-menu__item--link:hover {
+  text-decoration: underline;
+}
+
+.footer__newsletter-text {
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.488rem !important;
+  color: rgba(0, 0, 0, 0.75) !important;
+  line-height: 1.6 !important;
+}
+
+.footer .newsletter-form__field-wrapper .field__input {
+  border: 1px solid #e8e8e1;
+  background-color: #ffffff;
+  color: #1c1d1d;
+}
+
+.footer .newsletter-form__button {
+  background-color: #ceb498;
+  color: #ffffff;
+}
+
+/* Cart Drawer Progress Indicator */
+.cart-drawer__free-shipping {
+  background-color: #f2f2f2;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 1.6rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #1c1d1d;
+}
+
+.cart-drawer__free-shipping-bar {
+  height: 4px;
+  background-color: #e8e8e1;
+  border-radius: 2px;
+  margin-top: 0.8rem;
+  overflow: hidden;
+}
+
+.cart-drawer__free-shipping-progress {
+  height: 100%;
+  background-color: #ceb498;
+  transition: width 0.3s ease;
+}

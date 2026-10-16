@@ -1,6 +1,6 @@
 {%- style -%}
   .tskies-tiles-{{ section.id }} { padding: {{ section.settings.padding_top | times: 0.75 | round }}px 0 {{ section.settings.padding_bottom | times: 0.75 | round }}px; }
-  .tskies-tiles-{{ section.id }} .tskies-tiles__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: {{ section.settings.gap }}px; list-style: none; margin: 0; padding: 0; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__grid { display: grid; grid-template-columns: repeat({{ section.settings.columns_desktop | default: 4 }}, minmax(0, 1fr)); gap: {{ section.settings.gap }}px; list-style: none; margin: 0; padding: 0; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__item { grid-column: span 1; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__item--wide { grid-column: span 2; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__link { position: relative; display: block; overflow: hidden; color: #fff; text-decoration: none; background: rgba(var(--color-foreground), 0.06); }
@@ -8,7 +8,7 @@
   .tskies-tiles-{{ section.id }} .tskies-tiles__item--wide .tskies-tiles__media { aspect-ratio: 2 / 1; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__media img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__link::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}), rgba(0, 0, 0, 0) 55%); pointer-events: none; }
-  .tskies-tiles-{{ section.id }} .tskies-tiles__title { position: absolute; z-index: 1; left: 12.5px; bottom: 12.5px; right: 12.5px; margin: 0; text-transform: uppercase; font-size: {{ section.settings.title_size_mobile }}px; line-height: 1.2; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__title { position: absolute; z-index: 1; left: 15px; bottom: 15px; right: 15px; margin: 0; font-family: "TS Numerals", Marcellus, serif !important; font-weight: 400; text-transform: none; font-size: {{ section.settings.title_size_mobile }}px; line-height: 1.2; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__title span { background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat; transition: background-size 0.4s ease; padding-bottom: 2px; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__link:hover .tskies-tiles__title span,
   .tskies-tiles-{{ section.id }} .tskies-tiles__link:focus-visible .tskies-tiles__title span { background-size: 100% 2px; }
@@ -61,6 +61,7 @@
   "class": "section",
   "settings": [
     { "type": "inline_richtext", "id": "heading", "label": "Heading", "info": "Optional." },
+    { "type": "range", "id": "columns_desktop", "min": 2, "max": 6, "step": 1, "default": 4, "label": "Columns (desktop)" },
     { "type": "range", "id": "gap", "min": 0, "max": 24, "step": 2, "unit": "px", "default": 0, "label": "Gap between tiles" },
     { "type": "range", "id": "overlay_opacity", "min": 0, "max": 80, "step": 5, "unit": "%", "default": 25, "label": "Bottom overlay opacity", "info": "Darkens the bottom of each image so the title stays readable." },
     { "type": "range", "id": "title_size", "min": 14, "max": 40, "step": 1, "unit": "px", "default": 25, "label": "Title size (desktop)" },

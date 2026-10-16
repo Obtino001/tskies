@@ -6,11 +6,44 @@
   .tskies-catlinks-{{ section.id }} .tskies-catlinks__image { width: {{ section.settings.circle_size }}px; height: {{ section.settings.circle_size }}px; border-radius: 50%; overflow: hidden; background: rgba(var(--color-foreground), 0.06); margin: 0 auto; }
   .tskies-catlinks-{{ section.id }} .tskies-catlinks__image img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .tskies-catlinks-{{ section.id }} .tskies-catlinks__label { display: block; margin-top: 0.8rem; font-size: 1.3rem; }
-  @media (max-width: 749px) {
-    .tskies-catlinks-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.5 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round }}px; }
-    .tskies-catlinks-{{ section.id }} .tskies-catlinks__list { gap: 1.2rem 1.2rem; }
-    .tskies-catlinks-{{ section.id }} .tskies-catlinks__item, .tskies-catlinks-{{ section.id }} .tskies-catlinks__image { width: {{ section.settings.circle_size_mobile }}px; height: auto; }
-    .tskies-catlinks-{{ section.id }} .tskies-catlinks__image { height: {{ section.settings.circle_size_mobile }}px; }
+  {%- if section.settings.hide_on_desktop -%}
+    @media (min-width: 769px) {
+      .tskies-catlinks-{{ section.id }} { display: none !important; }
+    }
+  {%- endif -%}
+  @media (max-width: 768px) {
+    .tskies-catlinks-{{ section.id }} { padding-top: 10px; padding-bottom: 10px; }
+    .tskies-catlinks-{{ section.id }} .tskies-catlinks__list {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      justify-content: flex-start !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      gap: 1.2rem !important;
+      padding: 0 1rem !important;
+      scrollbar-width: none;
+    }
+    .tskies-catlinks-{{ section.id }} .tskies-catlinks__list::-webkit-scrollbar { display: none; }
+    .tskies-catlinks-{{ section.id }} .tskies-catlinks__item {
+      flex: 0 0 auto !important;
+      width: auto !important;
+      min-width: 6.4rem !important;
+    }
+    .tskies-catlinks-{{ section.id }} .tskies-catlinks__image {
+      width: 60px !important;
+      height: 60px !important;
+      border-radius: 100% !important;
+      border: 2px solid #000000 !important;
+      padding: 2px !important;
+      box-sizing: border-box !important;
+    }
+    .tskies-catlinks-{{ section.id }} .tskies-catlinks__label {
+      font-size: 1.2rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      color: #000000 !important;
+      margin-top: 5px !important;
+    }
   }
 {%- endstyle -%}
 <div class="tskies-catlinks-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
@@ -38,6 +71,7 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    { "type": "checkbox", "id": "hide_on_desktop", "label": "Hide on desktop (show only on mobile/tablet)", "default": true },
     { "type": "range", "id": "circle_size", "min": 60, "max": 160, "step": 4, "unit": "px", "default": 96, "label": "Circle size (desktop)" },
     { "type": "range", "id": "circle_size_mobile", "min": 48, "max": 120, "step": 4, "unit": "px", "default": 64, "label": "Circle size (mobile)" },
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
