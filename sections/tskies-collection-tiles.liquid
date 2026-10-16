@@ -39,11 +39,38 @@
         <li class="tskies-tiles__item{% if block.settings.wide %} tskies-tiles__item--wide{% endif %}" {{ block.shopify_attributes }}>
           <a href="{{ block.settings.link | default: target.url | default: routes.collections_url }}" class="tskies-tiles__link">
             <span class="tskies-tiles__media">
-              {%- if img != blank -%}
+              {%- if img != blank and img.width > 0 -%}
                 {%- if block.settings.wide -%}
                   {{ img | image_url: width: 1500 | image_tag: loading: 'lazy', widths: '600, 900, 1200, 1500', sizes: '(min-width: 750px) 50vw, 100vw', alt: img.alt | default: label }}
                 {%- else -%}
                   {{ img | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360, 540, 720, 900', sizes: '(min-width: 750px) 25vw, 50vw', alt: img.alt | default: label }}
+                {%- endif -%}
+              {%- else -%}
+                {%- assign tile_name = label | default: block.id | downcase | strip -%}
+                {%- capture asset_file -%}
+                  {%- case tile_name -%}
+                    {%- when 'rings' -%}promo_tile_rings.jpg
+                    {%- when 'earrings' -%}promo_tile_earrings.jpg
+                    {%- when 'bracelets' -%}promo_tile_bracelets.png
+                    {%- when 'necklaces' -%}promo_tile_necklaces.jpg
+                    {%- when 'desert blossom' -%}designer_desert_blossom.jpg
+                    {%- when 'enchantment' -%}designer_enchantment.jpg
+                    {%- when 'bead maiden' -%}designer_bead_maiden.png
+                    {%- when 'radiante' -%}designer_radiante.jpg
+                    {%- when 'skyweaver' -%}designer_skyweaver.jpg
+                    {%- when 'stamp dancer' -%}designer_stamp_dancer.jpg
+                  {%- endcase -%}
+                {%- endcapture -%}
+                {%- assign asset_file = asset_file | strip -%}
+                {%- if asset_file != blank -%}
+                  <img
+                    src="{{ asset_file | asset_url }}"
+                    alt="{{ label | escape }}"
+                    loading="lazy"
+                    width="{% if block.settings.wide %}1500{% else %}900{% endif %}"
+                    height="{% if block.settings.wide %}750{% else %}900{% endif %}"
+                    style="width: 100%; height: 100%; object-fit: cover;"
+                  >
                 {%- endif -%}
               {%- endif -%}
             </span>

@@ -56,7 +56,32 @@
         <li class="tskies-catlinks__item" {{ block.shopify_attributes }}>
           <a href="{{ block.settings.link | default: target.url | default: routes.collections_url }}">
             <span class="tskies-catlinks__image">
-              {%- if img != blank -%}{{ img | image_url: width: 300 | image_tag: loading: 'lazy', widths: '150, 300', alt: label }}{%- endif -%}
+              {%- if img != blank and img.width > 0 -%}
+                {{ img | image_url: width: 300 | image_tag: loading: 'lazy', widths: '150, 300', alt: label }}
+              {%- else -%}
+                {%- assign label_clean = label | downcase | strip -%}
+                {%- capture circle_file -%}
+                  {%- case label_clean -%}
+                    {%- when 'best sellers' -%}category_circle_best_sellers.png
+                    {%- when 'gallery' -%}category_circle_gallery.png
+                    {%- when 'rings' -%}category_circle_rings.jpg
+                    {%- when 'bracelets' -%}category_circle_bracelets.png
+                    {%- when 'necklaces' -%}category_circle_necklaces.png
+                    {%- when 'earrings' -%}category_circle_earrings.jpg
+                  {%- endcase -%}
+                {%- endcapture -%}
+                {%- assign circle_file = circle_file | strip -%}
+                {%- if circle_file != blank -%}
+                  <img
+                    src="{{ circle_file | asset_url }}"
+                    alt="{{ label | escape }}"
+                    loading="lazy"
+                    width="150"
+                    height="150"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+                  >
+                {%- endif -%}
+              {%- endif -%}
             </span>
             <span class="tskies-catlinks__label">{{ label | escape }}</span>
           </a>

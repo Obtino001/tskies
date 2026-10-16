@@ -19,12 +19,35 @@
         <li class="header-promo-tile" {{ block.shopify_attributes }}>
           <a href="{{ tile_link }}" class="header-promo-tile__link link link--text focus-inset">
             <span class="header-promo-tile__media">
-              {%- if block.settings.image != blank -%}
+              {%- if block.settings.image != blank and block.settings.image.width > 0 -%}
                 {{
                   block.settings.image
                   | image_url: width: 480
                   | image_tag: loading: 'lazy', widths: '240, 360, 480', sizes: '(min-width: 990px) 16vw, 40vw', alt: block.settings.image.alt | default: tile_heading
                 }}
+              {%- else -%}
+                {%- assign heading_clean = tile_heading | downcase | strip -%}
+                {%- capture promo_asset -%}
+                  {%- case heading_clean -%}
+                    {%- when 'ring stacks' -%}megamenu_ring_stacks.png
+                    {%- when 'jewelry sets' -%}megamenu_jewelry_sets.jpg
+                    {%- when 'enchantment' -%}megamenu_enchantment.png
+                    {%- when 'radiante' -%}megamenu_radiante.png
+                    {%- when 'fresh off the bench' -%}megamenu_fresh_off_bench.png
+                    {%- when 'one of a kind jewelry' -%}megamenu_one_of_a_kind.jpg
+                  {%- endcase -%}
+                {%- endcapture -%}
+                {%- assign promo_asset = promo_asset | strip -%}
+                {%- if promo_asset != blank -%}
+                  <img
+                    src="{{ promo_asset | asset_url }}"
+                    alt="{{ tile_heading | escape }}"
+                    loading="lazy"
+                    width="480"
+                    height="480"
+                    style="width: 100%; height: 100%; object-fit: cover;"
+                  >
+                {%- endif -%}
               {%- endif -%}
             </span>
             {%- if tile_heading != blank -%}

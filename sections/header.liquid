@@ -186,7 +186,7 @@
         <h1 class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        {%- if settings.logo != blank -%}
+        {%- if settings.logo != blank and settings.logo.width > 0 -%}
           <div class="header__heading-logo-wrapper">
             {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
@@ -206,7 +206,14 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
+          <img
+            src="{{ 'tskies_logo.webp' | asset_url }}"
+            alt="{{ shop.name | escape }}"
+            width="{{ settings.logo_width | default: 90 }}"
+            height="31"
+            class="header__heading-logo"
+            loading="eager"
+          >
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
@@ -229,7 +236,7 @@
         <h1 class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        {%- if settings.logo != blank -%}
+        {%- if settings.logo != blank and settings.logo.width > 0 -%}
           <div class="header__heading-logo-wrapper">
             {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
@@ -249,7 +256,14 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
+          <img
+            src="{{ 'tskies_logo.webp' | asset_url }}"
+            alt="{{ shop.name | escape }}"
+            width="{{ settings.logo_width | default: 90 }}"
+            height="31"
+            class="header__heading-logo"
+            loading="eager"
+          >
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}

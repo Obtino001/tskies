@@ -8,7 +8,7 @@
           "settings": {
             "collection": "best-sellers",
             "label": "Best Sellers",
-            "image": "shopify://shop_images/Best_Sellers.png"
+            "image": ""
           }
         },
         "gallery": {
@@ -16,7 +16,7 @@
           "settings": {
             "collection": "one-of-a-kind-styles",
             "label": "Gallery",
-            "image": "shopify://shop_images/Gallery_Circle.png"
+            "image": ""
           }
         },
         "rings": {
@@ -24,7 +24,7 @@
           "settings": {
             "collection": "rings",
             "label": "Rings",
-            "image": "shopify://shop_images/Rings.jpg"
+            "image": ""
           }
         },
         "bracelets": {
@@ -32,7 +32,7 @@
           "settings": {
             "collection": "bracelets",
             "label": "Bracelets",
-            "image": "shopify://shop_images/Bracelets_b36c021d-e31d-42ee-a98f-907466cb8d95.png"
+            "image": ""
           }
         },
         "necklaces": {
@@ -40,7 +40,7 @@
           "settings": {
             "collection": "necklaces",
             "label": "Necklaces",
-            "image": "shopify://shop_images/Necklaces_b42c2f7d-1766-49bb-9253-68c88d044001.png"
+            "image": ""
           }
         },
         "earrings": {
@@ -48,7 +48,7 @@
           "settings": {
             "collection": "earrings",
             "label": "Earrings",
-            "image": "shopify://shop_images/Earrings.jpg"
+            "image": ""
           }
         }
       },
@@ -74,7 +74,7 @@
         "turquoise": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2025Holiday-06.jpg",
+            "image": "",
             "image_overlay_opacity": 20,
             "heading": "Real Turquoise Jewelry",
             "heading_size": "h1",
@@ -92,7 +92,7 @@
         "native": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/edited-TSkies-April-2023-Lelle67_1.jpg",
+            "image": "",
             "image_overlay_opacity": 40,
             "heading": "Authentic Native American Jewelry",
             "heading_size": "h1",
@@ -110,7 +110,7 @@
         "rings": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2025HOLIDAY_Rings_2.jpg",
+            "image": "",
             "image_overlay_opacity": 30,
             "heading": "Turquoise Rings",
             "heading_size": "h1",
@@ -128,7 +128,7 @@
         "radiante": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Frankiegomez-87_d1fa71da-66a9-43a1-aa09-38ffdb6d0c57.jpg",
+            "image": "",
             "image_overlay_opacity": 0,
             "heading": "Radiante",
             "heading_size": "h1",
@@ -146,7 +146,7 @@
         "stamp": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Frankiegomez-62_f5707677-addb-40a0-a1f1-20787712c695.jpg",
+            "image": "",
             "image_overlay_opacity": 0,
             "heading": "Stamp Dancer",
             "heading_size": "h1",
@@ -224,7 +224,7 @@
           "type": "tile",
           "settings": {
             "collection": "rings",
-            "image": "shopify://shop_images/IMG_9907.jpg",
+            "image": "",
             "title": "Rings"
           }
         },
@@ -232,7 +232,7 @@
           "type": "tile",
           "settings": {
             "collection": "earrings",
-            "image": "shopify://shop_images/frankiegomezphoto02.2020-47_1.jpg",
+            "image": "",
             "title": "Earrings"
           }
         },
@@ -240,7 +240,7 @@
           "type": "tile",
           "settings": {
             "collection": "bracelets",
-            "image": "shopify://shop_images/2026_Evergreen_StampDancer_3.png",
+            "image": "",
             "title": "Bracelets"
           }
         },
@@ -248,7 +248,7 @@
           "type": "tile",
           "settings": {
             "collection": "necklaces",
-            "image": "shopify://shop_images/2025HOLIDAY_EnchantmentNecklaces_2.jpg",
+            "image": "",
             "title": "Necklaces"
           }
         }
@@ -302,7 +302,7 @@
           "type": "tile",
           "settings": {
             "collection": "desert-blossom",
-            "image": "shopify://shop_images/NajaCollection_TSkiesJewelry.jpg",
+            "image": "",
             "title": "Desert Blossom",
             "wide": true
           }
@@ -311,7 +311,7 @@
           "type": "tile",
           "settings": {
             "collection": "enchantment",
-            "image": "shopify://shop_images/frankiegomezphoto02.2020-12.jpg",
+            "image": "",
             "title": "Enchantment"
           }
         },
@@ -319,7 +319,7 @@
           "type": "tile",
           "settings": {
             "collection": "bead-maiden",
-            "image": "shopify://shop_images/BeadMaiden_TSkies.png",
+            "image": "",
             "title": "Bead Maiden"
           }
         },
@@ -327,7 +327,7 @@
           "type": "tile",
           "settings": {
             "collection": "radiante",
-            "image": "shopify://shop_images/TSkies-Xmas-2021015_1.jpg",
+            "image": "",
             "title": "Radiante"
           }
         },
@@ -335,7 +335,7 @@
           "type": "tile",
           "settings": {
             "collection": "skyweaver",
-            "image": "shopify://shop_images/skyweaver-jewelry-signature-jewelry.jpg",
+            "image": "",
             "title": "SkyWeaver"
           }
         },
@@ -343,7 +343,7 @@
           "type": "tile",
           "settings": {
             "collection": "stamp-dancer",
-            "image": "shopify://shop_images/IMG_9745.jpg",
+            "image": "",
             "title": "Stamp Dancer"
           }
         }
@@ -426,14 +426,14 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_1230.jpg",
+            "image": "",
             "link": "shopify://pages/about-us"
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1.23.24_4_1_d264d1b2-bf2d-4d0f-a10f-9bbd4ca04d66.jpg",
+            "image": "",
             "link": "shopify://pages/about-us"
           }
         }

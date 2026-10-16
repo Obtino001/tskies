@@ -16,6 +16,7 @@
   @param {boolean} [horizontal_class] - Whether to add the `card--horizontal` class. Defaults to `false`.
   @param {boolean} [horizontal_quick_add] - Whether to use horizontal quick-add styles. Defaults to `false`.
   @param {string} [placeholder_image] - The placeholder SVG name. Defaults to `product-apparel-2`.
+  @param {number} [placeholder_index] - Optional index used for rotation of placeholder jewelry assets.
   @param {string} [product_view_context] - The analytics context for the product-card view event, such as `collection`, `search`, or `recommendation`.
   @param {block} [block] - The current section block, used for optional card description content.
   @param {object} [section] - The current section context, supplied implicitly when rendered from a section and used by quick-add controls.
@@ -587,51 +588,79 @@
 {%- else -%}
   {%- liquid
     assign ratio = 1
-    assign placeholder = true
     if media_aspect_ratio == 'portrait'
       assign ratio = 0.8
     endif
+
+    assign _unused_placeholder = placeholder_image
+    assign p_idx = placeholder_index | default: 1
+    case p_idx
+      when 1
+        assign jewelry_img = 'spirit_trinity_ring_1.png'
+        assign jewelry_title = 'Spirit Turquoise Trinity Silver Ring'
+        assign jewelry_price = '$198.00'
+      when 2
+        assign jewelry_img = 'radiante_vista_ring_1.png'
+        assign jewelry_title = 'Radiante Vista Turquoise Silver Ring'
+        assign jewelry_price = '$148.00'
+      when 3
+        assign jewelry_img = 'stamp_dancer_attune_cuff_1.png'
+        assign jewelry_title = 'Stamp Dancer Attune Silver Cuff'
+        assign jewelry_price = '$220.00'
+      when 4
+        assign jewelry_img = 'enchantment_zia_earrings_1.png'
+        assign jewelry_title = 'Enchantment Turquoise Post Earrings'
+        assign jewelry_price = '$95.00'
+      when 5
+        assign jewelry_img = 'gallery_row_bracelet_1.png'
+        assign jewelry_title = '9-Stone Square Turquoise Row Bracelet'
+        assign jewelry_price = '$450.00'
+      else
+        assign jewelry_img = 'sets_enchantment_zia_set_1.png'
+        assign jewelry_title = 'Enchantment Zia Necklace & Earrings Set'
+        assign jewelry_price = '$245.00'
+    endcase
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
         card card--{{ settings.card_style }}
-        {% if extend_height %} card--extend-height{% endif %}
-        {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
-        {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
-        class="card__inner{% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio"
+        class="card__inner{% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio"
       >
         <div
-          class="card__media {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}"
+          class="card__media"
         >
-          <div
-            class="media media--transparent"
-          >
-            {%- if placeholder_image -%}
-              {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- else -%}
-              {{ 'product-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-            {% endif %}
+          <div class="media media--transparent">
+            <img
+              src="{{ jewelry_img | asset_url }}"
+              alt="{{ jewelry_title | escape }}"
+              loading="lazy"
+              width="720"
+              height="720"
+              style="width: 100%; height: 100%; object-fit: cover;"
+            >
           </div>
         </div>
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
-            <a role="link" aria-disabled="true" class="full-unstyled-link">
-              {{ 'onboarding.product_title' | t }}
+          <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
+            <a role="link" class="full-unstyled-link">
+              {{ jewelry_title | escape }}
             </a>
           </h3>
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
+              <div class="caption-with-letter-spacing light">T.Skies</div>
             {%- endif -%}
-            {% render 'price', placeholder: placeholder, show_compare_at_price: true %}
+            <span class="price price--regular">
+              <span class="price-item price-item--regular">{{ jewelry_price }}</span>
+            </span>
           </div>
         </div>
       </div>
