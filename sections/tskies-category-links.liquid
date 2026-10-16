@@ -62,12 +62,12 @@
                 {%- assign label_clean = label | downcase | strip -%}
                 {%- capture circle_file -%}
                   {%- case label_clean -%}
-                    {%- when 'best sellers' -%}category_circle_best_sellers.png
-                    {%- when 'gallery' -%}category_circle_gallery.png
-                    {%- when 'rings' -%}category_circle_rings.jpg
-                    {%- when 'bracelets' -%}category_circle_bracelets.png
-                    {%- when 'necklaces' -%}category_circle_necklaces.png
-                    {%- when 'earrings' -%}category_circle_earrings.jpg
+                    {%- when 'best sellers', 'bestsellere' -%}category_circle_best_sellers.png
+                    {%- when 'gallery', 'galleri' -%}category_circle_gallery.png
+                    {%- when 'rings', 'ringe' -%}category_circle_rings.jpg
+                    {%- when 'bracelets', 'armbånd' -%}category_circle_bracelets.png
+                    {%- when 'necklaces', 'halskæder' -%}category_circle_necklaces.png
+                    {%- when 'earrings', 'øreringe' -%}category_circle_earrings.jpg
                   {%- endcase -%}
                 {%- endcapture -%}
                 {%- assign circle_file = circle_file | strip -%}

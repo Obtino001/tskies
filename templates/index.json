@@ -7,7 +7,7 @@
           "type": "link",
           "settings": {
             "collection": "best-sellers",
-            "label": "Best Sellers",
+            "label": "Bestsellere",
             "image": ""
           }
         },
@@ -15,7 +15,7 @@
           "type": "link",
           "settings": {
             "collection": "one-of-a-kind-styles",
-            "label": "Gallery",
+            "label": "Galleri",
             "image": ""
           }
         },
@@ -23,7 +23,7 @@
           "type": "link",
           "settings": {
             "collection": "rings",
-            "label": "Rings",
+            "label": "Ringe",
             "image": ""
           }
         },
@@ -31,7 +31,7 @@
           "type": "link",
           "settings": {
             "collection": "bracelets",
-            "label": "Bracelets",
+            "label": "Armbånd",
             "image": ""
           }
         },
@@ -39,7 +39,7 @@
           "type": "link",
           "settings": {
             "collection": "necklaces",
-            "label": "Necklaces",
+            "label": "Halskæder",
             "image": ""
           }
         },
@@ -47,7 +47,7 @@
           "type": "link",
           "settings": {
             "collection": "earrings",
-            "label": "Earrings",
+            "label": "Øreringe",
             "image": ""
           }
         }
@@ -76,10 +76,10 @@
           "settings": {
             "image": "",
             "image_overlay_opacity": 20,
-            "heading": "Real Turquoise Jewelry",
+            "heading": "Ægte turkise smykker",
             "heading_size": "h1",
-            "subheading": "Rings, cuffs & necklaces",
-            "button_label": "Shop Turquoise Jewelry",
+            "subheading": "Ringe, armbånd og halskæder",
+            "button_label": "Shop turkise smykker",
             "link": "shopify://collections/turquoise",
             "button_style_secondary": true,
             "show_text_box": false,
@@ -94,10 +94,10 @@
           "settings": {
             "image": "",
             "image_overlay_opacity": 40,
-            "heading": "Authentic Native American Jewelry",
+            "heading": "Autentiske indianske smykker",
             "heading_size": "h1",
-            "subheading": "Know the hands that made it",
-            "button_label": "Shop Native American Jewelry",
+            "subheading": "Kend hænderne, der skabte dem",
+            "button_label": "Shop indianske smykker",
             "link": "shopify://collections/native-american-jewelry",
             "button_style_secondary": true,
             "show_text_box": false,
@@ -112,10 +112,10 @@
           "settings": {
             "image": "",
             "image_overlay_opacity": 30,
-            "heading": "Turquoise Rings",
+            "heading": "Turkise ringe",
             "heading_size": "h1",
-            "subheading": "Sterling silver & real turquoise",
-            "button_label": "Shop Turquoise Rings",
+            "subheading": "Sterlingsølv og ægte turkis",
+            "button_label": "Shop turkise ringe",
             "link": "shopify://collections/turquoise-rings",
             "button_style_secondary": true,
             "show_text_box": false,
@@ -132,8 +132,8 @@
             "image_overlay_opacity": 0,
             "heading": "Radiante",
             "heading_size": "h1",
-            "subheading": "Inspired by Mother Earth",
-            "button_label": "Shop the Collection",
+            "subheading": "Inspireret af Moder Jord",
+            "button_label": "Shop kollektionen",
             "link": "shopify://collections/radiante",
             "button_style_secondary": true,
             "show_text_box": false,
@@ -150,8 +150,8 @@
             "image_overlay_opacity": 0,
             "heading": "Stamp Dancer",
             "heading_size": "h1",
-            "subheading": "Stackable Handstamped Jewelry",
-            "button_label": "Shop the Collection",
+            "subheading": "Håndstemplede smykker til lag-på-lag",
+            "button_label": "Shop kollektionen",
             "link": "shopify://collections/stamp-dancer",
             "button_style_secondary": true,
             "show_text_box": false,
@@ -186,20 +186,20 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Real Turquoise Jewelry & Native American Jewelry",
+            "heading": "Ægte turkise smykker og indianske smykker",
             "heading_size": "h2"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>T.Skies is a turquoise jewelry studio and gallery in Albuquerque, New Mexico. We sell two kinds of work: our own Southwest jewelry designs, and Native American jewelry by named artists, sold under the maker’s name. Ask about any stone and we’ll tell you whether it’s natural or stabilized.</p>"
+            "text": "<p>T.Skies er et turkissmykkestudie og -galleri i Albuquerque, New Mexico. Vi forhandler to typer håndværk: vores egne sydvestlige smykkedesigns og indianske smykker skabt af anerkendte kunstnere, solgt under kunstnerens eget navn. Spørg om enhver sten, og vi fortæller dig, om den er naturlig eller stabiliseret.</p>"
           }
         },
         "links": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"shopify://collections/turquoise\">Turquoise Jewelry</a> &nbsp; <a href=\"shopify://collections/native-american-jewelry\">Native American Jewelry</a></p>"
+            "text": "<p><a href=\"shopify://collections/turquoise\">Turkise smykker</a> &nbsp; <a href=\"shopify://collections/native-american-jewelry\">Indianske smykker</a></p>"
           }
         }
       },
@@ -225,7 +225,7 @@
           "settings": {
             "collection": "rings",
             "image": "",
-            "title": "Rings"
+            "title": "Ringe"
           }
         },
         "earrings": {
@@ -233,7 +233,7 @@
           "settings": {
             "collection": "earrings",
             "image": "",
-            "title": "Earrings"
+            "title": "Øreringe"
           }
         },
         "bracelets": {
@@ -241,7 +241,7 @@
           "settings": {
             "collection": "bracelets",
             "image": "",
-            "title": "Bracelets"
+            "title": "Armbånd"
           }
         },
         "necklaces": {
@@ -249,7 +249,7 @@
           "settings": {
             "collection": "necklaces",
             "image": "",
-            "title": "Necklaces"
+            "title": "Halskæder"
           }
         }
       },
@@ -272,13 +272,13 @@
     "best_sellers": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best Sellers",
+        "title": "Bestsellere",
         "heading_size": "h2",
         "collection": "best-sellers",
         "products_to_show": 10,
         "columns_desktop": 5,
         "color_scheme": "scheme-1",
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "image_ratio": "square",
@@ -370,13 +370,13 @@
     "gallery_jewelry": {
       "type": "featured-collection",
       "settings": {
-        "title": "Gallery Jewelry",
+        "title": "Gallerismykker",
         "heading_size": "h2",
         "collection": "one-of-a-kind-styles",
         "products_to_show": 10,
         "columns_desktop": 5,
         "color_scheme": "scheme-1",
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "image_ratio": "square",
@@ -387,7 +387,7 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36,
-        "subtitle": "Just in, handmade by artisans",
+        "subtitle": "Lige ankommet, håndlavet af kunsthåndværkere",
         "center_title": true,
         "link_title": true,
         "show_description": false
@@ -396,13 +396,13 @@
     "jewelry_sets": {
       "type": "featured-collection",
       "settings": {
-        "title": "Jewelry Sets",
+        "title": "Smykkesæt",
         "heading_size": "h2",
         "collection": "sets",
         "products_to_show": 10,
         "columns_desktop": 5,
         "color_scheme": "scheme-1",
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "image_ratio": "square",
@@ -413,11 +413,11 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36,
-        "subtitle": "Bundle & Save",
+        "subtitle": "Kombiner og spar",
         "center_title": true,
         "link_title": true,
         "show_description": false,
-        "savings_badge_text": "Save [amount]"
+        "savings_badge_text": "Spar [amount]"
       }
     },
     "brand_story": {
@@ -443,10 +443,10 @@
         "image_2"
       ],
       "settings": {
-        "eyebrow": "Crafted by Hand",
-        "heading": "Infused with Spirit.",
-        "text": "<p>In the Southwest, the tradition of making, wearing and trading real <a href=\"shopify://collections/turquoise\">turquoise jewelry</a> is embedded in our way of life. At T.Skies, we honor the artistry and craftsmanship of this timeless art form through which so much culture and storytelling can be shared. At T.Skies, you’ll find fine Southwest jewelry handcrafted with high-quality, responsibly-sourced materials. We create pieces that feel like you.</p>",
-        "button_label": "Learn More About Us",
+        "eyebrow": "Skabt i hånden",
+        "heading": "Fyldt med sjæl.",
+        "text": "<p>I det amerikanske sydvest er traditionen med at fremstille, bære og handle med ægte turkise smykker en dybt forankret del af vores livsstil. Hos T.Skies hylder vi håndværket og kunsten i denne tidløse tradition, hvor så megen kultur og historiefortælling deles. Hos T.Skies finder du fine sydvestlige smykker håndlavet af ansvarligt indkøbte materialer af højeste kvalitet. Vi skaber smykker, der føles som dig.</p>",
+        "button_label": "Lær mere om os",
         "button_link": "shopify://pages/about-us",
         "button_style_secondary": false,
         "text_position": "left",
@@ -459,10 +459,10 @@
     "artist_video": {
       "type": "video",
       "settings": {
-        "heading": "Congrats to our KITA Scholarship Winner Karolina Chapo!",
+        "heading": "Tillykke til vores KITA-stipendievinder Karolina Chapo!",
         "heading_size": "h2",
         "video_url": "https://www.youtube.com/watch?v=a-xWD0KOWXk",
-        "description": "This year's KITA Scholarship has been awarded to Navajo dancer Karolina Chapo. Watch her story to see how she's preserving Indigenous traditions through the art of dance.",
+        "description": "Dette års KITA-stipendium er blevet tildelt Navajo-danseren Karolina Chapo. Se hendes historie for at opleve, hvordan hun bevarer oprindelige traditioner gennem dansens kunst.",
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -474,28 +474,28 @@
         "mines": {
           "type": "article",
           "settings": {
-            "heading": "Turquoise Mines",
+            "heading": "Turkise miner",
             "page": "shopify://pages/turquoise-mines"
           }
         },
         "artists": {
           "type": "article",
           "settings": {
-            "heading": "Meet the Silversmiths",
+            "heading": "Mød sølvsmedene",
             "page": "shopify://pages/silversmiths"
           }
         },
         "real_turquoise": {
           "type": "article",
           "settings": {
-            "heading": "How to Tell Real Turquoise",
+            "heading": "Sådan genkender du ægte turkis",
             "page": "shopify://pages/how-to-tell-real-turquoise"
           }
         },
         "guide": {
           "type": "article",
           "settings": {
-            "heading": "Southwest Jewelry Guide",
+            "heading": "Sydvestlig smykkeguide",
             "page": "shopify://pages/southwest-jewelry-guide"
           }
         }
@@ -507,7 +507,7 @@
         "guide"
       ],
       "settings": {
-        "heading": "Learn About Turquoise & the Artists",
+        "heading": "Lær om turkis og kunstnerne",
         "columns_desktop": 4,
         "columns_mobile": "2",
         "image_ratio": "4/3",

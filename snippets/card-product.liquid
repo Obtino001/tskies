@@ -594,48 +594,27 @@
 
     assign _unused_placeholder = placeholder_image
     assign p_idx = placeholder_index | default: 1
-    case p_idx
-      when 1
-        assign jewelry_img = 'spirit_trinity_ring_1.png'
-        assign jewelry_title = 'Spirit Turquoise Trinity Silver Ring'
-        assign jewelry_price = '$198.00'
-        assign jewelry_url = routes.collections_url | append: '/rings'
-      when 2
-        assign jewelry_img = 'radiante_vista_ring_1.png'
-        assign jewelry_title = 'Radiante Vista Turquoise Silver Ring'
-        assign jewelry_price = '$148.00'
-        assign jewelry_url = routes.collections_url | append: '/rings'
-      when 3
-        assign jewelry_img = 'stamp_dancer_attune_cuff_1.png'
-        assign jewelry_title = 'Stamp Dancer Attune Silver Cuff'
-        assign jewelry_price = '$220.00'
-        assign jewelry_url = routes.collections_url | append: '/bracelets'
-      when 4
-        assign jewelry_img = 'enchantment_zia_earrings_1.png'
-        assign jewelry_title = 'Enchantment Turquoise Post Earrings'
-        assign jewelry_price = '$95.00'
-        assign jewelry_url = routes.collections_url | append: '/earrings'
-      when 5
-        assign jewelry_img = 'gallery_row_bracelet_1.png'
-        assign jewelry_title = '9-Stone Square Turquoise Row Bracelet'
-        assign jewelry_price = '$450.00'
-        assign jewelry_url = routes.collections_url | append: '/bracelets'
-      else
-        assign jewelry_img = 'sets_enchantment_zia_set_1.png'
-        assign jewelry_title = 'Enchantment Zia Necklace & Earrings Set'
-        assign jewelry_price = '$245.00'
-        assign jewelry_url = routes.collections_url | append: '/sets'
-    endcase
+    assign idx0 = p_idx | minus: 1 | modulo: 10
+    assign titles = 'Turkis nugget og sterlingsølv perlehalskæde|3-strenget turkis og ghost beads halskæde|Turkis indlagt halvcirkel øreringe|Opal dobbeltløkke dråbeøreringe|Filigran øreringe med turkise accenter|Aventurin stenperle halskæde|Turkis perlehalskæde med sølvdetaljer|Turkis dobbeltløkke øreringe|Solansigt turkis og spiny oyster ørestikker|Turkis kanalindlagt vedhæng' | split: '|'
+    assign imgs = 'gallery_navajo_pearls_1.png|gallery_wrap_bracelet_1.png|enchantment_zia_earrings_1.png|radiante_vista_ring_1.png|stamp_dancer_attune_cuff_1.png|spirit_trinity_ring_1.png|gallery_row_bracelet_1.png|sets_petite_pendant_zia_studs_1.png|stamp_dancer_carpenter_cuff_1.png|gallery_inlay_pendant_1.png' | split: '|'
+    assign prices = '1.399,00 DKK|1.049,00 DKK|849,00 DKK|669,00 DKK|949,00 DKK|599,00 DKK|1.159,00 DKK|669,00 DKK|779,00 DKK|1.229,00 DKK' | split: '|'
+    assign urls = '/collections/necklaces|/collections/necklaces|/collections/earrings|/collections/earrings|/collections/earrings|/collections/necklaces|/collections/necklaces|/collections/earrings|/collections/earrings|/collections/necklaces' | split: '|'
+
+    assign jewelry_title = titles[idx0]
+    assign jewelry_img = imgs[idx0]
+    assign jewelry_price = prices[idx0]
+    assign jewelry_url = routes.root_url | append: urls[idx0]
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
         card card--{{ settings.card_style }}
       "
-      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+      style="--ratio-percent: 100%;"
     >
       <div
         class="card__inner{% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio"
+        style="--ratio-percent: 100%;"
       >
         <div
           class="card__media"
@@ -650,6 +629,24 @@
               style="width: 100%; height: 100%; object-fit: cover;"
             >
           </div>
+        </div>
+        <div class="tskies-card__actions">
+          <button
+            type="button"
+            class="tskies-add-to-cart-btn"
+            data-title="{{ jewelry_title | escape }}"
+            data-price="{{ jewelry_price | escape }}"
+            aria-label="{{ 'products.product.add_to_cart' | t | default: 'Læg i kurv' }}: {{ jewelry_title | escape }}"
+          >
+            <span class="tskies-btn__text">{{ 'products.product.add_to_cart' | t | default: 'Læg i kurv' }}</span>
+            <span class="tskies-btn__spinner hidden" aria-hidden="true">
+              <svg class="tskies-spinner-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <circle cx="12" cy="12" r="9" stroke-opacity="0.25"></circle>
+                <path d="M12 3a9 9 0 0 1 9 9"></path>
+              </svg>
+            </span>
+            <span class="tskies-btn__check hidden" aria-hidden="true">✓ Tilføjet</span>
+          </button>
         </div>
       </div>
       <div class="card__content">

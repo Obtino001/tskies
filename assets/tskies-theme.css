@@ -372,3 +372,205 @@ h1, h2, h3, h4, h5, h6,
   color: #ffffff !important;
 }
 
+/* Product card typography and layout matching tskies.com */
+.card__heading,
+.card__heading a,
+.card-wrapper .full-unstyled-link {
+  font-family: Marcellus, serif !important;
+  font-weight: 400 !important;
+  font-size: 1.6rem !important;
+  line-height: 1.35 !important;
+  color: #1c1d1d !important;
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 749px) {
+  .card__heading,
+  .card__heading a,
+  .card-wrapper .full-unstyled-link {
+    font-size: 1.4rem !important;
+  }
+}
+
+.card-wrapper:hover .card__heading a {
+  text-decoration: underline !important;
+}
+
+.card-wrapper .price,
+.card-wrapper .price-item,
+.card-wrapper .price-item--regular {
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  color: #1c1d1d !important;
+  margin-top: 6px !important;
+}
+
+/* Floating bottom-right "Add to cart" / "Læg i kurv" button on image */
+.card-wrapper {
+  position: relative;
+}
+
+.card__inner {
+  position: relative !important;
+}
+
+.card__inner .card__media,
+.card__inner .media,
+.card__inner .card__media img,
+.card__inner .media img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.card__inner .tskies-card__actions,
+.card-wrapper .quick-add {
+  position: absolute !important;
+  right: 8px !important;
+  bottom: 8px !important;
+  z-index: 6 !important;
+  margin: 0 !important;
+}
+
+.tskies-add-to-cart-btn,
+.quick-add__submit {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #1c1d1d !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border-radius: 4px !important;
+  padding: 5px 12px !important;
+  min-height: 28px !important;
+  min-width: 86px !important;
+  width: auto !important;
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+}
+
+.tskies-add-to-cart-btn:hover,
+.quick-add__submit:hover {
+  background-color: #f4f4f4 !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Spinner and loading animation */
+@keyframes tskies-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tskies-spinner-svg {
+  width: 14px;
+  height: 14px;
+  animation: tskies-spin 0.8s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tskies-btn__spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tskies-btn__text.hidden,
+.tskies-btn__spinner.hidden,
+.tskies-btn__check.hidden {
+  display: none !important;
+}
+
+.tskies-add-to-cart-btn.loading .tskies-btn__text,
+.tskies-add-to-cart-btn.loading .tskies-btn__check {
+  display: none !important;
+}
+
+.tskies-add-to-cart-btn.loading .tskies-btn__spinner {
+  display: inline-flex !important;
+}
+
+.tskies-add-to-cart-btn.success .tskies-btn__text,
+.tskies-add-to-cart-btn.success .tskies-btn__spinner {
+  display: none !important;
+}
+
+.tskies-add-to-cart-btn.success .tskies-btn__check {
+  display: inline-flex !important;
+}
+
+.tskies-btn__check {
+  color: #108043 !important;
+  font-weight: 600 !important;
+}
+
+/* Section Title and Underline */
+.collection__title h2,
+.collection__title .title,
+.tskies-title--center {
+  font-family: "TS Numerals", Marcellus, serif !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+  font-size: 3.2rem !important;
+  color: #1c1d1d !important;
+  letter-spacing: 0 !important;
+  margin: 0 auto !important;
+}
+
+.collection__title .title a,
+.collection__title h2 a,
+.tskies-title-link {
+  color: #1c1d1d !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 4px !important;
+  border-bottom: 2px solid #1c1d1d !important;
+}
+
+@media screen and (max-width: 749px) {
+  .collection__title h2,
+  .collection__title .title,
+  .tskies-title--center {
+    font-size: 2.4rem !important;
+  }
+}
+
+/* Shop All button below collection */
+.tskies-view-all-btn,
+.collection__view-all .button {
+  background-color: #ceb498 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 12px 32px !important;
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  text-transform: capitalize !important;
+  min-height: unset !important;
+  letter-spacing: 0.05em !important;
+  margin-top: 2.5rem !important;
+  display: inline-block !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.tskies-view-all-btn:hover,
+.collection__view-all .button:hover {
+  background-color: #bfa385 !important;
+}
+
+

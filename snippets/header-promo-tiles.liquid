@@ -13,7 +13,17 @@
   {%- for block in section.blocks -%}
     {%- if block.type == 'promo_tile' and block.settings.menu_item != blank -%}
       {%- assign tile_key = block.settings.menu_item | downcase | strip -%}
-      {%- if tile_key == parent_key -%}
+      {%- assign matches_parent = false -%}
+      {%- if tile_key == parent_key or parent_key contains tile_key or tile_key contains parent_key -%}
+        {%- assign matches_parent = true -%}
+      {%- elsif parent_key == 'shop alt' and tile_key contains 'shop' -%}
+        {%- assign matches_parent = true -%}
+      {%- elsif parent_key == 'kollektioner' and tile_key contains 'collect' -%}
+        {%- assign matches_parent = true -%}
+      {%- elsif parent_key == 'galleri' and tile_key contains 'galler' -%}
+        {%- assign matches_parent = true -%}
+      {%- endif -%}
+      {%- if matches_parent -%}
         {%- assign tile_link = block.settings.link | default: routes.collections_url -%}
         {%- assign tile_heading = block.settings.heading -%}
         <li class="header-promo-tile" {{ block.shopify_attributes }}>
@@ -29,12 +39,12 @@
                 {%- assign heading_clean = tile_heading | downcase | strip -%}
                 {%- capture promo_asset -%}
                   {%- case heading_clean -%}
-                    {%- when 'ring stacks' -%}megamenu_ring_stacks.png
-                    {%- when 'jewelry sets' -%}megamenu_jewelry_sets.jpg
+                    {%- when 'ring stacks', 'ring-stakke' -%}megamenu_ring_stacks.png
+                    {%- when 'jewelry sets', 'smykkesæt' -%}megamenu_jewelry_sets.jpg
                     {%- when 'enchantment' -%}megamenu_enchantment.png
                     {%- when 'radiante' -%}megamenu_radiante.png
-                    {%- when 'fresh off the bench' -%}megamenu_fresh_off_bench.png
-                    {%- when 'one of a kind jewelry' -%}megamenu_one_of_a_kind.jpg
+                    {%- when 'fresh off the bench', 'frisk fra værkstedet' -%}megamenu_fresh_off_bench.png
+                    {%- when 'one of a kind jewelry', 'unikke smykker' -%}megamenu_one_of_a_kind.jpg
                   {%- endcase -%}
                 {%- endcapture -%}
                 {%- assign promo_asset = promo_asset | strip -%}

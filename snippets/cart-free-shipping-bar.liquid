@@ -16,9 +16,9 @@
     <p class="cart-free-shipping__message" role="status">
       {%- if remaining_cents > 0 -%}
         {%- assign remaining_money = remaining_cents | money -%}
-        {{- settings.free_shipping_progress_message | default: '[amount] away from free shipping' | replace: '[amount]', remaining_money | escape -}}
+        {{- settings.free_shipping_progress_message | default: 'Du mangler [amount] for at opnå gratis forsendelse' | replace: '[amount]', remaining_money | escape -}}
       {%- else -%}
-        {{- settings.free_shipping_success_message | default: 'You have unlocked free shipping!' | escape -}}
+        {{- settings.free_shipping_success_message | default: 'Du har opnået gratis forsendelse!' | escape -}}
       {%- endif -%}
     </p>
     <div
@@ -27,7 +27,7 @@
       aria-valuemin="0"
       aria-valuemax="100"
       aria-valuenow="{{ progress }}"
-      aria-label="{{ settings.free_shipping_progress_label | default: 'Free shipping progress' | escape }}"
+      aria-label="{{ settings.free_shipping_progress_label | default: 'Fremskridt for gratis forsendelse' | escape }}"
     >
       <div class="cart-free-shipping__fill" style="width: {{ progress }}%"></div>
     </div>

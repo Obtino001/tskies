@@ -1599,10 +1599,10 @@
       "name": "Side"
     },
     "main-password-footer": {
-      "name": "Sidefod på adgangskodeside"
+      "name": "Adgangskode sidefod"
     },
     "main-password-header": {
-      "name": "Sidehoved på adgangskodesiden",
+      "name": "Adgangskode sidehoved",
       "settings": {
         "logo_help": {
           "content": "Rediger dit logo i [temaindstillinger](/editor?context=theme&category=logo)"
@@ -2637,7 +2637,7 @@
       }
     },
     "email-signup-banner": {
-      "name": "Banner for tilmelding med mail",
+      "name": "Mailtilmeldingsbanner",
       "settings": {
         "paragraph": {
           "content": "Tilføjelse af tilmeldinger [kundeprofiler](https://help.shopify.com/manual/customers/manage-customers)"

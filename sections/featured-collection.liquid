@@ -201,14 +201,18 @@
       {%- endif -%}
     </slider-component>
 
-    {%- if section.settings.show_view_all and more_in_collection -%}
+    {%- if section.settings.show_view_all -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
-          href="{{ section.settings.collection.url }}"
-          class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
-          aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
+          href="{{ section.settings.collection.url | default: routes.collections_url }}"
+          class="button button--primary tskies-view-all-btn"
+          aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | default: section.settings.title | escape }}"
         >
-          {{ 'sections.featured_collection.view_all' | t }}
+          {%- if section.settings.collection != blank and more_in_collection -%}
+            {{ 'sections.featured_collection.view_all' | t }}
+          {%- else -%}
+            Se alle {{ section.settings.title | strip_html | downcase }}
+          {%- endif -%}
         </a>
       </div>
     {%- endif -%}

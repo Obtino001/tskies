@@ -43,7 +43,7 @@
         "share": {
           "type": "share",
           "settings": {
-            "share_label": "Share"
+            "share_label": "Del"
           }
         },
         "trust": {
@@ -51,7 +51,7 @@
           "settings": {
             "layout": "horizontal",
             "icon_1": "truck",
-            "heading_1": "Free shipping on orders over $125",
+            "heading_1": "Gratis forsendelse på ordrer over 800 kr.",
             "icon_2": "none",
             "heading_2": "",
             "icon_3": "none",
@@ -61,7 +61,7 @@
         "shipping_tab": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
+            "heading": "Forsendelse & Returnering",
             "icon": "return",
             "page": "shipping-returns"
           }
@@ -69,7 +69,7 @@
         "care_tab": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Jewelry Care",
+            "heading": "Pleje af smykker",
             "icon": "none",
             "page": "jewelry-care"
           }
@@ -114,7 +114,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Du vil måske også synes om",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,

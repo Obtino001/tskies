@@ -52,10 +52,10 @@
                 {%- assign tile_name = label | default: block.id | downcase | strip -%}
                 {%- capture asset_file -%}
                   {%- case tile_name -%}
-                    {%- when 'rings' -%}promo_tile_rings.jpg
-                    {%- when 'earrings' -%}promo_tile_earrings.jpg
-                    {%- when 'bracelets' -%}promo_tile_bracelets.png
-                    {%- when 'necklaces' -%}promo_tile_necklaces.jpg
+                    {%- when 'rings', 'ringe' -%}promo_tile_rings.jpg
+                    {%- when 'earrings', 'øreringe' -%}promo_tile_earrings.jpg
+                    {%- when 'bracelets', 'armbånd' -%}promo_tile_bracelets.png
+                    {%- when 'necklaces', 'halskæder' -%}promo_tile_necklaces.jpg
                     {%- when 'desert blossom' -%}designer_desert_blossom.jpg
                     {%- when 'enchantment' -%}designer_enchantment.jpg
                     {%- when 'bead maiden' -%}designer_bead_maiden.png
