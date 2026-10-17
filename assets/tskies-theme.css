@@ -1136,8 +1136,7 @@ h1, h2, h3, h4, h5, h6,
 .tskies-trust-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 5px;
+  gap: 12px;
 }
 
 .tskies-trust-icon {
@@ -1146,14 +1145,14 @@ h1, h2, h3, h4, h5, h6,
   justify-content: center;
   color: #4a4a4a;
   flex-shrink: 0;
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
 }
 
 .tskies-trust-icon img {
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
@@ -1161,7 +1160,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: Roboto, sans-serif;
   font-size: 1.35rem;
   color: #333333;
-  line-height: 35px;
+  line-height: 1.4;
   font-weight: 400;
 }
 
@@ -1308,25 +1307,4 @@ h1, h2, h3, h4, h5, h6,
 .header__icon--cart .icon {
   height: 2.4rem;
   width: 2.4rem;
-}
-
-/* Collection page: load-more button and bottom description (reference layout). */
-.tskies-load-more {
-  display: flex;
-  justify-content: center;
-  margin: 3rem 0 1rem;
-}
-
-.tskies-load-more .button[aria-busy='true'] {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.tskies-collection-description__text {
-  max-width: 100%;
-}
-
-.tskies-collection-description__text--large {
-  font-size: 1.8rem;
-  line-height: 1.6;
 }
