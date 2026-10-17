@@ -1,24 +1,43 @@
+/* Reference cart drawer shipping progress: tinted box, bold 14px message, 7px rounded track. */
 .cart-free-shipping {
-  padding: 1.2rem 2rem 1.6rem;
+  --native-cart-accent: #1e5d65;
+  display: grid;
+  gap: 6px;
+  margin: 8px 2rem;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--native-cart-accent) 8%, #ffffff);
 }
 
 .cart-free-shipping__message {
-  margin: 0 0 0.8rem;
-  font-size: 1.4rem;
-  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: normal;
+}
+
+.cart-free-shipping--reached .cart-free-shipping__message,
+.native-cart-shipping--reached .cart-free-shipping__message {
+  color: var(--native-cart-accent);
 }
 
 .cart-free-shipping__track {
-  height: 0.6rem;
+  height: 7px;
   overflow: hidden;
-  background: rgba(var(--color-foreground), 0.1);
-  border-radius: 0.3rem;
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--native-cart-accent) 16%, transparent);
 }
 
 .cart-free-shipping__fill {
+  display: block;
+  width: 100%;
   height: 100%;
-  background: rgb(var(--color-button));
-  transition: width var(--duration-medium) ease;
+  border-radius: inherit;
+  background: var(--native-cart-accent);
+  transform: scaleX(var(--native-cart-progress, 0));
+  transform-origin: left;
+  transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -12,8 +12,8 @@
   {%- assign remaining_cents = threshold_cents | minus: cart.total_price -%}
   {%- assign progress = cart.total_price | times: 100 | divided_by: threshold_cents -%}
   {%- if progress > 100 -%}{%- assign progress = 100 -%}{%- endif -%}
-  <div class="cart-free-shipping" data-free-shipping-threshold="{{ threshold_cents }}">
-    <p class="cart-free-shipping__message" role="status">
+  <div class="cart-free-shipping native-cart-shipping{% if remaining_cents <= 0 %} native-cart-shipping--reached{% endif %}" data-free-shipping-threshold="{{ threshold_cents }}" style="--native-cart-progress: {{ progress | divided_by: 100.0 }}">
+    <p class="cart-free-shipping__message native-cart-shipping__message" role="status">
       {%- if remaining_cents > 0 -%}
         {%- assign remaining_money = remaining_cents | money -%}
         {{- settings.free_shipping_progress_message | default: 'Du mangler [amount] for at opnå gratis forsendelse' | replace: '[amount]', remaining_money | escape -}}
@@ -22,14 +22,14 @@
       {%- endif -%}
     </p>
     <div
-      class="cart-free-shipping__track"
+      class="cart-free-shipping__track native-cart-shipping__track"
       role="progressbar"
       aria-valuemin="0"
       aria-valuemax="100"
       aria-valuenow="{{ progress }}"
       aria-label="{{ settings.free_shipping_progress_label | default: 'Fremskridt for gratis forsendelse' | escape }}"
     >
-      <div class="cart-free-shipping__fill" style="width: {{ progress }}%"></div>
+      <div class="cart-free-shipping__fill native-cart-shipping__fill" aria-hidden="true"></div>
     </div>
   </div>
   <link rel="stylesheet" href="{{ 'component-cart-free-shipping.css' | asset_url }}">
