@@ -417,6 +417,14 @@ h1, h2, h3, h4, h5, h6,
 /* Floating bottom-right "Add to cart" / "Læg i kurv" button on image */
 .card-wrapper {
   position: relative;
+  container-type: inline-size;
+}
+
+/* The real quick-add button lives in the card text area; pin it to the bottom-right of the image instead. */
+.card-wrapper .quick-add {
+  top: calc(100cqw * var(--card-media-ratio, 1) - 8px) !important;
+  bottom: auto !important;
+  transform: translateY(-100%);
 }
 
 .card__inner {
@@ -1113,8 +1121,15 @@ h1, h2, h3, h4, h5, h6,
   justify-content: center;
   color: #4a4a4a;
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
+}
+
+.tskies-trust-icon img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .tskies-trust-text {
@@ -1262,3 +1277,16 @@ h1, h2, h3, h4, h5, h6,
 
 
 
+
+/* Header icons: the reference bag/user/search icons fill a 64px viewBox, so size all three equally. */
+.header__icon .icon,
+.header__icon--cart .icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.header__icon .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
