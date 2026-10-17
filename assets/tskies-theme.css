@@ -1462,3 +1462,42 @@ h1, h2, h3, h4, h5, h6,
 .tskies-payment-icons .icon { width: 3.8rem; height: 2.4rem; }
 
 .tskies-pdp-payment-icons { margin: 1.6rem 0; }
+
+/* Collection page header: breadcrumb styled like the product page, centered title (reference layout). */
+.collection-hero .collection-hero__breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1.6rem 0 2rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #767676;
+  text-align: left;
+}
+
+.collection-hero .collection-hero__breadcrumbs a,
+.collection-hero .collection-hero__breadcrumbs span {
+  font-size: inherit;
+  letter-spacing: 0;
+}
+
+.collection-hero .collection-hero__breadcrumbs a {
+  color: #767676;
+  text-decoration: none;
+}
+
+.collection-hero .collection-hero__breadcrumbs a:hover {
+  color: #1c1d1d;
+  text-decoration: none;
+}
+
+.collection-hero .collection-hero__breadcrumbs span[aria-hidden='true'] { color: #a8a8a8; }
+.collection-hero .collection-hero__breadcrumbs span[aria-current='page'] { color: #1c1d1d; font-weight: 500; }
+
+.collection-hero .collection-hero__title {
+  margin: 0 0 2.4rem;
+  text-align: center;
+}
