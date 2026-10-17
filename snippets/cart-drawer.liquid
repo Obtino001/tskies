@@ -64,7 +64,7 @@
         </div>
       {%- endif -%}
       <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}<span class="tskies-cart-count">({{ cart.item_count }})</span></h2>
         <button
           class="drawer__close"
           type="button"
@@ -527,7 +527,7 @@
           </div>
 
           <div class="totals" role="status">
-            <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
+            <h2 class="totals__total">{{ 'sections.cart.subtotal' | t }}</h2>
             <p class="totals__total-value">{{ cart.total_price | money_without_trailing_zeros | replace: cart.currency.iso_code, '' | strip | append: ' ' | append: cart.currency.iso_code }}</p>
           </div>
 
@@ -585,6 +585,7 @@
               disabled
             {% endif %}
           >
+            <span class="svg-wrapper tskies-checkout-lock" aria-hidden="true">{{- 'icon-lock.svg' | inline_asset_content -}}</span>
             {{ 'sections.cart.checkout' | t }}
           </button>
         </div>

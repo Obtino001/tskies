@@ -400,8 +400,12 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-.card-wrapper:hover .card__heading a {
-  text-decoration: underline !important;
+.card-wrapper:hover .card__heading a,
+.card-wrapper:hover .full-unstyled-link,
+.card-wrapper .card__heading a:hover,
+.underline-links-hover:hover a,
+.underline-links-hover a:hover {
+  text-decoration: none !important;
 }
 
 .card-wrapper .price,
