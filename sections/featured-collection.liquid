@@ -39,9 +39,18 @@
 {%- endstyle -%}
 
 {%- liquid
-  assign products_to_display = section.settings.collection.all_products_count
+  comment
+    Use the selected collection; if it is missing or empty, fall back to the store's real catalogue
+    so cards always link to real products and add to the real cart.
+  endcomment
+  assign source_collection = section.settings.collection
+  if source_collection == blank or source_collection.products_count == 0
+    assign source_collection = collections.all
+  endif
 
-  if section.settings.collection.all_products_count > section.settings.products_to_show
+  assign products_to_display = source_collection.all_products_count
+
+  if source_collection.all_products_count > section.settings.products_to_show
     assign products_to_display = section.settings.products_to_show
     assign more_in_collection = true
   endif
@@ -78,8 +87,8 @@
       {%- endif -%}
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if section.settings.center_title %} tskies-title--center{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-          {%- if section.settings.link_title and section.settings.collection != blank -%}
-            <a href="{{ section.settings.collection.url }}" class="tskies-title-link">{{ section.settings.title }}</a>
+          {%- if section.settings.link_title and source_collection != blank -%}
+            <a href="{{ source_collection.url }}" class="tskies-title-link">{{ section.settings.title }}</a>
           {%- else -%}
             {{ section.settings.title }}
           {%- endif -%}
@@ -109,10 +118,10 @@
       >
         {% assign skip_card_product_styles = false %}
 
-        {%- if section.settings.collection.products.size > 0 -%}
+        {%- if source_collection.products.size > 0 -%}
           {% assign lazy_load = false %}
-          {% paginate section.settings.collection.products by section.settings.products_to_show %}
-            {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          {% paginate source_collection.products by section.settings.products_to_show %}
+            {%- for product in source_collection.products limit: section.settings.products_to_show -%}
               {% if lazy_load == false and forloop.index > max_columns_to_show %}
                 {% assign lazy_load = true %}
               {% endif %}
@@ -204,7 +213,7 @@
     {%- if section.settings.show_view_all -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
-          href="{{ section.settings.collection.url | default: routes.collections_url }}"
+          href="{{ source_collection.url | default: routes.collections_url }}"
           class="button button--primary tskies-view-all-btn"
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | default: section.settings.title | escape }}"
         >
