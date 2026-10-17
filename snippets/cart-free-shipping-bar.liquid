@@ -15,7 +15,7 @@
   <div class="cart-free-shipping native-cart-shipping{% if remaining_cents <= 0 %} native-cart-shipping--reached{% endif %}" data-free-shipping-threshold="{{ threshold_cents }}" style="--native-cart-progress: {{ progress | divided_by: 100.0 }}">
     <p class="cart-free-shipping__message native-cart-shipping__message" role="status">
       {%- if remaining_cents > 0 -%}
-        {%- assign remaining_money = remaining_cents | money -%}
+        {%- assign remaining_money = remaining_cents | money_without_trailing_zeros -%}
         {{- settings.free_shipping_progress_message | default: 'Du mangler [amount] for at opnå gratis forsendelse' | replace: '[amount]', remaining_money | escape -}}
       {%- else -%}
         {{- settings.free_shipping_success_message | default: 'Du har opnået gratis forsendelse!' | escape -}}

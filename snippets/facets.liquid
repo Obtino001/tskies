@@ -97,7 +97,7 @@
                       <facet-remove>
                         <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
                           <span class="active-facets__button-inner button button--tertiary">
-                            {{ min | default: 0 | money }} - {{ max | default: filter.range_max | money }}
+                            {{ min | default: 0 | money_without_trailing_zeros }} - {{ max | default: filter.range_max | money_without_trailing_zeros }}
                             <span class="svg-wrapper">
                               {{- 'icon-close-small.svg' | inline_asset_content -}}
                             </span>
@@ -319,7 +319,7 @@
                       class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
                     >
                       <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
-                        {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
+                        {%- assign max_price_amount = filter.range_max | money_without_trailing_zeros | strip_html | escape -%}
                         <span class="facets__selected">
                           {{- 'products.facets.max_price' | t: price: max_price_amount -}}
                         </span>
@@ -363,7 +363,7 @@
                     <facet-remove>
                       <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
                         <span class="active-facets__button-inner button button--tertiary">
-                          {{ min | default: 0 | money }} - {{ max | default: filter.range_max | money }}
+                          {{ min | default: 0 | money_without_trailing_zeros }} - {{ max | default: filter.range_max | money_without_trailing_zeros }}
                           <span class="svg-wrapper">
                             {{- 'icon-close-small.svg' | inline_asset_content -}}
                           </span>
@@ -692,7 +692,7 @@
                             {{ filter.label | escape }}
                           </button>
 
-                          {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
+                          {%- assign max_price_amount = filter.range_max | money_without_trailing_zeros | strip_html | escape -%}
                           <p class="mobile-facets__info">
                             {{ 'products.facets.max_price' | t: price: max_price_amount }}
                           </p>
@@ -809,7 +809,7 @@
           <facet-remove>
             <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
               <span class="active-facets__button-inner button button--tertiary">
-                {{ min | default: 0 | money }} - {{ max | default: filter.range_max | money }}
+                {{ min | default: 0 | money_without_trailing_zeros }} - {{ max | default: filter.range_max | money_without_trailing_zeros }}
                 <span class="svg-wrapper">
                   {{- 'icon-close-small.svg' | inline_asset_content -}}
                 </span>
@@ -922,7 +922,7 @@
                 <facet-remove>
                   <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
                     <span class="active-facets__button-inner button button--tertiary">
-                      {{ min | default: 0 | money }} - {{ max | default: filter.range_max | money }}
+                      {{ min | default: 0 | money_without_trailing_zeros }} - {{ max | default: filter.range_max | money_without_trailing_zeros }}
                       <span class="svg-wrapper">
                         {{- 'icon-close-small.svg' | inline_asset_content -}}
                       </span>

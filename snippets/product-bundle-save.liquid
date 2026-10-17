@@ -35,7 +35,7 @@
           <span class="tskies-bundle__tier-heading">En ring</span>
         </label>
         <div class="tskies-bundle__tier-pricing">
-          <span class="tskies-bundle__price tskies-bundle__price--single">{{ current_price | money }}</span>
+          <span class="tskies-bundle__price tskies-bundle__price--single">{{ current_price | money_without_trailing_zeros }}</span>
         </div>
       </div>
 
@@ -105,12 +105,12 @@
           <span class="tskies-bundle__radio-dot"></span>
           <div class="tskies-bundle__tier-title-group">
             <span class="tskies-bundle__tier-heading">To ringe</span>
-            <span class="tskies-bundle__save-text">Du sparer {{ bundle_discount_cents | money }}</span>
+            <span class="tskies-bundle__save-text">Du sparer {{ bundle_discount_cents | money_without_trailing_zeros }}</span>
           </div>
         </label>
         <div class="tskies-bundle__tier-pricing">
-          <span class="tskies-bundle__price tskies-bundle__price--discounted">{{ discounted_double_price | money }}</span>
-          <s class="tskies-bundle__price-compare">{{ double_price | money }}</s>
+          <span class="tskies-bundle__price tskies-bundle__price--discounted">{{ discounted_double_price | money_without_trailing_zeros }}</span>
+          <s class="tskies-bundle__price-compare">{{ double_price | money_without_trailing_zeros }}</s>
         </div>
       </div>
     </div>
