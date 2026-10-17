@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "category_links": {
@@ -8,7 +17,7 @@
           "settings": {
             "collection": "best-sellers",
             "label": "Bestsellere",
-            "image": ""
+            "link": ""
           }
         },
         "gallery": {
@@ -16,7 +25,7 @@
           "settings": {
             "collection": "one-of-a-kind-styles",
             "label": "Galleri",
-            "image": ""
+            "link": ""
           }
         },
         "rings": {
@@ -24,7 +33,7 @@
           "settings": {
             "collection": "rings",
             "label": "Ringe",
-            "image": ""
+            "link": ""
           }
         },
         "bracelets": {
@@ -32,7 +41,7 @@
           "settings": {
             "collection": "bracelets",
             "label": "Armbånd",
-            "image": ""
+            "link": ""
           }
         },
         "necklaces": {
@@ -40,7 +49,7 @@
           "settings": {
             "collection": "necklaces",
             "label": "Halskæder",
-            "image": ""
+            "link": ""
           }
         },
         "earrings": {
@@ -48,7 +57,7 @@
           "settings": {
             "collection": "earrings",
             "label": "Øreringe",
-            "image": ""
+            "link": ""
           }
         }
       },
@@ -61,6 +70,7 @@
         "earrings"
       ],
       "settings": {
+        "hide_on_desktop": true,
         "circle_size": 96,
         "circle_size_mobile": 64,
         "color_scheme": "scheme-1",
@@ -74,7 +84,6 @@
         "turquoise": {
           "type": "slide",
           "settings": {
-            "image": "",
             "image_overlay_opacity": 20,
             "heading": "Ægte turkise smykker",
             "heading_size": "h1",
@@ -92,7 +101,6 @@
         "native": {
           "type": "slide",
           "settings": {
-            "image": "",
             "image_overlay_opacity": 40,
             "heading": "Autentiske indianske smykker",
             "heading_size": "h1",
@@ -110,7 +118,6 @@
         "rings": {
           "type": "slide",
           "settings": {
-            "image": "",
             "image_overlay_opacity": 30,
             "heading": "Turkise ringe",
             "heading_size": "h1",
@@ -128,7 +135,6 @@
         "radiante": {
           "type": "slide",
           "settings": {
-            "image": "",
             "image_overlay_opacity": 0,
             "heading": "Radiante",
             "heading_size": "h1",
@@ -146,7 +152,6 @@
         "stamp": {
           "type": "slide",
           "settings": {
-            "image": "",
             "image_overlay_opacity": 0,
             "heading": "Stamp Dancer",
             "heading_size": "h1",
@@ -224,32 +229,36 @@
           "type": "tile",
           "settings": {
             "collection": "rings",
-            "image": "",
-            "title": "Ringe"
+            "title": "Ringe",
+            "link": "",
+            "wide": false
           }
         },
         "earrings": {
           "type": "tile",
           "settings": {
             "collection": "earrings",
-            "image": "",
-            "title": "Øreringe"
+            "title": "Øreringe",
+            "link": "",
+            "wide": false
           }
         },
         "bracelets": {
           "type": "tile",
           "settings": {
             "collection": "bracelets",
-            "image": "",
-            "title": "Armbånd"
+            "title": "Armbånd",
+            "link": "",
+            "wide": false
           }
         },
         "necklaces": {
           "type": "tile",
           "settings": {
             "collection": "necklaces",
-            "image": "",
-            "title": "Halskæder"
+            "title": "Halskæder",
+            "link": "",
+            "wide": false
           }
         }
       },
@@ -260,6 +269,8 @@
         "necklaces"
       ],
       "settings": {
+        "heading": "",
+        "columns_desktop": 4,
         "gap": 0,
         "overlay_opacity": 25,
         "title_size": 25,
@@ -272,27 +283,33 @@
     "best_sellers": {
       "type": "featured-collection",
       "settings": {
-        "title": "Bestsellere",
-        "heading_size": "h2",
         "collection": "best-sellers",
         "products_to_show": 10,
-        "columns_desktop": 5,
-        "color_scheme": "scheme-1",
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "title": "Bestsellere",
+        "heading_size": "h2",
         "subtitle": "Shop",
         "center_title": true,
         "link_title": true,
-        "show_description": false
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 5,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "savings_badge_text": "",
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "designer_collections": {
@@ -302,8 +319,8 @@
           "type": "tile",
           "settings": {
             "collection": "desert-blossom",
-            "image": "",
             "title": "Desert Blossom",
+            "link": "",
             "wide": true
           }
         },
@@ -311,40 +328,45 @@
           "type": "tile",
           "settings": {
             "collection": "enchantment",
-            "image": "",
-            "title": "Enchantment"
+            "title": "Enchantment",
+            "link": "",
+            "wide": false
           }
         },
         "bead_maiden": {
           "type": "tile",
           "settings": {
             "collection": "bead-maiden",
-            "image": "",
-            "title": "Bead Maiden"
+            "title": "Bead Maiden",
+            "link": "",
+            "wide": false
           }
         },
         "radiante": {
           "type": "tile",
           "settings": {
             "collection": "radiante",
-            "image": "",
-            "title": "Radiante"
+            "title": "Radiante",
+            "link": "",
+            "wide": false
           }
         },
         "skyweaver": {
           "type": "tile",
           "settings": {
             "collection": "skyweaver",
-            "image": "",
-            "title": "SkyWeaver"
+            "title": "SkyWeaver",
+            "link": "",
+            "wide": false
           }
         },
         "stamp_dancer": {
           "type": "tile",
           "settings": {
             "collection": "stamp-dancer",
-            "image": "",
-            "title": "Stamp Dancer"
+            "title": "Stamp Dancer",
+            "link": "",
+            "wide": false
           }
         }
       },
@@ -357,7 +379,8 @@
         "stamp_dancer"
       ],
       "settings": {
-        "columns_desktop": 3,
+        "heading": "",
+        "columns_desktop": 4,
         "gap": 0,
         "overlay_opacity": 25,
         "title_size": 25,
@@ -370,54 +393,65 @@
     "gallery_jewelry": {
       "type": "featured-collection",
       "settings": {
-        "title": "Gallerismykker",
-        "heading_size": "h2",
         "collection": "one-of-a-kind-styles",
         "products_to_show": 10,
-        "columns_desktop": 5,
-        "color_scheme": "scheme-1",
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "title": "Gallerismykker",
+        "heading_size": "h2",
         "subtitle": "Lige ankommet, håndlavet af kunsthåndværkere",
         "center_title": true,
         "link_title": true,
-        "show_description": false
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 5,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "savings_badge_text": "",
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "jewelry_sets": {
       "type": "featured-collection",
       "settings": {
-        "title": "Smykkesæt",
-        "heading_size": "h2",
         "collection": "sets",
         "products_to_show": 10,
-        "columns_desktop": 5,
-        "color_scheme": "scheme-1",
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "title": "Smykkesæt",
+        "heading_size": "h2",
         "subtitle": "Kombiner og spar",
         "center_title": true,
         "link_title": true,
+        "description": "",
         "show_description": false,
-        "savings_badge_text": "Spar [amount]"
+        "description_style": "body",
+        "columns_desktop": 5,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "savings_badge_text": "Spar [amount]",
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "brand_story": {
@@ -426,14 +460,12 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "",
             "link": "shopify://pages/about-us"
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "",
             "link": "shopify://pages/about-us"
           }
         }
@@ -461,8 +493,10 @@
       "settings": {
         "heading": "Tillykke til vores KITA-stipendievinder Karolina Chapo!",
         "heading_size": "h2",
+        "enable_video_looping": false,
         "video_url": "https://www.youtube.com/watch?v=a-xWD0KOWXk",
         "description": "Dette års KITA-stipendium er blevet tildelt Navajo-danseren Karolina Chapo. Se hendes historie for at opleve, hvordan hun bevarer oprindelige traditioner gennem dansens kunst.",
+        "full_width": false,
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -475,28 +509,36 @@
           "type": "article",
           "settings": {
             "heading": "Turkise miner",
-            "page": "shopify://pages/turquoise-mines"
+            "description": "",
+            "page": "shopify://pages/turquoise-mines",
+            "link": ""
           }
         },
         "artists": {
           "type": "article",
           "settings": {
             "heading": "Mød sølvsmedene",
-            "page": "shopify://pages/silversmiths"
+            "description": "",
+            "page": "shopify://pages/silversmiths",
+            "link": ""
           }
         },
         "real_turquoise": {
           "type": "article",
           "settings": {
             "heading": "Sådan genkender du ægte turkis",
-            "page": "shopify://pages/how-to-tell-real-turquoise"
+            "description": "",
+            "page": "shopify://pages/how-to-tell-real-turquoise",
+            "link": ""
           }
         },
         "guide": {
           "type": "article",
           "settings": {
             "heading": "Sydvestlig smykkeguide",
-            "page": "shopify://pages/southwest-jewelry-guide"
+            "description": "",
+            "page": "shopify://pages/southwest-jewelry-guide",
+            "link": ""
           }
         }
       },
@@ -508,13 +550,14 @@
       ],
       "settings": {
         "heading": "Lær om turkis og kunstnerne",
+        "description": "",
+        "layout": "links",
         "columns_desktop": 4,
         "columns_mobile": "2",
         "image_ratio": "4/3",
         "color_scheme": "scheme-1",
         "padding_top": 24,
-        "padding_bottom": 28,
-        "layout": "links"
+        "padding_bottom": 28
       }
     }
   },
