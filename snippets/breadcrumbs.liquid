@@ -1,0 +1,25 @@
+{%- doc -%}
+  Renders breadcrumbs for product and collection pages.
+{%- enddoc -%}
+
+<nav class="tskies-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="tskies-breadcrumbs__list" role="list">
+    <li class="tskies-breadcrumbs__item">
+      <a href="{{ routes.root_url }}" class="tskies-breadcrumbs__link">
+        Hjem
+      </a>
+    </li>
+    {%- if collection -%}
+      <li class="tskies-breadcrumbs__separator" aria-hidden="true">/</li>
+      <li class="tskies-breadcrumbs__item">
+        <a href="{{ collection.url }}" class="tskies-breadcrumbs__link">
+          {{- collection.title -}}
+        </a>
+      </li>
+    {%- endif -%}
+    <li class="tskies-breadcrumbs__separator" aria-hidden="true">/</li>
+    <li class="tskies-breadcrumbs__item tskies-breadcrumbs__item--active" aria-current="page">
+      <span>{{ product.title }}</span>
+    </li>
+  </ol>
+</nav>

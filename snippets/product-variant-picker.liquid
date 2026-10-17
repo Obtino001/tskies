@@ -48,8 +48,27 @@
           %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
-        <fieldset class="js product-form__input product-form__input--pill">
-          <legend class="form__label">{{ option.name }}</legend>
+        {%- assign opt_name_lower = option.name | downcase -%}
+        {%- assign is_size_option = false -%}
+        {%- if opt_name_lower contains 'size' or opt_name_lower contains 'størrelse' or opt_name_lower contains 'ring' -%}
+          {%- assign is_size_option = true -%}
+        {%- endif -%}
+        <fieldset class="js product-form__input product-form__input--pill{% if is_size_option %} product-form__input--square-sizes{% endif %}">
+          <legend class="form__label{% if is_size_option %} form__label--with-size-chart{% endif %}">
+            <span class="tskies-variant-option-name">{{ option.name }}</span>
+            {%- if is_size_option -%}
+              <span class="tskies-size-chart-divider">—</span>
+              <button
+                type="button"
+                class="tskies-size-chart-trigger"
+                data-modal-open="#TskiesSizeChartModal"
+                aria-haspopup="dialog"
+              >
+                Størrelsesguide
+                <span class="tskies-ruler-icon" aria-hidden="true">📏</span>
+              </button>
+            {%- endif -%}
+          </legend>
           {% render 'product-variant-options',
             option: option,
             block: block,

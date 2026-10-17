@@ -3,15 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
+          "settings": {}
+        },
+        "rating": {
+          "type": "rating",
           "settings": {}
         },
         "price": {
@@ -22,41 +19,35 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "circle"
+            "swatch_shape": "none"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 15,
+            "show_inventory_quantity": true
+          }
+        },
+        "bundle_and_save": {
+          "type": "bundle_and_save",
           "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
           }
+        },
+        "trust_badges": {
+          "type": "trust_badges",
+          "settings": {}
         },
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Del"
-          }
-        },
-        "trust": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "horizontal",
-            "icon_1": "truck",
-            "heading_1": "Gratis forsendelse på ordrer over 800 kr.",
-            "icon_2": "none",
-            "heading_2": "",
-            "icon_3": "none",
-            "heading_3": ""
-          }
         },
         "shipping_tab": {
           "type": "collapsible_tab",
@@ -76,39 +67,32 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
+        "rating",
         "price",
         "variant_picker",
-        "quantity_selector",
+        "inventory",
+        "bundle_and_save",
         "buy_buttons",
-        "trust",
+        "trust_badges",
         "description",
         "shipping_tab",
-        "care_tab",
-        "share"
+        "care_tab"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "mobile_thumbnails": "hide",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
         "media_position": "left",
         "image_zoom": "lightbox",
-        "hide_variants": true,
+        "hide_variants": false,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
-      }
-    },
-    "disclosures": {
-      "type": "disclosures",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 0
+        "padding_top": 20,
+        "padding_bottom": 24
       }
     },
     "related-products": {
@@ -132,7 +116,6 @@
   },
   "order": [
     "main",
-    "disclosures",
     "related-products"
   ]
 }

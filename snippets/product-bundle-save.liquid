@@ -1,0 +1,118 @@
+{%- doc -%}
+  Renders the authentic T.Skies "Bundle & Save" tier selector for the PDP.
+{%- enddoc -%}
+
+{%- liquid
+  assign current_price = product.selected_or_first_available_variant.price | default: product.price
+  assign double_price = current_price | times: 2
+  assign bundle_discount_cents = current_price | times: 2 | times: 10 | divided_by: 100
+  assign discounted_double_price = double_price | minus: bundle_discount_cents
+
+  assign size_option = null
+  for opt in product.options_with_values
+    assign opt_name = opt.name | downcase
+    if opt_name contains 'size' or opt_name contains 'størrelse' or opt_name contains 'ring'
+      assign size_option = opt
+      break
+    endif
+  endfor
+-%}
+
+<div class="tskies-bundle" data-product-price="{{ current_price }}">
+  <div class="tskies-bundle__header">
+    <span class="tskies-bundle__line"></span>
+    <span class="tskies-bundle__title">Køb flere & spar</span>
+    <span class="tskies-bundle__line"></span>
+  </div>
+
+  <div class="tskies-bundle__tiers" role="radiogroup" aria-label="Køb flere & spar">
+    <!-- Tier 1: One Ring -->
+    <div class="tskies-bundle__tier tskies-bundle__tier--active" data-tier="1" data-quantity="1">
+      <div class="tskies-bundle__tier-row">
+        <label class="tskies-bundle__tier-label">
+          <input type="radio" name="tskies_bundle_choice" value="1" checked class="tskies-bundle__radio">
+          <span class="tskies-bundle__radio-dot"></span>
+          <span class="tskies-bundle__tier-heading">En ring</span>
+        </label>
+        <div class="tskies-bundle__tier-pricing">
+          <span class="tskies-bundle__price tskies-bundle__price--single">{{ current_price | money }}</span>
+        </div>
+      </div>
+
+      <div class="tskies-bundle__tier-body">
+        <div class="tskies-bundle__subcard">
+          <div class="tskies-bundle__item-thumb">
+            {%- if product.featured_image != blank -%}
+              <img
+                src="{{ product.featured_image | image_url: width: 120 }}"
+                alt="{{ product.title | escape }}"
+                width="60"
+                height="60"
+                loading="lazy"
+              >
+            {%- else -%}
+              <img
+                src="{{ 'radiante_vista_ring_1.png' | asset_url }}"
+                alt="{{ product.title | escape }}"
+                width="60"
+                height="60"
+                loading="lazy"
+              >
+            {%- endif -%}
+          </div>
+          <div class="tskies-bundle__item-details">
+            <span class="tskies-bundle__item-title">{{ product.title | default: 'Radiante: Vista Turquoise Ring' }}</span>
+            <div class="tskies-bundle__item-actions">
+              <div class="tskies-bundle__size-wrap">
+                <select class="tskies-bundle__size-select" aria-label="Vælg størrelse">
+                  {%- if size_option != null -%}
+                    {%- for val in size_option.values -%}
+                      <option value="{{ val | escape }}" {% if forloop.first %}selected{% endif %}>{{ val | escape }}</option>
+                    {%- endfor -%}
+                  {%- else -%}
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7" selected>7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                  {%- endif -%}
+                </select>
+                <span class="svg-wrapper tskies-bundle__caret">
+                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                </span>
+              </div>
+              <div class="tskies-bundle__qty-stepper">
+                <button type="button" class="tskies-bundle__qty-btn tskies-bundle__qty-minus" aria-label="Decrease quantity">−</button>
+                <input type="number" class="tskies-bundle__qty-val" value="1" min="1" max="10" readonly aria-label="Quantity">
+                <button type="button" class="tskies-bundle__qty-btn tskies-bundle__qty-plus" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tier 2: Two Rings (Most Popular) -->
+    <div class="tskies-bundle__tier" data-tier="2" data-quantity="2">
+      <span class="tskies-bundle__popular-badge">MEST POPULÆRE</span>
+      <div class="tskies-bundle__tier-row">
+        <label class="tskies-bundle__tier-label">
+          <input type="radio" name="tskies_bundle_choice" value="2" class="tskies-bundle__radio">
+          <span class="tskies-bundle__radio-dot"></span>
+          <div class="tskies-bundle__tier-title-group">
+            <span class="tskies-bundle__tier-heading">To ringe</span>
+            <span class="tskies-bundle__save-text">Du sparer {{ bundle_discount_cents | money }}</span>
+          </div>
+        </label>
+        <div class="tskies-bundle__tier-pricing">
+          <span class="tskies-bundle__price tskies-bundle__price--discounted">{{ discounted_double_price | money }}</span>
+          <s class="tskies-bundle__price-compare">{{ double_price | money }}</s>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

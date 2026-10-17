@@ -365,9 +365,17 @@ h1, h2, h3, h4, h5, h6,
 .tskies-tiles__link,
 .tskies-tiles__link:hover,
 .tskies-tiles__link:focus,
-.tskies-tiles__link:visited,
+.tskies-tiles__link:visited {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
 .tskies-tiles__title,
-.tskies-tiles__title.h4,
+.tskies-tiles__title.h4 {
+  position: absolute !important;
+  color: #ffffff !important;
+}
+
 .tskies-tiles__title span {
   color: #ffffff !important;
 }
@@ -572,5 +580,685 @@ h1, h2, h3, h4, h5, h6,
 .collection__view-all .button:hover {
   background-color: #bfa385 !important;
 }
+
+/* ==========================================================================
+   T.Skies PDP (Product Detail Page) 1-to-1 Styles
+   ========================================================================== */
+
+/* Breadcrumbs */
+.tskies-breadcrumbs {
+  margin: 1.6rem 0 2rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1.25rem;
+  color: #767676;
+}
+
+.tskies-breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tskies-breadcrumbs__link {
+  color: #767676;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tskies-breadcrumbs__link:hover {
+  color: #1c1d1d;
+  text-decoration: underline;
+}
+
+.tskies-breadcrumbs__separator {
+  color: #a8a8a8;
+  user-select: none;
+}
+
+.tskies-breadcrumbs__item--active span {
+  color: #1c1d1d;
+  font-weight: 500;
+}
+
+/* PDP Main Title */
+.product__title h1,
+.product__title .h1 {
+  font-family: "TS Numerals", Marcellus, serif !important;
+  font-size: 3.2rem !important;
+  line-height: 1.25 !important;
+  color: #1c1d1d !important;
+  font-weight: 400 !important;
+  margin: 0 0 0.8rem 0 !important;
+  letter-spacing: 0 !important;
+}
+
+@media screen and (max-width: 749px) {
+  .product__title h1,
+  .product__title .h1 {
+    font-size: 2.6rem !important;
+  }
+}
+
+/* PDP Review Stars */
+.tskies-pdp-rating {
+  margin: 0.4rem 0 1.2rem;
+}
+
+.tskies-gold-stars {
+  color: #d4af37;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  line-height: 1;
+  display: inline-block;
+  user-select: none;
+}
+
+/* PDP Price */
+.product .price .price-item--regular,
+.product .price .price-item--sale {
+  font-family: Roboto, sans-serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 600 !important;
+  color: #1c1d1d !important;
+  letter-spacing: 0 !important;
+}
+
+/* PDP Variant Picker: Ring Size & Size Chart */
+.form__label--with-size-chart {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin-bottom: 1rem !important;
+}
+
+.tskies-variant-option-name {
+  font-family: Roboto, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1c1d1d;
+}
+
+.tskies-size-chart-divider {
+  color: #767676;
+}
+
+.tskies-size-chart-trigger {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 1.3rem;
+  color: #767676;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.tskies-size-chart-trigger:hover {
+  color: #1c1d1d;
+}
+
+.tskies-ruler-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Square Ring Size Buttons */
+.product-form__input--square-sizes {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 0 1.6rem 0 !important;
+}
+
+.product-form__input--square-sizes input[type='radio'] {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+}
+
+.product-form__input--square-sizes input[type='radio'] + label {
+  min-width: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 10px !important;
+  border: 1px solid #d2d2d2 !important;
+  border-radius: 2px !important;
+  background: #ffffff !important;
+  color: #1c1d1d !important;
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.product-form__input--square-sizes input[type='radio'] + label:hover {
+  border-color: #1c1d1d !important;
+}
+
+.product-form__input--square-sizes input[type='radio']:checked + label {
+  border: 2px solid #1c1d1d !important;
+  font-weight: 700 !important;
+  color: #1c1d1d !important;
+  background-color: #ffffff !important;
+}
+
+.product-form__input--square-sizes input[type='radio'].disabled + label {
+  opacity: 0.35 !important;
+  text-decoration: line-through !important;
+  cursor: not-allowed !important;
+}
+
+/* Stock Indicator with Amber Dot */
+.tskies-stock-indicator {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0.6rem 0 1.6rem !important;
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.35rem !important;
+  color: #4a4a4a !important;
+}
+
+.tskies-stock-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.tskies-stock-dot--low {
+  background-color: #d97706;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2);
+}
+
+.tskies-stock-dot--in {
+  background-color: #10b981;
+}
+
+.tskies-stock-text {
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+/* Bundle & Save Block */
+.tskies-bundle {
+  margin: 1.8rem 0;
+  width: 100%;
+}
+
+.tskies-bundle__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.2rem;
+}
+
+.tskies-bundle__line {
+  flex: 1;
+  height: 1px;
+  background-color: #dcdad7;
+}
+
+.tskies-bundle__title {
+  font-family: Roboto, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #4a4a4a;
+  white-space: nowrap;
+}
+
+.tskies-bundle__tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tskies-bundle__tier {
+  position: relative;
+  border: 1.5px solid #d2d2d2;
+  border-radius: 6px;
+  padding: 1.4rem 1.6rem;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.tskies-bundle__tier--active {
+  border-color: #ceb498;
+  background: #faf8f5;
+}
+
+.tskies-bundle__tier-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tskies-bundle__tier-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.tskies-bundle__radio {
+  display: none !important;
+}
+
+.tskies-bundle__radio-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #8e8e8e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease;
+}
+
+.tskies-bundle__tier--active .tskies-bundle__radio-dot {
+  border-color: #bfa385;
+}
+
+.tskies-bundle__tier--active .tskies-bundle__radio-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #bfa385;
+}
+
+.tskies-bundle__tier-heading {
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1c1d1d;
+}
+
+.tskies-bundle__tier-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.tskies-bundle__save-text {
+  font-size: 1.25rem;
+  color: #2e7d32;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.tskies-bundle__tier-pricing {
+  text-align: right;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.tskies-bundle__price {
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1c1d1d;
+}
+
+.tskies-bundle__price-compare {
+  color: #767676;
+  font-size: 1.3rem;
+  text-decoration: line-through;
+}
+
+.tskies-bundle__popular-badge {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  background-color: #ceb498;
+  color: #ffffff;
+  font-family: Roboto, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+/* Subcard inside Tier 1 */
+.tskies-bundle__subcard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e8e6e3;
+  border-radius: 4px;
+}
+
+.tskies-bundle__item-thumb img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 2px;
+  background: #faf7f5;
+  display: block;
+}
+
+.tskies-bundle__item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tskies-bundle__item-title {
+  font-family: Marcellus, serif;
+  font-size: 1.45rem;
+  color: #1c1d1d;
+  font-weight: 400;
+}
+
+.tskies-bundle__item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tskies-bundle__size-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tskies-bundle__size-select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #d2d2d2;
+  border-radius: 2px;
+  padding: 6px 28px 6px 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.tskies-bundle__caret {
+  position: absolute;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  color: #767676;
+}
+
+.tskies-bundle__qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d2d2d2;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.tskies-bundle__qty-btn {
+  background: none;
+  border: none;
+  width: 28px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #1c1d1d;
+  user-select: none;
+  transition: background-color 0.15s ease;
+}
+
+.tskies-bundle__qty-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.tskies-bundle__qty-val {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  -moz-appearance: textfield;
+}
+
+.tskies-bundle__qty-val::-webkit-outer-spin-button,
+.tskies-bundle__qty-val::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Primary PDP Add to Cart Button */
+.product-form__submit {
+  width: 100% !important;
+  background-color: #ceb498 !important;
+  color: #ffffff !important;
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: none !important;
+  border: none !important;
+  border-radius: 0px !important;
+  min-height: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background-color 0.25s ease, opacity 0.25s ease !important;
+  cursor: pointer !important;
+  margin: 1.4rem 0 !important;
+}
+
+.product-form__submit:hover {
+  background-color: #bfa385 !important;
+}
+
+/* Trust Badges / Value Propositions */
+.tskies-trust-list {
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.tskies-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tskies-trust-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a4a4a;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.tskies-trust-text {
+  font-family: Roboto, sans-serif;
+  font-size: 1.35rem;
+  color: #333333;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* Size Chart Modal */
+.tskies-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.tskies-modal[hidden] {
+  display: none !important;
+}
+
+.tskies-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.tskies-modal__content {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  border-radius: 4px;
+  max-width: 580px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tskies-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.tskies-modal__title {
+  font-family: "TS Numerals", Marcellus, serif;
+  font-size: 2.4rem;
+  color: #1c1d1d;
+  margin: 0;
+}
+
+.tskies-modal__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: #767676;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.tskies-modal__close:hover {
+  color: #1c1d1d;
+}
+
+.tskies-modal__intro {
+  font-family: Roboto, sans-serif;
+  font-size: 1.35rem;
+  color: #666666;
+  margin: 0 0 1.8rem 0;
+  line-height: 1.5;
+}
+
+.tskies-modal__table-wrap {
+  overflow-x: auto;
+}
+
+.tskies-size-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Roboto, sans-serif;
+  font-size: 1.3rem;
+}
+
+.tskies-size-table th {
+  background: #f7f5f2;
+  color: #1c1d1d;
+  font-weight: 600;
+  padding: 10px 12px;
+  text-align: center;
+  border: 1px solid #e2dfdb;
+}
+
+.tskies-size-table td {
+  padding: 9px 12px;
+  text-align: center;
+  border: 1px solid #e8e6e3;
+  color: #333333;
+}
+
+.tskies-size-table tr:nth-child(even) td {
+  background: #faf9f7;
+}
+
+/* Media Gallery Thumbnail row */
+.product--thumbnail_slider .thumbnail-list {
+  display: flex !important;
+  gap: 8px !important;
+  margin-top: 14px !important;
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+.product--thumbnail_slider .thumbnail-list__item {
+  width: 64px !important;
+  height: 64px !important;
+  flex: 0 0 64px !important;
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 2px !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.product--thumbnail_slider .thumbnail-list__item:hover,
+.product--thumbnail_slider .thumbnail-list__item[aria-current='true'] {
+  border: 1.5px solid #1c1d1d !important;
+}
+
+.product--thumbnail_slider .thumbnail-list__item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
 
 

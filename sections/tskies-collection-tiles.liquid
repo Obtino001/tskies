@@ -3,16 +3,14 @@
   .tskies-tiles-{{ section.id }} .tskies-tiles__grid { display: grid; grid-template-columns: repeat({{ section.settings.columns_desktop | default: 4 }}, minmax(0, 1fr)); gap: {{ section.settings.gap }}px; list-style: none; margin: 0; padding: 0; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__item { grid-column: span 1; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__item--wide { grid-column: span 2; }
-  .tskies-tiles-{{ section.id }} .tskies-tiles__link { position: relative; display: block; overflow: hidden; color: #ffffff !important; text-decoration: none; background: rgba(var(--color-foreground), 0.06); }
-  .tskies-tiles-{{ section.id }} .tskies-tiles__media { display: block; aspect-ratio: 1 / 1; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__link { position: relative; display: block; overflow: hidden; color: #ffffff !important; text-decoration: none; background: transparent; width: 100%; height: 100%; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__media { display: block; width: 100%; height: 100%; aspect-ratio: 1 / 1; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__item--wide .tskies-tiles__media { aspect-ratio: 2 / 1; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__media img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__link::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}), rgba(0, 0, 0, 0) 55%); pointer-events: none; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__title,
-  .tskies-tiles-{{ section.id }} .tskies-tiles__title.h4,
-  .tskies-tiles-{{ section.id }} .tskies-tiles__title span { position: relative; color: #ffffff !important; }
-  .tskies-tiles-{{ section.id }} .tskies-tiles__title { position: absolute; z-index: 2; left: 15px; bottom: 15px; right: 15px; margin: 0; font-family: "TS Numerals", Marcellus, serif !important; font-weight: 400; text-transform: none; font-size: {{ section.settings.title_size_mobile }}px; line-height: 1.2; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55); }
-  .tskies-tiles-{{ section.id }} .tskies-tiles__title span { background: linear-gradient(#ffffff, #ffffff) 0 100% / 0 2px no-repeat; transition: background-size 0.4s ease; padding-bottom: 2px; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__title.h4 { position: absolute !important; z-index: 2; left: 16px; bottom: 16px; right: 16px; margin: 0; font-family: "TS Numerals", Marcellus, serif !important; font-weight: 400; text-transform: none; font-size: {{ section.settings.title_size_mobile }}px; line-height: 1.2; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55); color: #ffffff !important; }
+  .tskies-tiles-{{ section.id }} .tskies-tiles__title span { position: relative; display: inline-block; color: #ffffff !important; background: linear-gradient(#ffffff, #ffffff) 0 100% / 0 2px no-repeat; transition: background-size 0.4s ease; padding-bottom: 2px; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__link:hover .tskies-tiles__title span,
   .tskies-tiles-{{ section.id }} .tskies-tiles__link:focus-visible .tskies-tiles__title span { background-size: 100% 2px; }
   .tskies-tiles-{{ section.id }} .tskies-tiles__link:hover .tskies-tiles__media img { transform: scale(1.03); }
@@ -22,7 +20,8 @@
     .tskies-tiles-{{ section.id }} .tskies-tiles__item--wide { grid-column: span 2; }
   }
   @media (min-width: 750px) {
-    .tskies-tiles-{{ section.id }} .tskies-tiles__title { font-size: {{ section.settings.title_size }}px; }
+    .tskies-tiles-{{ section.id }} .tskies-tiles__title,
+    .tskies-tiles-{{ section.id }} .tskies-tiles__title.h4 { font-size: {{ section.settings.title_size }}px; left: 24px; bottom: 24px; right: 24px; }
   }
   @media (prefers-reduced-motion: reduce) {
     .tskies-tiles-{{ section.id }} .tskies-tiles__media img, .tskies-tiles-{{ section.id }} .tskies-tiles__title span { transition: none; }
