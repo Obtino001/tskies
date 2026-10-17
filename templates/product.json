@@ -54,9 +54,9 @@
         "trust_badges": {
           "type": "trust_badges",
           "settings": {
-            "text_1": "Handcrafted in New Mexico, USA",
-            "text_2": "Ethically sourced & fairly priced",
-            "text_3": "Empower & give back to local artisans"
+            "text_1": "Håndlavet i New Mexico, USA",
+            "text_2": "Etisk indkøbt og rimeligt prissat",
+            "text_3": "Støtter og giver tilbage til lokale kunsthåndværkere"
           }
         },
         "description": {
@@ -66,9 +66,9 @@
         "shipping_tab": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
+            "heading": "Forsendelse og returnering",
             "icon": "none",
-            "content": "<p><strong>Shipping</strong></p><p>Free shipping on US orders $125+. All in-stock orders are shipped within 24-48 business hours. If you select Standard Shipping, you'll receive your order in 4-8 business days. If you select Priority Shipping, you’ll receive your order within 3-5 business days. If you select Express Shipping, you’ll receive your order within 2-3 business days.</p><p><strong>Returns</strong></p><p>We offer a 14-day 100% satisfaction guarantee or your money back.</p>",
+            "content": "<p><strong>Forsendelse</strong></p><p>Gratis forsendelse på ordrer i USA over 125 $. Alle varer på lager sendes inden for 24-48 arbejdstimer. Vælger du standardforsendelse, modtager du din ordre inden for 4-8 hverdage. Vælger du prioritetsforsendelse, modtager du den inden for 3-5 hverdage. Vælger du ekspresforsendelse, modtager du den inden for 2-3 hverdage.</p><p><strong>Returnering</strong></p><p>Vi tilbyder 14 dages 100 % tilfredshedsgaranti eller pengene tilbage.</p>",
             "page": ""
           }
         }
@@ -122,9 +122,9 @@
         "image_2"
       ],
       "settings": {
-        "eyebrow": "We Give Back",
-        "heading": "Empowering Local Artisans",
-        "text": "<p>A portion of every sale is donated to the T.Skies co-op where local Southwest jewelers share tools, knowledge, and a storefront to sell their art.</p>",
+        "eyebrow": "Vi giver tilbage",
+        "heading": "Styrker lokale kunsthåndværkere",
+        "text": "<p>En del af hvert salg doneres til T.Skies-kooperativet, hvor lokale smykkemagere i Sydvesten deler værktøj, viden og en butik til at sælge deres kunst.</p>",
         "button_label": "",
         "button_link": "",
         "button_style_secondary": false,
@@ -156,9 +156,9 @@
         "image_2"
       ],
       "settings": {
-        "eyebrow": "Buy with Confidence",
-        "heading": "Ethical Craftsmanship",
-        "text": "<p>All of our pieces are handcrafted in-house at our headquarters in Albuquerque, NM. We infuse soul into each design, ensuring your new piece will feel as good as it looks.</p>",
+        "eyebrow": "Køb med tillid",
+        "heading": "Etisk håndværk",
+        "text": "<p>Alle vores smykker er håndlavet i vores eget værksted i Albuquerque, NM. Vi lægger sjæl i hvert design, så dit nye smykke føles lige så godt, som det ser ud.</p>",
         "button_label": "",
         "button_link": "",
         "button_style_secondary": false,
