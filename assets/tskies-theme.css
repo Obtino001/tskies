@@ -1443,3 +1443,22 @@ h1, h2, h3, h4, h5, h6,
 #CartDrawer .cart__checkout-button::after { box-shadow: none; }
 
 #CartDrawer .tskies-checkout-lock .icon { width: 2rem; height: 2rem; }
+
+/* Payment icons (footer and product page) */
+.tskies-payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tskies-payment-icons--center { justify-content: center; }
+.tskies-payment-icons--start { justify-content: flex-start; }
+.tskies-payment-icons--greyscale { filter: grayscale(1); }
+
+.tskies-payment-icons .list-payment__item { padding: 0.2rem 0; }
+.tskies-payment-icons .icon { width: 3.8rem; height: 2.4rem; }
+
+.tskies-pdp-payment-icons { margin: 1.6rem 0; }

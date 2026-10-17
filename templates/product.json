@@ -71,6 +71,13 @@
             "content": "<p><strong>Forsendelse</strong></p><p>Gratis forsendelse på ordrer i USA over 125 $. Alle varer på lager sendes inden for 24-48 arbejdstimer. Vælger du standardforsendelse, modtager du din ordre inden for 4-8 hverdage. Vælger du prioritetsforsendelse, modtager du den inden for 3-5 hverdage. Vælger du ekspresforsendelse, modtager du den inden for 2-3 hverdage.</p><p><strong>Returnering</strong></p><p>Vi tilbyder 14 dages 100 % tilfredshedsgaranti eller pengene tilbage.</p>",
             "page": ""
           }
+        },
+        "payment_icons": {
+          "type": "payment_icons",
+          "settings": {
+            "payment_types": "american_express, apple_pay, bancontact, blik, diners_club, discover, eps, google_pay, spidealwero, jcb, maestro, master, mb, mobilepay, paypal, shopify_pay, twint, unionpay, visa",
+            "greyscale": true
+          }
         }
       },
       "block_order": [
@@ -81,6 +88,7 @@
         "inventory",
         "bundle_and_save",
         "buy_buttons",
+        "payment_icons",
         "trust_badges",
         "description",
         "shipping_tab"

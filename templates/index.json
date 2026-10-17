@@ -501,64 +501,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "learning_links": {
-      "type": "tskies-learning-links",
-      "blocks": {
-        "mines": {
-          "type": "article",
-          "settings": {
-            "heading": "Turkise miner",
-            "description": "",
-            "page": "shopify://pages/turquoise-mines",
-            "link": ""
-          }
-        },
-        "artists": {
-          "type": "article",
-          "settings": {
-            "heading": "Mød sølvsmedene",
-            "description": "",
-            "page": "shopify://pages/silversmiths",
-            "link": ""
-          }
-        },
-        "real_turquoise": {
-          "type": "article",
-          "settings": {
-            "heading": "Sådan genkender du ægte turkis",
-            "description": "",
-            "page": "shopify://pages/how-to-tell-real-turquoise",
-            "link": ""
-          }
-        },
-        "guide": {
-          "type": "article",
-          "settings": {
-            "heading": "Sydvestlig smykkeguide",
-            "description": "",
-            "page": "shopify://pages/southwest-jewelry-guide",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "mines",
-        "artists",
-        "real_turquoise",
-        "guide"
-      ],
-      "settings": {
-        "heading": "Lær om turkis og kunstnerne",
-        "description": "",
-        "layout": "links",
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "image_ratio": "4/3",
-        "color_scheme": "scheme-1",
-        "padding_top": 24,
-        "padding_bottom": 28
-      }
     }
   },
   "order": [
@@ -571,7 +513,6 @@
     "gallery_jewelry",
     "jewelry_sets",
     "brand_story",
-    "artist_video",
-    "learning_links"
+    "artist_video"
   ]
 }
