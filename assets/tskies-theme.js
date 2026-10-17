@@ -207,7 +207,39 @@
     }
   }
 
+  // Collection "Load more": fetch the next page and append its products in place.
+  function initLoadMore() {
+    document.addEventListener('click', async (event) => {
+      const link = event.target.closest('[data-tskies-load-more]');
+      if (!link) return;
+      event.preventDefault();
+      if (link.dataset.busy === 'true') return;
+      link.dataset.busy = 'true';
+      link.setAttribute('aria-busy', 'true');
+      try {
+        const response = await fetch(link.href);
+        const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
+        const grid = document.getElementById('product-grid');
+        const nextGrid = doc.getElementById('product-grid');
+        if (!grid || !nextGrid) { window.location.href = link.href; return; }
+        nextGrid.querySelectorAll(':scope > li').forEach((item) => grid.appendChild(document.importNode(item, true)));
+        const nextLink = doc.querySelector('[data-tskies-load-more]');
+        if (nextLink) { link.href = nextLink.href; } else { link.closest('.tskies-load-more')?.remove(); }
+        const pagination = document.querySelector('.pagination-wrapper');
+        const nextPagination = doc.querySelector('.pagination-wrapper');
+        if (pagination && nextPagination) pagination.replaceWith(document.importNode(nextPagination, true));
+        window.history.replaceState({}, '', link.href === window.location.href ? window.location.href : window.location.href);
+      } catch (error) {
+        window.location.href = link.href;
+      } finally {
+        link.dataset.busy = 'false';
+        link.removeAttribute('aria-busy');
+      }
+    });
+  }
+
   function init() {
+    initLoadMore();
     initTskiesAddToCart();
     initSizeChartModal();
     initBundleSelector();

@@ -206,14 +206,7 @@
             }}
           </div>
         {%- else -%}
-          <img
-            src="{{ 'tskies_logo.webp' | asset_url }}"
-            alt="{{ shop.name | escape }}"
-            width="{{ settings.logo_width | default: 90 }}"
-            height="31"
-            class="header__heading-logo"
-            loading="eager"
-          >
+          <span class="h2">{{ shop.name | escape }}</span>
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
@@ -256,14 +249,7 @@
             }}
           </div>
         {%- else -%}
-          <img
-            src="{{ 'tskies_logo.webp' | asset_url }}"
-            alt="{{ shop.name | escape }}"
-            width="{{ settings.logo_width | default: 90 }}"
-            height="31"
-            class="header__heading-logo"
-            loading="eager"
-          >
+          <span class="h2">{{ shop.name | escape }}</span>
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}

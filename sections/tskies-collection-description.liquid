@@ -1,0 +1,25 @@
+{%- if collection.description != blank -%}
+  <div class="tskies-collection-description color-{{ section.settings.color_scheme }} gradient" style="padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;">
+    <div class="page-width">
+      <div class="tskies-collection-description__text rte{% if section.settings.larger_text %} tskies-collection-description__text--large{% endif %}">
+        {{ collection.description }}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "T.Skies collection description",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "paragraph", "content": "Shows the collection's own description below the product grid. Edit the text under Products > Collections in Shopify admin." },
+    { "type": "checkbox", "id": "larger_text", "label": "Larger text", "default": true },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 24, "label": "Top padding" },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 48, "label": "Bottom padding" }
+  ],
+  "presets": [{ "name": "T.Skies collection description" }]
+}
+{% endschema %}
