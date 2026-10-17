@@ -474,7 +474,7 @@
                 {%- when 'bundle_and_save' -%}
                   {% render 'product-bundle-save', product: product %}
                 {%- when 'trust_badges' -%}
-                  {% render 'product-trust-badges' %}
+                  {% render 'product-trust-badges', block: block %}
                 {%- when 'rating' -%}
                   <div class="tskies-pdp-rating" {{ block.shopify_attributes }}>
                     {%- if product.metafields.reviews.rating.value != blank -%}
@@ -746,7 +746,16 @@
     {
       "type": "trust_badges",
       "name": "Trust Badges",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        { "type": "paragraph", "content": "Icon and text rows shown under the add-to-cart button. Rows without text are hidden." },
+        { "type": "image_picker", "id": "image_1", "label": "Icon 1" },
+        { "type": "text", "id": "text_1", "label": "Text 1" },
+        { "type": "image_picker", "id": "image_2", "label": "Icon 2" },
+        { "type": "text", "id": "text_2", "label": "Text 2" },
+        { "type": "image_picker", "id": "image_3", "label": "Icon 3" },
+        { "type": "text", "id": "text_3", "label": "Text 3" }
+      ]
     },
     {
       "type": "@app"
