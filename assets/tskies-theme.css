@@ -1312,3 +1312,134 @@ h1, h2, h3, h4, h5, h6,
   height: 2.4rem;
   width: 2.4rem;
 }
+
+/* ---- Cart drawer: reference layout (compact rows, no column headings, subtotal + lock checkout) ---- */
+.cart-drawer .drawer__inner {
+  width: min(100vw, 480px);
+  max-width: 100%;
+}
+
+.cart-drawer .drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 0 2rem;
+  border-bottom: 1px solid #e8e8e1;
+}
+
+.cart-drawer .drawer__heading {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.tskies-cart-count {
+  margin-left: 0.8rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1.6rem;
+  color: rgba(28, 29, 29, 0.68);
+}
+
+.cart-drawer .drawer__close .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Column headings are not shown in the reference. */
+.cart-drawer .cart-items thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.cart-drawer .cart-items tbody { display: block; }
+
+.cart-drawer .cart-item {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) auto;
+  grid-template-areas:
+    'media details details'
+    'media quantity totals';
+  column-gap: 1.2rem;
+  row-gap: 0.6rem;
+  align-items: center;
+  padding: 1.4rem 2rem;
+  border: 0;
+}
+
+.cart-drawer .cart-item__media { grid-area: media; width: 80px; padding: 0; align-self: start; }
+.cart-drawer .cart-item__media img { width: 80px; height: auto; }
+.cart-drawer .cart-item__details { grid-area: details; width: auto; padding: 0; align-self: start; }
+.cart-drawer .cart-item__quantity { grid-area: quantity; padding: 0; width: auto; }
+.cart-drawer .cart-item__totals { grid-area: totals; padding: 0; width: auto; text-align: right; }
+
+.cart-drawer .cart-item__name {
+  font-family: Roboto, sans-serif;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  text-transform: none;
+  text-decoration: none;
+}
+
+/* The per-unit price duplicates the line total, which sits beside the quantity in the reference. */
+.cart-drawer .cart-item__details .cart-item__price-wrapper { display: none; }
+
+.cart-drawer .cart-item__totals .cart-item__price-wrapper { display: block; font-size: 1.4rem; }
+.cart-drawer .cart-item__totals .price { white-space: nowrap; }
+
+.cart-drawer .quantity {
+  width: 132px;
+  min-height: 44px;
+  border: 1px solid rgba(28, 29, 29, 0.16);
+}
+
+.cart-drawer .quantity::before,
+.cart-drawer .quantity::after { display: none; }
+
+/* Removal happens by reducing the quantity to 0; keep the trash button for keyboard and screen-reader users only. */
+.cart-drawer cart-remove-button {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.cart-drawer .cart-drawer__footer {
+  padding: 1.6rem 2rem 0;
+  border-top: 1px solid #e8e8e1;
+}
+
+.cart-drawer .totals {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cart-drawer .totals__total { font-size: 1.6rem; font-weight: 600; text-transform: none; }
+.cart-drawer .totals__total-value { font-size: 1.6rem; font-weight: 600; }
+.cart-drawer .tax-note { display: none; }
+
+.cart-drawer .cart__ctas { padding: 1.2rem 2rem 2rem; }
+
+.cart-drawer .cart__checkout-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  min-height: 58px;
+  background: #ceb498;
+  color: #1c1d1d;
+  font-size: 1.8rem;
+  text-transform: none;
+}
+
+.cart-drawer .cart__checkout-button::before,
+.cart-drawer .cart__checkout-button::after { box-shadow: none; }
+
+.cart-drawer .tskies-checkout-lock .icon { width: 2rem; height: 2rem; }
