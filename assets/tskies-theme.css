@@ -422,9 +422,34 @@ h1, h2, h3, h4, h5, h6,
 
 /* The real quick-add button lives in the card text area; pin it to the bottom-right of the image instead. */
 .card-wrapper .quick-add {
-  top: calc(100cqw * var(--card-media-ratio, 1) - 8px) !important;
+  position: absolute !important;
+  top: calc(100cqw * var(--card-media-ratio, 1) - 16px) !important;
   bottom: auto !important;
+  right: 8px !important;
+  left: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 6 !important;
   transform: translateY(-100%);
+}
+
+/* Reference button: flat white chip, soft border, no Dawn double-outline. */
+.card-wrapper .quick-add__submit::before,
+.card-wrapper .quick-add__submit::after,
+.tskies-add-to-cart-btn::before,
+.tskies-add-to-cart-btn::after {
+  display: none !important;
+  box-shadow: none !important;
+}
+
+.card-wrapper .quick-add__submit {
+  min-width: 100px !important;
+  min-height: 33px !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: none !important;
+  font-size: 1.3rem !important;
+  font-weight: 400 !important;
 }
 
 .card__inner {
@@ -441,8 +466,7 @@ h1, h2, h3, h4, h5, h6,
   object-fit: cover !important;
 }
 
-.card__inner .tskies-card__actions,
-.card-wrapper .quick-add {
+.card__inner .tskies-card__actions {
   position: absolute !important;
   right: 8px !important;
   bottom: 8px !important;
@@ -1283,10 +1307,4 @@ h1, h2, h3, h4, h5, h6,
 .header__icon--cart .icon {
   height: 2.4rem;
   width: 2.4rem;
-}
-
-.header__icon .svg-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
