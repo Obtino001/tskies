@@ -33,6 +33,7 @@
         <div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
             <div class="cart-drawer__empty-content">
+              {%- render 'cart-free-shipping-bar' -%}
               <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
               <button
                 class="drawer__close"
@@ -76,6 +77,7 @@
           </span>
         </button>
       </div>
+      {%- render 'cart-free-shipping-bar' -%}
       <cart-drawer-items
         view-event-payload="{{ cart | standard_event_data: 'view', context: 'dialog' | escape }}"
         view-event-trigger="manual"
@@ -171,18 +173,18 @@
                                 {{ 'products.product.price.regular_price' | t }}
                               </span>
                               <s class="cart-item__old-price product-option">
-                                {{- item.original_price | money_without_trailing_zeros -}}
+                                {{- item.original_price | money -}}
                               </s>
                               <span class="visually-hidden">
                                 {{ 'products.product.price.sale_price' | t }}
                               </span>
                               <strong class="cart-item__final-price product-option">
-                                {{ item.final_price | money_without_trailing_zeros }}
+                                {{ item.final_price | money }}
                               </strong>
                             </div>
                           {%- else -%}
                             <div class="product-option">
-                              {{ item.original_price | money_without_trailing_zeros }}
+                              {{ item.original_price | money }}
                             </div>
                           {%- endif -%}
 
@@ -253,18 +255,18 @@
                                   {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price price price--end">
-                                  {{ item.original_line_price | money_without_trailing_zeros }}
+                                  {{ item.original_line_price | money }}
                                 </s>
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                 <span class="price price--end">
-                                  {{ item.final_line_price | money_without_trailing_zeros }}
+                                  {{ item.final_line_price | money }}
                                 </span>
                               </div>
                             {%- else -%}
                               <span class="price price--end">
-                                {{ item.original_line_price | money_without_trailing_zeros }}
+                                {{ item.original_line_price | money }}
                               </span>
                             {%- endif -%}
 
@@ -445,7 +447,7 @@
                                     <ul class="list-unstyled">
                                       <li>
                                         <span>{{ item.variant.quantity_rule.min }}+</span>
-                                        <span>{{ item.variant.price | money_without_trailing_zeros | replace: cart.currency.iso_code, '' | strip | append: ' ' | append: cart.currency.iso_code }}/ea</span>
+                                        <span>{{ item.variant.price | money_with_currency }}/ea</span>
                                       </li>
                                       {%- for price_break in item.variant.quantity_price_breaks -%}
                                         <li>
@@ -453,7 +455,7 @@
                                             {{- price_break.minimum_quantity -}}
                                             <span aria-hidden="true">+</span></span
                                           >
-                                          <span>{{ price_break.price | money_without_trailing_zeros | replace: cart.currency.iso_code, '' | strip | append: ' ' | append: cart.currency.iso_code }}/ea</span>
+                                          <span>{{ price_break.price | money_with_currency }}/ea</span>
                                         </li>
                                       {%- endfor -%}
                                     </ul>
@@ -519,7 +521,7 @@
                   <li class="discounts__discount discounts__discount--end">
                     {{- 'icon-discount.svg' | inline_asset_content -}}
                     {{ discount.title | escape }}
-                    (-{{ discount.total_allocated_amount | money_without_trailing_zeros }})
+                    (-{{ discount.total_allocated_amount | money }})
                   </li>
                 {%- endfor -%}
               </ul>
@@ -527,7 +529,7 @@
           </div>
 
           <div class="totals" role="status">
-            <h2 class="totals__total">{{ 'sections.cart.subtotal' | t }}</h2>
+            <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
             <p class="totals__total-value">{{ cart.total_price | money_without_trailing_zeros | replace: cart.currency.iso_code, '' | strip | append: ' ' | append: cart.currency.iso_code }}</p>
           </div>
 

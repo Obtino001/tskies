@@ -1,5 +1,5 @@
 {%- doc -%}
-  Renders the icon + text trust rows under the add-to-cart button. Text comes from the block settings; icons come from the block settings and fall back to the bundled theme icons.
+  Renders the icon + text trust rows under the add-to-cart button. All content comes from the block settings.
 
   @param {block} block - The `trust_badges` block of the product section.
 
@@ -12,18 +12,11 @@
     {%- assign text_key = 'text_' | append: i -%}
     {%- assign row_image = block.settings[image_key] -%}
     {%- assign row_text = block.settings[text_key] -%}
-    {%- case i -%}
-      {%- when 1 -%}{%- assign fallback_icon = 'trust-icon-handcrafted.png' -%}
-      {%- when 2 -%}{%- assign fallback_icon = 'trust-icon-ethical.png' -%}
-      {%- else -%}{%- assign fallback_icon = 'trust-icon-artisans.png' -%}
-    {%- endcase -%}
     {%- if row_text != blank -%}
       <li class="tskies-trust-item">
         <span class="tskies-trust-icon" aria-hidden="true">
           {%- if row_image != blank -%}
-            {{ row_image | image_url: width: 96 | image_tag: loading: 'lazy', widths: '70, 96', width: 35, height: 35, alt: '' }}
-          {%- else -%}
-            <img src="{{ fallback_icon | asset_url }}" width="35" height="35" loading="lazy" alt="">
+            {{ row_image | image_url: width: 96 | image_tag: loading: 'lazy', widths: '48, 96', width: 32, alt: '' }}
           {%- endif -%}
         </span>
         <span class="tskies-trust-text">{{ row_text | escape }}</span>
