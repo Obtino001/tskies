@@ -144,7 +144,7 @@
                   class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
                 >
                   {%- if savings_badge_text contains '[amount]' -%}
-                    {%- assign savings_amount = card_product.compare_at_price | minus: card_product.price | money_without_trailing_zeros -%}
+                    {%- assign savings_amount = card_product.compare_at_price | minus: card_product.price | money | append: ' ' | replace: ',00 ', ' ' | replace: '.00 ', ' ' | strip -%}
                     {{- savings_badge_text | replace: '[amount]', savings_amount | escape -}}
                   {%- else -%}
                     {{- 'products.product.on_sale' | t -}}
@@ -573,7 +573,7 @@
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
               >
                 {%- if savings_badge_text contains '[amount]' -%}
-                    {%- assign savings_amount = card_product.compare_at_price | minus: card_product.price | money_without_trailing_zeros -%}
+                    {%- assign savings_amount = card_product.compare_at_price | minus: card_product.price | money | append: ' ' | replace: ',00 ', ' ' | replace: '.00 ', ' ' | strip -%}
                     {{- savings_badge_text | replace: '[amount]', savings_amount | escape -}}
                   {%- else -%}
                     {{- 'products.product.on_sale' | t -}}

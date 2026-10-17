@@ -1,1 +1,1 @@
-{{ 'sections.cart.new_estimated_total' | t }}: {{ cart.total_price | money_without_trailing_zeros | replace: cart.currency.iso_code, '' | strip | append: ' ' | append: cart.currency.iso_code }}
+{{ 'sections.cart.new_estimated_total' | t }}: {{ cart.total_price | money_with_currency | append: ' ' | replace: ',00 ', ' ' | replace: '.00 ', ' ' | strip }}

@@ -173,7 +173,7 @@
           <div class="quick-order-list-total__price">
             <div class="totals__product-total">
               <span class="totals__subtotal-value">
-                {{ cart | line_items_for: product | sum: 'original_line_price' | money_without_trailing_zeros }}
+                {{ cart | line_items_for: product | sum: 'original_line_price' | money | append: ' ' | replace: ',00 ', ' ' | replace: '.00 ', ' ' | strip }}
               </span>
               <p class="totals__subtotal h5">{{ 'sections.quick_order_list.product_total' | t }}</p>
             </div>
