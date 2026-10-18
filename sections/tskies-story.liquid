@@ -2,10 +2,17 @@
   .tskies-story-{{ section.id }} { padding: {{ section.settings.padding_top | times: 0.75 | round }}px 0 {{ section.settings.padding_bottom | times: 0.75 | round }}px; }
   .tskies-story-{{ section.id }} .tskies-story__row { display: flex; flex-direction: column; gap: 3rem; align-items: center; }
   .tskies-story-{{ section.id }} .tskies-story__text { width: 100%; text-align: {{ section.settings.text_alignment }}; }
-  .tskies-story-{{ section.id }} .tskies-story__eyebrow { margin: 0 0 0.5rem; font-size: 1.36rem; letter-spacing: 0.2em; text-transform: uppercase; }
-  .tskies-story-{{ section.id }} .tskies-story__heading { margin: 0 0 1.6rem; }
+  .tskies-story-{{ section.id }} .tskies-story__eyebrow { margin: 0 0 0.5rem; font-size: 1.36rem; letter-spacing: 0.2em; text-transform: uppercase; color: #1c1d1d; }
+  .tskies-story-{{ section.id }} .tskies-story__heading { margin: 0 0 1.6rem; font-size: 2.8rem; line-height: 1.2; text-transform: none; }
+  .tskies-story-{{ section.id }} .tskies-story__text .rte { font-size: 1.8rem; line-height: 1.7; letter-spacing: 0; color: #1c1d1d; }
+  .tskies-story-{{ section.id }} .tskies-story__text .rte p { margin: 0 0 1.4rem; }
   .tskies-story-{{ section.id }} .tskies-story__images { display: grid; grid-template-columns: repeat({{ section.blocks | where: 'type', 'image' | size | at_least: 1 }}, minmax(0, 1fr)); gap: 2rem; width: 100%; }
   .tskies-story-{{ section.id }} .tskies-story__images img { display: block; width: 100%; height: auto; }
+  .tskies-story-{{ section.id }} .tskies-story__images--overlap { display: flex; align-items: flex-start; gap: 0; }
+  .tskies-story-{{ section.id }} .tskies-story__images--overlap > div { flex: 0 0 auto; }
+  .tskies-story-{{ section.id }} .tskies-story__images--overlap > div:nth-child(1) { position: relative; z-index: 1; width: 52.7%; margin-top: 13.9%; }
+  .tskies-story-{{ section.id }} .tskies-story__images--overlap > div:nth-child(2) { position: relative; z-index: 2; width: 57.5%; margin-left: -10.2%; }
+  .tskies-story-{{ section.id }} .tskies-story__images--overlap > div:nth-child(n+3) { display: none; }
   @media (max-width: 749px) {
     .tskies-story-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.5 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round }}px; }
     .tskies-story-{{ section.id }} .tskies-story__row { padding: 0 1.5rem; }
@@ -27,7 +34,7 @@
           <a href="{{ section.settings.button_link | default: routes.root_url }}" class="button{% if section.settings.button_style_secondary %} button--secondary{% endif %}">{{ section.settings.button_label | escape }}</a>
         {%- endif -%}
       </div>
-      <div class="tskies-story__images">
+      <div class="tskies-story__images{% if section.settings.image_layout == 'overlap' %} tskies-story__images--overlap{% endif %}">
         {%- for block in section.blocks -%}
           <div {{ block.shopify_attributes }}>
             {%- capture picture -%}
@@ -66,6 +73,7 @@
     { "type": "text", "id": "button_label", "label": "Button label" },
     { "type": "url", "id": "button_link", "label": "Button link" },
     { "type": "checkbox", "id": "button_style_secondary", "label": "Outline button", "default": false },
+    { "type": "select", "id": "image_layout", "label": "Image layout", "options": [{ "value": "overlap", "label": "Overlapping" }, { "value": "side_by_side", "label": "Side by side" }], "default": "overlap" },
     { "type": "select", "id": "text_position", "label": "Text position (desktop)", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "left" },
     { "type": "select", "id": "text_alignment", "label": "Text alignment", "options": [{ "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }], "default": "left" },
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },

@@ -79,91 +79,96 @@
       }
     },
     "hero": {
-      "type": "slideshow",
+      "type": "custom-slideshow",
       "blocks": {
         "turquoise": {
           "type": "slide",
           "settings": {
-            "image_overlay_opacity": 20,
-            "heading": "Ægte turkise smykker",
-            "heading_size": "h1",
-            "subheading": "Ringe, armbånd og halskæder",
-            "button_label": "Shop turkise smykker",
-            "link": "shopify://collections/turquoise",
-            "button_style_secondary": true,
-            "show_text_box": false,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "text_alignment_mobile": "left",
-            "color_scheme": "scheme-3"
+            "media_type": "image",
+            "image": "",
+            "overlay_opacity": 20,
+            "text_color": "#FFFFFF",
+            "heading": "<p>Ægte turkise smykker</p>",
+            "subheading": "<p>Ringe, armbånd og halskæder</p>",
+            "button_text": "Shop turkise smykker",
+            "button_link": "shopify://collections/turquoise",
+            "button_bg": "#ceb498",
+            "button_text_color": "#FFFFFF",
+            "text_position_top": 92,
+            "text_position_left": 4,
+            "text_alignment": "left"
           }
         },
         "native": {
           "type": "slide",
           "settings": {
-            "image_overlay_opacity": 40,
-            "heading": "Autentiske indianske smykker",
-            "heading_size": "h1",
-            "subheading": "Kend hænderne, der skabte dem",
-            "button_label": "Shop indianske smykker",
-            "link": "shopify://collections/native-american-jewelry",
-            "button_style_secondary": true,
-            "show_text_box": false,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "text_alignment_mobile": "left",
-            "color_scheme": "scheme-3"
+            "media_type": "image",
+            "image": "",
+            "overlay_opacity": 40,
+            "text_color": "#FFFFFF",
+            "heading": "<p>Autentiske indianske smykker</p>",
+            "subheading": "<p>Kend hænderne, der skabte dem</p>",
+            "button_text": "Shop indianske smykker",
+            "button_link": "shopify://collections/native-american-jewelry",
+            "button_bg": "#ceb498",
+            "button_text_color": "#FFFFFF",
+            "text_position_top": 92,
+            "text_position_left": 4,
+            "text_alignment": "left"
           }
         },
         "rings": {
           "type": "slide",
           "settings": {
-            "image_overlay_opacity": 30,
-            "heading": "Turkise ringe",
-            "heading_size": "h1",
-            "subheading": "Sterlingsølv og ægte turkis",
-            "button_label": "Shop turkise ringe",
-            "link": "shopify://collections/turquoise-rings",
-            "button_style_secondary": true,
-            "show_text_box": false,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "text_alignment_mobile": "left",
-            "color_scheme": "scheme-3"
+            "media_type": "image",
+            "image": "",
+            "overlay_opacity": 30,
+            "text_color": "#FFFFFF",
+            "heading": "<p>Turkise ringe</p>",
+            "subheading": "<p>Sterlingsølv og ægte turkis</p>",
+            "button_text": "Shop turkise ringe",
+            "button_link": "shopify://collections/turquoise-rings",
+            "button_bg": "#ceb498",
+            "button_text_color": "#FFFFFF",
+            "text_position_top": 92,
+            "text_position_left": 4,
+            "text_alignment": "left"
           }
         },
         "radiante": {
           "type": "slide",
           "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Radiante",
-            "heading_size": "h1",
-            "subheading": "Inspireret af Moder Jord",
-            "button_label": "Shop kollektionen",
-            "link": "shopify://collections/radiante",
-            "button_style_secondary": true,
-            "show_text_box": false,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "text_alignment_mobile": "left",
-            "color_scheme": "scheme-3"
+            "media_type": "image",
+            "image": "",
+            "overlay_opacity": 0,
+            "text_color": "#FFFFFF",
+            "heading": "<p>Radiante</p>",
+            "subheading": "<p>Inspireret af Moder Jord</p>",
+            "button_text": "Shop kollektionen",
+            "button_link": "shopify://collections/radiante",
+            "button_bg": "#ceb498",
+            "button_text_color": "#FFFFFF",
+            "text_position_top": 92,
+            "text_position_left": 4,
+            "text_alignment": "left"
           }
         },
         "stamp": {
           "type": "slide",
           "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Stamp Dancer",
-            "heading_size": "h1",
-            "subheading": "Håndstemplede smykker til lag-på-lag",
-            "button_label": "Shop kollektionen",
-            "link": "shopify://collections/stamp-dancer",
-            "button_style_secondary": true,
-            "show_text_box": false,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "text_alignment_mobile": "left",
-            "color_scheme": "scheme-3"
+            "media_type": "image",
+            "image": "",
+            "overlay_opacity": 0,
+            "text_color": "#FFFFFF",
+            "heading": "<p>Stamp Dancer</p>",
+            "subheading": "<p>Håndstemplede smykker til lag-på-lag</p>",
+            "button_text": "Shop kollektionen",
+            "button_link": "shopify://collections/stamp-dancer",
+            "button_bg": "#ceb498",
+            "button_text_color": "#FFFFFF",
+            "text_position_top": 92,
+            "text_position_left": 4,
+            "text_alignment": "left"
           }
         }
       },
@@ -175,14 +180,17 @@
         "stamp"
       ],
       "settings": {
-        "layout": "full_bleed",
-        "slide_height": "large",
-        "slider_visual": "dots",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": false,
-        "accessibility_info": "T.Skies smykkekollektioner"
+        "accessibility_label": "T.Skies smykkekollektioner",
+        "autoplay_speed": 5,
+        "transition_effect": "slide",
+        "show_pagination": true,
+        "dot_color": "#ceb498",
+        "show_navigation": true,
+        "adapt_height_desktop": false,
+        "min_height_desktop": 650,
+        "adapt_height_mobile": false,
+        "min_height_mobile": 500,
+        "button_radius": 0
       }
     },
     "brand_intro": {
