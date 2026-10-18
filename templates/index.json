@@ -85,95 +85,100 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/2025Holiday-06.jpg",
+            "fallback_asset": "hero-slide-1.jpg",
             "overlay_opacity": 20,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "heading": "<p>Ægte turkise smykker</p>",
             "subheading": "<p>Ringe, armbånd og halskæder</p>",
             "button_text": "Shop turkise smykker",
             "button_link": "shopify://collections/turquoise",
+            "button_text2": "",
+            "button_link2": "",
             "button_bg": "#1c1d1d",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left",
-            "fallback_asset": "hero-slide-1.jpg"
+            "text_alignment": "left"
           }
         },
         "native": {
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/edited-TSkies-April-2023-Lelle67_1.jpg",
+            "fallback_asset": "hero-slide-2.jpg",
             "overlay_opacity": 40,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "heading": "<p>Autentiske indianske smykker</p>",
             "subheading": "<p>Kend hænderne, der skabte dem</p>",
             "button_text": "Shop indianske smykker",
             "button_link": "shopify://collections/native-american-jewelry",
+            "button_text2": "",
+            "button_link2": "",
             "button_bg": "#1c1d1d",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left",
-            "fallback_asset": "hero-slide-2.jpg"
+            "text_alignment": "left"
           }
         },
         "rings": {
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/2025HOLIDAY_Rings_2.jpg",
+            "fallback_asset": "hero-slide-3.jpg",
             "overlay_opacity": 30,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "heading": "<p>Turkise ringe</p>",
             "subheading": "<p>Sterlingsølv og ægte turkis</p>",
             "button_text": "Shop turkise ringe",
             "button_link": "shopify://collections/turquoise-rings",
+            "button_text2": "",
+            "button_link2": "",
             "button_bg": "#1c1d1d",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left",
-            "fallback_asset": "hero-slide-3.jpg"
+            "text_alignment": "left"
           }
         },
         "radiante": {
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/Frankiegomez-87_d1fa71da-66a9-43a1-aa09-38ffdb6d0c57.jpg",
-            "overlay_opacity": 0,
-            "text_color": "#FFFFFF",
+            "fallback_asset": "hero-slide-4.jpg",
+            "overlay_opacity": 80,
+            "text_color": "#ffffff",
             "heading": "<p>Radiante</p>",
             "subheading": "<p>Inspireret af Moder Jord</p>",
             "button_text": "Shop kollektionen",
             "button_link": "shopify://collections/radiante",
+            "button_text2": "",
+            "button_link2": "",
             "button_bg": "#1c1d1d",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left",
-            "fallback_asset": "hero-slide-4.jpg"
+            "text_alignment": "left"
           }
         },
         "stamp": {
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/Frankiegomez-62_f5707677-addb-40a0-a1f1-20787712c695.jpg",
+            "fallback_asset": "hero-slide-5.jpg",
             "overlay_opacity": 0,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "heading": "<p>Stamp Dancer</p>",
             "subheading": "<p>Håndstemplede smykker til lag-på-lag</p>",
             "button_text": "Shop kollektionen",
             "button_link": "shopify://collections/stamp-dancer",
+            "button_text2": "",
+            "button_link2": "",
             "button_bg": "#1c1d1d",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left",
-            "fallback_asset": "hero-slide-5.jpg"
+            "text_alignment": "left"
           }
         }
       },
@@ -195,8 +200,8 @@
         "min_height_desktop": 650,
         "adapt_height_mobile": false,
         "min_height_mobile": 500,
-        "button_radius": 0,
-        "button_style": "outline"
+        "button_style": "outline",
+        "button_radius": 0
       }
     },
     "brand_intro": {
@@ -495,6 +500,7 @@
         "button_label": "Lær mere om os",
         "button_link": "shopify://pages/about-us",
         "button_style_secondary": false,
+        "image_layout": "overlap",
         "text_position": "left",
         "text_alignment": "left",
         "color_scheme": "scheme-1",
