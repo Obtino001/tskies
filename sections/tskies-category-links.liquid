@@ -56,7 +56,7 @@
         {%- assign img = block.settings.image | default: target.featured_image -%}
         <li class="tskies-catlinks__item" {{ block.shopify_attributes }}>
           <a href="{{ block.settings.link | default: target.url | default: routes.collections_url }}">
-            <span class="tskies-catlinks__image">
+            <div class="tskies-catlinks__image">
               {%- if img != blank and img.width > 0 -%}
                 {{ img | image_url: width: 300 | image_tag: loading: 'lazy', widths: '150, 300', alt: label }}
               {%- else -%}
@@ -83,7 +83,7 @@
                   >
                 {%- endif -%}
               {%- endif -%}
-            </span>
+            </div>
             <span class="tskies-catlinks__label">{{ label | escape }}</span>
           </a>
         </li>
