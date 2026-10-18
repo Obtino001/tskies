@@ -85,7 +85,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "",
+            "image": "shopify://shop_images/2025Holiday-06.jpg",
             "overlay_opacity": 20,
             "text_color": "#FFFFFF",
             "heading": "<p>Ægte turkise smykker</p>",
@@ -103,7 +103,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "",
+            "image": "shopify://shop_images/edited-TSkies-April-2023-Lelle67_1.jpg",
             "overlay_opacity": 40,
             "text_color": "#FFFFFF",
             "heading": "<p>Autentiske indianske smykker</p>",
@@ -121,7 +121,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "",
+            "image": "shopify://shop_images/2025HOLIDAY_Rings_2.jpg",
             "overlay_opacity": 30,
             "text_color": "#FFFFFF",
             "heading": "<p>Turkise ringe</p>",
@@ -139,7 +139,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "",
+            "image": "shopify://shop_images/Frankiegomez-87_d1fa71da-66a9-43a1-aa09-38ffdb6d0c57.jpg",
             "overlay_opacity": 0,
             "text_color": "#FFFFFF",
             "heading": "<p>Radiante</p>",
@@ -157,7 +157,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "",
+            "image": "shopify://shop_images/Frankiegomez-62_f5707677-addb-40a0-a1f1-20787712c695.jpg",
             "overlay_opacity": 0,
             "text_color": "#FFFFFF",
             "heading": "<p>Stamp Dancer</p>",

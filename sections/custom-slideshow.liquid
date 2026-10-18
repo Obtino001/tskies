@@ -1,5 +1,5 @@
-{{ 'https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css' | stylesheet_tag }}
-<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js" defer="defer"></script>
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   /* --- SCOPED VARIABLES & RESET --- */
