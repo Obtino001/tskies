@@ -234,6 +234,7 @@ h1, h2, h3, h4, h5, h6,
     width: 6.8rem !important;
   }
   .tskies-catlinks__image {
+    display: block !important;
     width: 6rem !important;
     height: 6rem !important;
     border-radius: 50% !important;
@@ -1552,3 +1553,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .tskies-catlinks__list::-webkit-scrollbar { display: none !important; width: 0; height: 0; }
+
+/* Category circle photos fill the circle instead of rendering at natural size. */
+.tskies-catlinks__image { display: block; overflow: hidden; }
+.tskies-catlinks__image img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }

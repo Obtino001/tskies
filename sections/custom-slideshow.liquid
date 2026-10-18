@@ -256,7 +256,7 @@
               endif
             -%}
             {%- if overlay_opacity > 0 -%}
-              <div class="cs-overlay" style="background: {{ section.settings.overlay_color | color_modify: 'alpha', overlay_opacity | divided_by: 100.0 }};"></div>
+              <div class="cs-overlay" style="background: {{ section.settings.overlay_color | color_modify: 'alpha', overlay_opacity | divided_by: 100.0 }};"> </div>
             {%- endif -%}
           </div>
 
