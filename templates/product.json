@@ -75,7 +75,7 @@
         "payment_icons": {
           "type": "payment_icons",
           "settings": {
-            "payment_types": "american_express, apple_pay, bancontact, blik, diners_club, discover, eps, google_pay, spidealwero, jcb, maestro, master, mb, mobilepay, paypal, shopify_pay, twint, unionpay, visa",
+            "payment_types": "mobilepay, master, visa, apple_pay, google_pay, paypal",
             "greyscale": true
           }
         }
