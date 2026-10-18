@@ -1518,3 +1518,37 @@ h1, h2, h3, h4, h5, h6,
   .header__icons > .header__search { order: 2; }
   .header__icons > .header__icon--cart { order: 3; }
 }
+
+/* Header (mobile): logo left; search, menu and cart on the right (reference layout). */
+@media screen and (max-width: 989px) {
+  header.header {
+    grid-template-areas: 'heading search menu cart';
+    grid-template-columns: 1fr auto auto auto;
+    column-gap: 0.2rem;
+    align-items: center;
+  }
+
+  header.header .header__heading,
+  header.header .header__heading-link {
+    grid-area: heading;
+    justify-self: start;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  header.header .header__icons { display: contents; }
+  header.header .header__icons > .header__search { grid-area: search; display: inline-flex; }
+  header.header header-drawer { grid-area: menu; justify-self: end; margin-left: 0; }
+  header.header .header__icons > .header__icon--cart { grid-area: cart; margin-right: -1.2rem; }
+  header.header .header__icons > shopify-account,
+  header.header .header__icons > .header__icon--account { display: none; }
+}
+
+/* Category circles: never show a scrollbar under the swipe row. */
+.tskies-catlinks__list {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none;
+  overflow-y: hidden;
+}
+
+.tskies-catlinks__list::-webkit-scrollbar { display: none !important; width: 0; height: 0; }

@@ -249,8 +249,14 @@
                 <img src="{{ block.settings.fallback_asset | asset_url }}" class="cs-image" width="2400" height="1600" loading="{{ loading_mode }}" alt="{{ block.settings.heading | strip_html | escape }}">
               {% endif %}
             {%- endif -%}
-            {%- if block.settings.overlay_opacity > 0 -%}
-              <div class="cs-overlay" style="background: rgba(0, 0, 0, {{ block.settings.overlay_opacity | divided_by: 100.0 }});"></div>
+            {%- liquid
+              assign overlay_opacity = block.settings.overlay_opacity
+              if section.settings.use_global_overlay
+                assign overlay_opacity = section.settings.global_overlay_opacity
+              endif
+            -%}
+            {%- if overlay_opacity > 0 -%}
+              <div class="cs-overlay" style="background: {{ section.settings.overlay_color | color_modify: 'alpha', overlay_opacity | divided_by: 100.0 }};"></div>
             {%- endif -%}
           </div>
 
@@ -427,6 +433,33 @@
       "id": "show_navigation",
       "label": "Show Navigation Arrows",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Image overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_global_overlay",
+      "label": "Use one overlay for all slides",
+      "info": "When off, each slide uses its own Image overlay opacity.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "global_overlay_opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
     },
     {
       "type": "header",
