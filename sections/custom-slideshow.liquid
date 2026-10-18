@@ -82,7 +82,7 @@
     pointer-events: auto;
     padding: 20px;
     box-sizing: border-box;
-    max-width: 640px;
+    max-width: 900px;
   }
 
   #custom-slideshow-{{ section.id }} .cs-heading {
@@ -91,8 +91,8 @@
     font-size: 70px;
     line-height: 1.1;
     letter-spacing: 0;
-    margin: 0 0 15px 0;
-    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    text-transform: none;
   }
 
   #custom-slideshow-{{ section.id }} .cs-subheading {
@@ -101,7 +101,15 @@
     line-height: 1.4;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin: 0 0 25px 0;
+    margin: 0;
+  }
+
+  /* Subheading and buttons share one row, as on the reference hero. */
+  #custom-slideshow-{{ section.id }} .cs-subline {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
   }
 
   #custom-slideshow-{{ section.id }} .cs-buttons-wrapper {
@@ -116,10 +124,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem 3rem;
+    padding: 1.1rem 2rem;
     background: var(--btn-bg);
     color: var(--btn-text);
-    border: 1px solid var(--btn-bg);
+    border: 2px solid var(--btn-border, var(--btn-bg));
     border-radius: {{ section.settings.button_radius }}px;
     text-decoration: none;
     font-family: var(--font-body-family);
@@ -152,8 +160,8 @@
 
   #custom-slideshow-{{ section.id }} .cs-theme-btn:hover,
   #custom-slideshow-{{ section.id }} .cs-theme-btn:focus-visible {
-    color: var(--btn-bg); /* Text becomes background color */
-    border-color: var(--btn-bg);
+    color: var(--btn-hover-text, var(--btn-bg)); /* Text becomes background color */
+    border-color: var(--btn-border, var(--btn-bg));
   }
 
   #custom-slideshow-{{ section.id }} .cs-theme-btn:hover::before,
@@ -164,20 +172,22 @@
   /* --- CONTROLS --- */
   #custom-slideshow-{{ section.id }} .cs-nav-btn {
     position: absolute;
-    top: 50%; transform: translateY(-50%);
-    width: 50px; height: 50px;
+    bottom: 20px;
+    width: 40px; height: 40px;
     padding: 0;
-    background: rgba(255,255,255,0.2);
-    border: 1px solid rgba(255,255,255,0.5);
+    background: #fff;
+    border: 0;
     border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
     display: flex; align-items: center; justify-content: center;
     cursor: pointer; z-index: 20;
-    transition: background 0.3s ease; color: #fff;
+    transition: background 0.3s ease; color: #1c1d1d;
   }
-  #custom-slideshow-{{ section.id }} .cs-nav-btn:hover { background: rgba(255,255,255,0.4); }
-  #custom-slideshow-{{ section.id }} .cs-prev-btn { left: 20px; }
+  #custom-slideshow-{{ section.id }} .cs-nav-btn:hover { background: #f2f2f2; }
+  #custom-slideshow-{{ section.id }} .cs-prev-btn { right: 68px; }
   #custom-slideshow-{{ section.id }} .cs-next-btn { right: 20px; }
   #custom-slideshow-{{ section.id }} .cs-nav-icon { width: 20px; height: 20px; fill: currentColor; }
+  #custom-slideshow-{{ section.id }} .cs-nav-btn:focus-visible { outline: 2px solid #ceb498; outline-offset: 2px; }
 
   #custom-slideshow-{{ section.id }} .cs-pagination-wrapper {
     position: absolute; bottom: 20px; left: 0; width: 100%;
@@ -235,6 +245,9 @@
                   | image_tag: class: 'cs-image cs-mobile-img', widths: '400, 600, 800, 1000', sizes: '100vw', loading: loading_mode, alt: mobile_img.alt
                 }}
               {% endif %}
+              {% if block.settings.image == blank and block.settings.fallback_asset != blank %}
+                <img src="{{ block.settings.fallback_asset | asset_url }}" class="cs-image" width="2400" height="1600" loading="{{ loading_mode }}" alt="{{ block.settings.heading | strip_html | escape }}">
+              {% endif %}
             {%- endif -%}
             {%- if block.settings.overlay_opacity > 0 -%}
               <div class="cs-overlay" style="background: rgba(0, 0, 0, {{ block.settings.overlay_opacity | divided_by: 100.0 }});"></div>
@@ -267,6 +280,7 @@
                 <h2 class="cs-heading">{{ block.settings.heading }}</h2>
               {% endif %}
 
+              <div class="cs-subline">
               {% if block.settings.subheading != blank %}
                 <div class="cs-subheading">{{ block.settings.subheading }}</div>
               {% endif %}
@@ -275,7 +289,7 @@
                 {% if block.settings.button_text != blank %}
                   <a href="{{ block.settings.button_link | default: routes.all_products_collection_url }}"
                      class="cs-theme-btn"
-                     style="--btn-bg: {{ block.settings.button_bg }}; --btn-text: {{ block.settings.button_text_color }};">
+                     style="{% if section.settings.button_style == 'outline' %}--btn-bg: transparent; --btn-border: {{ block.settings.button_text_color }}; --btn-text: {{ block.settings.button_text_color }}; --btn-hover-text: {{ block.settings.button_bg }};{% else %}--btn-bg: {{ block.settings.button_bg }}; --btn-text: {{ block.settings.button_text_color }};{% endif %}">
                     {{ block.settings.button_text }}
                   </a>
                 {% endif %}
@@ -283,10 +297,11 @@
                 {% if block.settings.button_text2 != blank %}
                   <a href="{{ block.settings.button_link2 | default: routes.all_products_collection_url }}"
                      class="cs-theme-btn"
-                     style="--btn-bg: {{ block.settings.button_bg }}; --btn-text: {{ block.settings.button_text_color }};">
+                     style="{% if section.settings.button_style == 'outline' %}--btn-bg: transparent; --btn-border: {{ block.settings.button_text_color }}; --btn-text: {{ block.settings.button_text_color }}; --btn-hover-text: {{ block.settings.button_bg }};{% else %}--btn-bg: {{ block.settings.button_bg }}; --btn-text: {{ block.settings.button_text_color }};{% endif %}">
                     {{ block.settings.button_text2 }}
                   </a>
                 {% endif %}
+              </div>
               </div>
 
             </div>
@@ -454,6 +469,16 @@
       "content": "Buttons"
     },
     {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        { "value": "outline", "label": "Outline (hover fills)" },
+        { "value": "solid", "label": "Solid" }
+      ],
+      "default": "outline"
+    },
+    {
       "type": "range",
       "id": "button_radius",
       "min": 0,
@@ -497,6 +522,12 @@
           "type": "video",
           "id": "video",
           "label": "Video (MP4)"
+        },
+        {
+          "type": "text",
+          "id": "fallback_asset",
+          "label": "Bundled theme image",
+          "info": "File name of an image bundled in the theme's assets folder. Used only when no Desktop Image is selected."
         },
         {
           "type": "range",

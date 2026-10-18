@@ -1501,3 +1501,20 @@ h1, h2, h3, h4, h5, h6,
   margin: 0 0 2.4rem;
   text-align: center;
 }
+
+/* Header (desktop): logo left, menu centered, icons right with account first (reference layout). */
+@media screen and (min-width: 990px) {
+  .header.header--middle-left {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .header--middle-left .header__inline-menu {
+    justify-self: center;
+    margin-left: 0;
+  }
+
+  .header__icons > shopify-account,
+  .header__icons > .header__icon--account { order: 1; }
+  .header__icons > .header__search { order: 2; }
+  .header__icons > .header__icon--cart { order: 3; }
+}

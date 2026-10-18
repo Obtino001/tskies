@@ -92,11 +92,12 @@
             "subheading": "<p>Ringe, armbånd og halskæder</p>",
             "button_text": "Shop turkise smykker",
             "button_link": "shopify://collections/turquoise",
-            "button_bg": "#ceb498",
+            "button_bg": "#1c1d1d",
             "button_text_color": "#FFFFFF",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left"
+            "text_alignment": "left",
+            "fallback_asset": "hero-slide-1.jpg"
           }
         },
         "native": {
@@ -110,11 +111,12 @@
             "subheading": "<p>Kend hænderne, der skabte dem</p>",
             "button_text": "Shop indianske smykker",
             "button_link": "shopify://collections/native-american-jewelry",
-            "button_bg": "#ceb498",
+            "button_bg": "#1c1d1d",
             "button_text_color": "#FFFFFF",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left"
+            "text_alignment": "left",
+            "fallback_asset": "hero-slide-2.jpg"
           }
         },
         "rings": {
@@ -128,11 +130,12 @@
             "subheading": "<p>Sterlingsølv og ægte turkis</p>",
             "button_text": "Shop turkise ringe",
             "button_link": "shopify://collections/turquoise-rings",
-            "button_bg": "#ceb498",
+            "button_bg": "#1c1d1d",
             "button_text_color": "#FFFFFF",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left"
+            "text_alignment": "left",
+            "fallback_asset": "hero-slide-3.jpg"
           }
         },
         "radiante": {
@@ -146,11 +149,12 @@
             "subheading": "<p>Inspireret af Moder Jord</p>",
             "button_text": "Shop kollektionen",
             "button_link": "shopify://collections/radiante",
-            "button_bg": "#ceb498",
+            "button_bg": "#1c1d1d",
             "button_text_color": "#FFFFFF",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left"
+            "text_alignment": "left",
+            "fallback_asset": "hero-slide-4.jpg"
           }
         },
         "stamp": {
@@ -164,11 +168,12 @@
             "subheading": "<p>Håndstemplede smykker til lag-på-lag</p>",
             "button_text": "Shop kollektionen",
             "button_link": "shopify://collections/stamp-dancer",
-            "button_bg": "#ceb498",
+            "button_bg": "#1c1d1d",
             "button_text_color": "#FFFFFF",
             "text_position_top": 92,
             "text_position_left": 4,
-            "text_alignment": "left"
+            "text_alignment": "left",
+            "fallback_asset": "hero-slide-5.jpg"
           }
         }
       },
@@ -183,14 +188,15 @@
         "accessibility_label": "T.Skies smykkekollektioner",
         "autoplay_speed": 5,
         "transition_effect": "slide",
-        "show_pagination": true,
+        "show_pagination": false,
         "dot_color": "#ceb498",
         "show_navigation": true,
         "adapt_height_desktop": false,
         "min_height_desktop": 650,
         "adapt_height_mobile": false,
         "min_height_mobile": 500,
-        "button_radius": 0
+        "button_radius": 0,
+        "button_style": "outline"
       }
     },
     "brand_intro": {
