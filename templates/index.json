@@ -106,7 +106,7 @@
           "settings": {
             "media_type": "image",
             "fallback_asset": "hero-slide-2.jpg",
-            "overlay_opacity": 65,
+            "overlay_opacity": 80,
             "text_color": "#ffffff",
             "heading": "<p>Autentiske indianske smykker</p>",
             "subheading": "<p>Kend hænderne, der skabte dem</p>",
