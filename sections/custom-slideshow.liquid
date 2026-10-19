@@ -254,9 +254,11 @@
               if section.settings.use_global_overlay
                 assign overlay_opacity = section.settings.global_overlay_opacity
               endif
+              assign overlay_alpha = overlay_opacity | divided_by: 100.0
+              assign overlay_color = section.settings.overlay_color | default: '#000000'
             -%}
             {%- if overlay_opacity > 0 -%}
-              <div class="cs-overlay" style="background: {{ section.settings.overlay_color | color_modify: 'alpha', overlay_opacity | divided_by: 100.0 }};"> </div>
+              <div class="cs-overlay" style="background: {{ overlay_color | color_modify: 'alpha', overlay_alpha }};"> </div>
             {%- endif -%}
           </div>
 
