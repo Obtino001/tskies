@@ -61,9 +61,9 @@
         "trust_badges": {
           "type": "trust_badges",
           "settings": {
-            "text_1": "Håndlavet i New Mexico, USA",
-            "text_2": "Etisk indkøbt og rimeligt prissat",
-            "text_3": "Støtter og giver tilbage til lokale kunsthåndværkere"
+            "text_1": "Ægte grønlandsk sten · Der findes kun én af hver",
+            "text_2": "Gaveæske og håndskrevet kort inkluderet",
+            "text_3": "Fri levering · 30 dages returret"
           }
         },
         "description": {
@@ -94,6 +94,7 @@
         "shipping_tab"
       ],
       "settings": {
+        "show_breadcrumbs": false,
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
         "media_size": "medium",
