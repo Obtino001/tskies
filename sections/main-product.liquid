@@ -123,7 +123,7 @@
                       <span>{{ 'products.product.volume_pricing.note' | t }}</span>
                     </div>
                   {%- endif -%}
-                  {%- if cart.taxes_included or cart.duties_included or shop.shipping_policy.body != blank -%}
+                  {%- if block.settings.show_tax_notice != false and cart.taxes_included or block.settings.show_tax_notice != false and cart.duties_included or block.settings.show_tax_notice != false and shop.shipping_policy.body != blank -%}
                     <div class="product__tax caption rte">
                       {%- if cart.duties_included and cart.taxes_included -%}
                         {{ 'products.product.duties_and_taxes_included' | t }}
@@ -825,7 +825,16 @@
     {
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_tax_notice",
+          "label": "Show tax and shipping note",
+          "info": "The small text under the price, such as \"Taxes included. Shipping calculated at checkout.\"",
+          "default": true
+        }
+      ]
     },
     {
       "type": "sku",

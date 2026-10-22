@@ -16,27 +16,17 @@
           "type": "title",
           "settings": {}
         },
-        "rating": {
-          "type": "rating",
-          "settings": {}
-        },
         "price": {
           "type": "price",
-          "settings": {}
+          "settings": {
+            "show_tax_notice": false
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
             "swatch_shape": "none"
-          }
-        },
-        "inventory": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 15,
-            "show_inventory_quantity": true
           }
         },
         "bundle_and_save": {
@@ -78,16 +68,46 @@
             "content": "<p><strong>Forsendelse</strong></p><p>Gratis forsendelse på ordrer i USA over 125 $. Alle varer på lager sendes inden for 24-48 arbejdstimer. Vælger du standardforsendelse, modtager du din ordre inden for 4-8 hverdage. Vælger du prioritetsforsendelse, modtager du den inden for 3-5 hverdage. Vælger du ekspresforsendelse, modtager du den inden for 2-3 hverdage.</p><p><strong>Returnering</strong></p><p>Vi tilbyder 14 dages 100 % tilfredshedsgaranti eller pengene tilbage.</p>",
             "page": ""
           }
+        },
+        "subtitle_text": {
+          "type": "text",
+          "settings": {
+            "text": "En grønlandsk sten, der lyser op, når lyset rammer den.",
+            "text_style": "body"
+          }
+        },
+        "size_info": {
+          "type": "text",
+          "settings": {
+            "text": "En størrelse · Justerbar · Passer håndled fra 14 til 24 cm",
+            "text_style": "body"
+          }
+        },
+        "gift_line": {
+          "type": "text",
+          "settings": {
+            "text": "Én til hende, én til dig · 1.250 kr.",
+            "text_style": "body"
+          }
+        },
+        "order_note": {
+          "type": "text",
+          "settings": {
+            "text": "Bestil i dag, så sender vi i morgen",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
         "title",
-        "rating",
+        "subtitle_text",
         "price",
         "variant_picker",
-        "inventory",
+        "size_info",
         "bundle_and_save",
+        "gift_line",
         "buy_buttons",
+        "order_note",
         "payment_icons",
         "trust_badges",
         "description",
