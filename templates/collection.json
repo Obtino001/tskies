@@ -6,7 +6,7 @@
         "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "scheme-1",
-        "show_breadcrumbs": true,
+        "show_breadcrumbs": false,
         "breadcrumb_home_label": "Hjem",
         "breadcrumb_label": "Brødkrumme"
       }
