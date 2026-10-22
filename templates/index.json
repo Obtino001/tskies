@@ -69,6 +69,7 @@
         "necklaces",
         "earrings"
       ],
+      "disabled": true,
       "settings": {
         "hide_on_desktop": true,
         "circle_size": 96,
