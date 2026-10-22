@@ -51,6 +51,13 @@
             "show_gift_card_recipient": false
           }
         },
+        "payment_icons": {
+          "type": "payment_icons",
+          "settings": {
+            "payment_types": "mobilepay, master, visa, apple_pay, google_pay, paypal",
+            "greyscale": true
+          }
+        },
         "trust_badges": {
           "type": "trust_badges",
           "settings": {
@@ -71,13 +78,6 @@
             "content": "<p><strong>Forsendelse</strong></p><p>Gratis forsendelse på ordrer i USA over 125 $. Alle varer på lager sendes inden for 24-48 arbejdstimer. Vælger du standardforsendelse, modtager du din ordre inden for 4-8 hverdage. Vælger du prioritetsforsendelse, modtager du den inden for 3-5 hverdage. Vælger du ekspresforsendelse, modtager du den inden for 2-3 hverdage.</p><p><strong>Returnering</strong></p><p>Vi tilbyder 14 dages 100 % tilfredshedsgaranti eller pengene tilbage.</p>",
             "page": ""
           }
-        },
-        "payment_icons": {
-          "type": "payment_icons",
-          "settings": {
-            "payment_types": "mobilepay, master, visa, apple_pay, google_pay, paypal",
-            "greyscale": true
-          }
         }
       },
       "block_order": [
@@ -94,7 +94,7 @@
         "shipping_tab"
       ],
       "settings": {
-        "enable_sticky_info": true,
+        "enable_sticky_info": false,
         "color_scheme": "scheme-1",
         "media_size": "medium",
         "constrain_to_viewport": true,
@@ -136,6 +136,7 @@
         "button_label": "",
         "button_link": "",
         "button_style_secondary": false,
+        "image_layout": "overlap",
         "text_position": "left",
         "text_alignment": "left",
         "color_scheme": "scheme-1",
@@ -170,6 +171,7 @@
         "button_label": "",
         "button_link": "",
         "button_style_secondary": false,
+        "image_layout": "overlap",
         "text_position": "right",
         "text_alignment": "left",
         "color_scheme": "scheme-1",
