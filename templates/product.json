@@ -74,9 +74,36 @@
         "shipping_tab": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Forsendelse og returnering",
+            "heading": "Størrelse og detaljer",
             "icon": "none",
-            "content": "<p><strong>Forsendelse</strong></p><p>Gratis forsendelse på ordrer i USA over 125 $. Alle varer på lager sendes inden for 24-48 arbejdstimer. Vælger du standardforsendelse, modtager du din ordre inden for 4-8 hverdage. Vælger du prioritetsforsendelse, modtager du den inden for 3-5 hverdage. Vælger du ekspresforsendelse, modtager du den inden for 2-3 hverdage.</p><p><strong>Returnering</strong></p><p>Vi tilbyder 14 dages 100 % tilfredshedsgaranti eller pengene tilbage.</p>",
+            "content": "<p><strong>Passer alle håndled</strong><br/><br/>Armbåndet har en glideknude og kan justeres fra 14 til 22 cm. Træk i de to snore for at stramme, og skub knuden for at løsne. Du behøver ikke kende hendes størrelse.</p><p><strong>Materialer</strong><br/><br/>· Snor: sort, håndflettet [materiale, fx voksbehandlet bomuld]<br/><br/>· Sten: grønlandsk [stentype], ca. 8 mm<br/><br/>· Perler: [fx 14 karat guld-fyldt / 18 karat forgyldt sølv]</p><p>Hver sten er unik, så farve og form varierer en smule fra billederne.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Fzq8f6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Stenen",
+            "icon": "check_mark",
+            "content": "<p>Stenen er fundet i Grønland [eventuelt konkret sted]. Den er mørk som havbunden, men når lyset rammer den, lyser den op indefra.</p><p>Ingen to sten er ens. Den, hun får, findes kun én gang.</p><p><strong>Prøv det:</strong> Hold stenen op mod et vindue eller mod solen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_QX6tAP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Forsendelse og returnering",
+            "icon": "check_mark",
+            "content": "<p><strong>Fri levering</strong> til hele Danmark.<br/><br/>Vi sender inden for [1–2] hverdage, og pakken er fremme på 1–3 hverdage.</p><p><strong>Gaveklar</strong><br/><br/>Armbåndet kommer i vores gaveæske med et håndskrevet kort. Skriv din hilsen ved bestillingen, så skriver vi den i hånden.</p><p><strong>30 dages returret</strong><br/><br/>Passer det ikke, eller er hun ikke glad for det, kan du returnere det inden for 30 dage. Ombytning er altid gratis.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_mqaTek": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Pleje",
+            "icon": "check_mark",
+            "content": "<p>Tag armbåndet af i forbindelse med bad, svømning eller træning, så holder snoren længere.<br/><br/>Undgå parfume og cremer direkte på stenen.<br/><br/><br/><br/></p>",
             "page": ""
           }
         }
@@ -92,7 +119,10 @@
         "payment_icons",
         "trust_badges",
         "description",
-        "shipping_tab"
+        "shipping_tab",
+        "collapsible_tab_Fzq8f6",
+        "collapsible_tab_QX6tAP",
+        "collapsible_tab_mqaTek"
       ],
       "settings": {
         "show_breadcrumbs": false,
