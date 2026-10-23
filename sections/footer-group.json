@@ -94,14 +94,14 @@
         "customer_care": {
           "type": "link_list",
           "settings": {
-            "heading": "Kundeservice",
+            "heading": "",
             "menu": "footer"
           }
         },
         "tskies": {
           "type": "link_list",
           "settings": {
-            "heading": "#TSKIES",
+            "heading": "",
             "menu": "main-menu"
           }
         },
