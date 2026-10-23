@@ -11,13 +11,62 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_with_text_VnmDqA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hwmLtH": {
+          "type": "heading",
+          "settings": {
+            "heading": "SENGEKANTEN",
+            "heading_size": "h1"
+          }
+        },
+        "text_Yqgaw9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pipaluk voksede op i ved&nbsp;<br/>Isua-området i Grønland, i et lille træhus, hvor vintrene var lange og mørket kom tidligt. Hendes mor, Arnaq, arbejdede hele dagen, men om aftenen satte hun sig altid på kanten af Pipaluks seng.</p><p>Der fortalte hun den samme historie igen og igen. Om Sassuma Arnaa, Havets Moder, der gav alt det, hun havde, og sad alene på havbunden, til nogen kom ned til hende.</p><p><em>“Jeg syntes, det var en uhyggelig historie,”</em> siger Pipaluk i dag. <em>“Jeg hørte ikke, at hun prøvede at fortælle mig noget.”</em></p>",
+            "text_style": "body"
+          }
+        },
+        "button_xjy8WN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Knaptekst",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hwmLtH",
+        "text_Yqgaw9",
+        "button_xjy8WN"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_VnmDqA"
   ]
 }
