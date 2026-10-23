@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -352,7 +361,7 @@
       "announcement_bar": "Meddelelseslinje"
     },
     "quick_order_list": {
-      "product_total": "Subtotal for produkt",
+      "product_total": "Total",
       "view_cart": "Se indkøbskurv",
       "each": "{{ money }}/stk.",
       "product": "Produkt",
@@ -491,7 +500,7 @@
       "tracking_url": "Sporingslink",
       "tracking_company": "Fragtfirma",
       "tracking_number": "Trackingnummer",
-      "subtotal": "Subtotal",
+      "subtotal": "Total",
       "total_duties": "Told",
       "total_refunded": "Refunderet"
     }
@@ -526,6 +535,26 @@
       "send_on_label": "Send (valgfrit)",
       "expanded": "Formularen til modtager af gavekort er vist",
       "collapsed": "Formularen til modtager af gavekort er skjult"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "subtotal_label": "Total",
+        "subtotal_label_with_quantity": {
+          "one": "Total"
+        }
+      },
+      "ucp": {
+        "totals": {
+          "subtotal": "Total"
+        }
+      }
+    }
+  },
+  "customer_accounts": {
+    "order_details": {
+      "subtotal": "Total"
     }
   }
 }
