@@ -108,8 +108,8 @@
         "visit": {
           "type": "text",
           "settings": {
-            "heading": "Besøg os",
-            "subtext": "<p>8106 Menaul Blvd NE, Albuquerque, NM 87110</p><p>Tir–lør kl. 11.00–17.00</p><p>(505) 369-1924</p>"
+            "heading": "",
+            "subtext": ""
           }
         }
       },
