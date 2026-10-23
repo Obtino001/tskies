@@ -81,7 +81,9 @@
     },
     "homepage_redirect": {
       "type": "homepage-redirect",
-      "settings": {}
+      "settings": {
+        "product": "sassuma-arnaa"
+      }
     }
   },
   "order": [
