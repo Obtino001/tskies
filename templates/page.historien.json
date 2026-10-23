@@ -50,6 +50,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/hf_20261023_220927_c372600b-5dfc-4a6e-9ba0-8c40348218e2.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
