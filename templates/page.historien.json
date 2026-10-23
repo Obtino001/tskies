@@ -158,6 +158,55 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/hf_20261023_225020_b733c5d1-6c2a-4ba6-994a-89603eec9d0e_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_tmGykB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LKNCJV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hvorfor jeg gør det",
+            "heading_size": "h1"
+          }
+        },
+        "text_nmBpt6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jeg nåede aldrig at sige det højt til min mor. Det er det sværeste, jeg bærer.</p><p>Derfor fletter jeg hvert armbånd om en grønlandsk sten. Snoren er som det hår, jeg til sidst nåede at rede. Stenen er mørk som havbunden, men den lyser op, når nogen endelig ser den.</p><p>Jeg laver det til alle dem, der giver uden at bede om noget. Så du kan sige det, mens hun stadig kan høre det.</p><p><em>– Pipaluk</em></p>",
+            "text_style": "body"
+          }
+        },
+        "button_YzchPc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find stenen til hende",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LKNCJV",
+        "text_nmBpt6",
+        "button_YzchPc"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hf_20261023_121754_bb12946a-1d04-4d5e-a490-4876277b4912_3.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -178,6 +227,7 @@
     "image_with_text_VnmDqA",
     "image_with_text_wjEYAJ",
     "image_with_text_fxNMYA",
-    "image_with_text_97B4b4"
+    "image_with_text_97B4b4",
+    "image_with_text_tmGykB"
   ]
 }
