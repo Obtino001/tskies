@@ -11,13 +11,58 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_RfHdrB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Dc4aCL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Privatlivspolitik",
+            "heading_size": "h1"
+          }
+        },
+        "text_C8N4JT": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Hvem er vi</h3><p>Sassuma Arnaa&nbsp;<br/><br/>Har du spørgsmål om dine data, så skriv til kontakt@sassuma-arnaa.dk</p><h3>Hvilke oplysninger vi indsamler</h3><p>Når du handler hos os, indsamler vi:</p><ul><li>Navn, adresse, e-mail og telefonnummer</li><li>Ordreoplysninger, fx hvad du har købt, og den hilsen du skriver til kortet</li><li>Betalingsoplysninger, som håndteres direkte af vores betalingsudbydere. Vi ser eller gemmer aldrig dine kortoplysninger.</li></ul><p>Når du besøger siden, indsamler vi via cookies oplysninger om din enhed og hvordan du bruger siden.</p><h3>Hvorfor vi bruger dem</h3><ul><li>For at behandle og sende din ordre</li><li>For at kontakte dig om din ordre, levering eller returnering</li><li>For at overholde bogføringsloven</li><li>For at forbedre siden og vise relevante annoncer, hvis du har givet samtykke til cookies</li></ul><h3>Hvem vi deler dem med</h3><p>Vi sælger aldrig dine oplysninger. Vi deler dem kun med de partnere, der er nødvendige for at levere din ordre:</p><ul><li><strong>Shopify</strong> (vores webshop)</li><li><strong>Betalingsudbydere</strong> [fx Shopify Payments, MobilePay, Klarna]</li><li><strong>Fragtfirma</strong> [fx PostNord, GLS]</li><li><strong>Meta</strong> (Facebook og Instagram), kun hvis du har accepteret marketingcookies</li></ul><h3>Hvor længe vi gemmer dem</h3><p>Ordreoplysninger gemmer vi i 5 år, som bogføringsloven kræver. Øvrige oplysninger sletter vi, når vi ikke længere har brug for dem.</p><h3>Cookies</h3><p>Vi bruger nødvendige cookies, så siden virker, og statistik- og marketingcookies, hvis du accepterer dem. Du kan altid ændre dit valg i cookiebanneret.</p><h3>Dine rettigheder</h3><p>Du har ret til at:</p><ul><li>Få indsigt i de oplysninger, vi har om dig</li><li>Få rettet forkerte oplysninger</li><li>Få slettet dine oplysninger, når vi ikke længere skal gemme dem</li><li>Trække dit samtykke tilbage</li></ul><p>Skriv til kontakt@sassuma-arnaa.dk, så hjælper vi dig. Er du utilfreds med, hvordan vi behandler dine data, kan du klage til <strong>Datatilsynet</strong> på datatilsynet.dk.</p>"
+          }
+        },
+        "button_n7NM8J": {
+          "type": "button",
+          "settings": {
+            "button_label": "Knaptekst",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Dc4aCL",
+        "text_C8N4JT",
+        "button_n7NM8J"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_RfHdrB"
   ]
 }
