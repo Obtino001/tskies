@@ -342,6 +342,45 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_EGyckT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_WLg8mY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fra mine hænder. Til hende.",
+            "heading_size": "h1"
+          }
+        },
+        "text_bRraVy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jeg fletter hvert armbånd med de hænder, min mor gav mig.</p><p>Hver gang tænker jeg på hende. Og på dig, der stadig kan nå det, jeg ikke nåede.</p><p>Jeg håber, hun lyser op, når hun åbner det.</p><p>-Pipaluk</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WLg8mY",
+        "text_bRraVy"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hf_20261023_121754_bb12946a-1d04-4d5e-a490-4876277b4912.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -350,6 +389,7 @@
     "give_back",
     "confidence",
     "related-products",
-    "image_with_text_g3cTGq"
+    "image_with_text_g3cTGq",
+    "image_with_text_EGyckT"
   ]
 }
