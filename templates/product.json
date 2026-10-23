@@ -16,6 +16,13 @@
           "type": "title",
           "settings": {}
         },
+        "subtitle_text": {
+          "type": "text",
+          "settings": {
+            "text": "En grønlandsk sten, der lyser op, når lyset rammer den.",
+            "text_style": "body"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -29,16 +36,37 @@
             "swatch_shape": "none"
           }
         },
+        "size_info": {
+          "type": "text",
+          "settings": {
+            "text": "En størrelse · Justerbar · Passer håndled fra 14 til 24 cm",
+            "text_style": "body"
+          }
+        },
         "bundle_and_save": {
           "type": "bundle_and_save",
           "disabled": true,
           "settings": {}
+        },
+        "gift_line": {
+          "type": "text",
+          "settings": {
+            "text": "Én til hende, én til dig · 1.250 kr.",
+            "text_style": "body"
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
+          }
+        },
+        "order_note": {
+          "type": "text",
+          "settings": {
+            "text": "Bestil i dag, så sender vi i morgen",
+            "text_style": "body"
           }
         },
         "payment_icons": {
@@ -96,34 +124,6 @@
             "content": "<p>Tag armbåndet af i forbindelse med bad, svømning eller træning, så holder snoren længere.<br/><br/>Undgå parfume og cremer direkte på stenen.<br/><br/><br/><br/></p>",
             "page": ""
           }
-        },
-        "subtitle_text": {
-          "type": "text",
-          "settings": {
-            "text": "En grønlandsk sten, der lyser op, når lyset rammer den.",
-            "text_style": "body"
-          }
-        },
-        "size_info": {
-          "type": "text",
-          "settings": {
-            "text": "En størrelse · Justerbar · Passer håndled fra 14 til 24 cm",
-            "text_style": "body"
-          }
-        },
-        "gift_line": {
-          "type": "text",
-          "settings": {
-            "text": "Én til hende, én til dig · 1.250 kr.",
-            "text_style": "body"
-          }
-        },
-        "order_note": {
-          "type": "text",
-          "settings": {
-            "text": "Bestil i dag, så sender vi i morgen",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
@@ -161,18 +161,70 @@
         "padding_bottom": 24
       }
     },
+    "image_with_text_ME8wV7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xg4wfR": {
+          "type": "heading",
+          "settings": {
+            "heading": "I skyggen er den mørk og stille. Men når lyset rammer den, lyser den op indefra.",
+            "heading_size": "h1"
+          }
+        },
+        "text_kcAdVK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hver sten er fundet langs kysten i Grønland. I skyggen er den mørk og stille. Men når lyset rammer den, lyser den op indefra.</p><p>Hver sten er unik. Den, hun får, findes kun én gang.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_r4TURB": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Knaptekst",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xg4wfR",
+        "text_kcAdVK",
+        "button_r4TURB"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hf_20261023_111001_68fee62e-a193-4f88-afea-778629922e6e.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "give_back": {
       "type": "tskies-story",
       "blocks": {
         "image_1": {
           "type": "image",
+          "disabled": true,
           "settings": {
+            "image": "shopify://shop_images/hf_20261023_111001_68fee62e-a193-4f88-afea-778629922e6e.jpg",
             "link": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/hf_20261023_111001_68fee62e-a193-4f88-afea-778629922e6e.jpg",
             "link": ""
           }
         }
@@ -181,6 +233,7 @@
         "image_1",
         "image_2"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "Vi giver tilbage",
         "heading": "Styrker lokale kunsthåndværkere",
@@ -252,6 +305,7 @@
   },
   "order": [
     "main",
+    "image_with_text_ME8wV7",
     "give_back",
     "confidence",
     "related-products"
