@@ -33,20 +33,11 @@
             "text": "<p>Pipaluk voksede op i ved&nbsp;<br/>Isua-området i Grønland, i et lille træhus, hvor vintrene var lange og mørket kom tidligt. Hendes mor, Arnaq, arbejdede hele dagen, men om aftenen satte hun sig altid på kanten af Pipaluks seng.</p><p>Der fortalte hun den samme historie igen og igen. Om Sassuma Arnaa, Havets Moder, der gav alt det, hun havde, og sad alene på havbunden, til nogen kom ned til hende.</p><p><em>“Jeg syntes, det var en uhyggelig historie,”</em> siger Pipaluk i dag. <em>“Jeg hørte ikke, at hun prøvede at fortælle mig noget.”</em></p>",
             "text_style": "body"
           }
-        },
-        "button_xjy8WN": {
-          "type": "button",
-          "settings": {
-            "button_label": "Knaptekst",
-            "button_link": "",
-            "button_style_secondary": false
-          }
         }
       },
       "block_order": [
         "heading_hwmLtH",
-        "text_Yqgaw9",
-        "button_xjy8WN"
+        "text_Yqgaw9"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -64,10 +55,50 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_wjEYAJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_3VWCQr": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>HAVETS MODER</strong>&nbsp;",
+            "heading_size": "h1"
+          }
+        },
+        "text_7qaNYF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>I historien var Sassuma Arnaa en ung pige, som hendes egen far kastede i havet. Hun klamrede sig til båden, og han huggede hendes fingre af. Fingrene sank ned i det iskolde vand og blev til sæler, hvalrosser og hvaler. Alt det, folket skulle leve af.</p><p>Hun sank efter dem og kom aldrig op igen. Men hver dag sender hun dyrene op. Hun beder aldrig om noget.</p><p>Når ingen ser hende, filtrer hendes hår sig, og hun kan ikke selv rede det ud. Så sidder hun alene i mørket på havbunden. Kun hvis nogen kommer hele vejen ned til hende og reder hendes hår, lyser hun op igen.</p><p><em>“Min mor fortalte den med en helt rolig stemme,”</em> husker Pipaluk. <em>“Først mange år senere forstod jeg, hvorfor.”</em></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3VWCQr",
+        "text_7qaNYF"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hf_20261023_221940_834b26af-4757-47cf-95aa-8cb7876e2ad9.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "image_with_text_VnmDqA"
+    "image_with_text_VnmDqA",
+    "image_with_text_wjEYAJ"
   ]
 }
