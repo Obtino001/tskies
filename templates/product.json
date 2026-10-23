@@ -255,12 +255,14 @@
         "image_1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/hf_20261022_091754_a47b2c2d-91e6-4fc0-92d4-314e7e887ee1.jpg",
             "link": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/hf_20261023_113248_df425800-6e0d-4bfc-b017-6be0a8cd08c3.jpg",
             "link": ""
           }
         }
