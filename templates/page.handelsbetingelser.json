@@ -11,13 +11,58 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_BQPtnx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UyJT8d": {
+          "type": "heading",
+          "settings": {
+            "heading": "Handelsbetingelser",
+            "heading_size": "h1"
+          }
+        },
+        "text_fG7A86": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sassuma Arnaa<br/><br/>E-mail: <a href=\"mailto:kontakt@sassuma-arnaa.dk\">kontakt@sassuma-arnaa.dk</a></p><h3>Priser</h3><p>Alle priser er i danske kroner og inkl. 25 % moms. Levering er gratis i hele Danmark. Prisen, du ser ved bestillingen, er den, du betaler.</p><h3>Betaling</h3><p>Vi tager imod [MobilePay, Dankort, Visa, Mastercard, Apple Pay, Google Pay]. Beløbet trækkes først, når din ordre afsendes. Alle betalinger foregår krypteret, og vi ser eller gemmer aldrig dine kortoplysninger.</p><h3>Bestilling og aftale</h3><p>Når du har bestilt, får du en ordrebekræftelse på e-mail. Aftalen er bindende, når vi har sendt bekræftelsen. Tjek venligst, at dine oplysninger er korrekte.</p><h3>Levering</h3><p>Vi sender inden for [1–2] hverdage med [PostNord / GLS], og pakken er normalt fremme på 1–3 hverdage. Vi leverer kun i Danmark.</p><h3>Om produktet</h3><p>Hver sten er naturlig og unik. Farve, form og mønster vil derfor variere en smule fra billederne. Det er ikke en fejl, men en del af det, der gør hvert armbånd til sit eget.</p><p>Armbåndet sendes i en gaveæske. Skriver du en hilsen ved bestillingen, skriver vi den i hånden på kortet.</p><h3>14 dages fortrydelsesret</h3><p>Du har 14 dages fortrydelsesret fra den dag, du modtager varen. Ønsker du at fortryde, skal du give os besked på <a href=\"mailto:kontakt@sassuma-arnaa.dk\">kontakt@sassuma-arnaa.dk</a> inden for de 14 dage og sende varen retur senest 14 dage efter.</p><h3>30 dages returret</h3><p>Ud over fortrydelsesretten giver vi 30 dages returret fra modtagelsen. Varen skal returneres ubrugt og i den originale gaveæske.</p><ul><li><strong>Returnering:</strong> Du betaler selv returfragten. Vi refunderer købsprisen senest 14 dage efter, vi har modtaget varen.</li><li><strong>Ombytning:</strong> Er der noget galt med armbåndet, eller vil du bytte, er det altid gratis.</li></ul><p>Returadresse: [adresse]</p><h3>Reklamation</h3><p>Du har 2 års reklamationsret efter købeloven. Er der en fejl ved varen, så skriv til os med en beskrivelse og gerne et billede, så finder vi en løsning. Almindeligt slid på snoren ved daglig brug er ikke en fejl.</p><h3>Personoplysninger</h3><p>Vi behandler dine oplysninger efter vores privatlivspolitik, som du finder [link].</p><h3>Klager</h3><p>Er du utilfreds, så skriv til os først på <a href=\"mailto:kontakt@sassuma-arnaa.dk\">kontakt@sassuma-arnaa.dk</a>. Kan vi ikke finde en løsning sammen, kan du klage til Nævnenes Hus, Toldboden 2, 8800 Viborg, via naevneneshus.dk.</p>"
+          }
+        },
+        "button_3dbbGA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Knaptekst",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UyJT8d",
+        "text_fG7A86",
+        "button_3dbbGA"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_BQPtnx"
   ]
 }
