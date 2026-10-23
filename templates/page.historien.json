@@ -133,12 +133,51 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_97B4b4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zKmczR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hendes hænder",
+            "heading_size": "h1"
+          }
+        },
+        "text_t4qNj6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mange år senere sad Pipaluk ved sin mors seng på hospitalet. En dag bad moren hende om at rede sit hår. Hun kunne ikke selv løfte armene længere.</p><p>Mens hun redte det, så Pipaluk sin mors hænder hvile på dynen. Hvor trætte de var. Hvor meget de havde givet.</p><p><em>“Og så forstod jeg det,”</em> siger hun. <em>“Hun var Sassuma Arnaa. Hun havde givet os sine hænder. Og først nu var jeg kommet hele vejen ned til hende.”</em></p><p>Hendes mor sov ind kort efter. Ugerne efter gik Pipaluk langs kysten uden at vide, hvad hun ledte efter. Så fandt hun en lille, mørkegrøn sten. Hun holdt den op mod lyset, og den lyste op indefra.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zKmczR",
+        "text_t4qNj6"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "image_with_text_VnmDqA",
     "image_with_text_wjEYAJ",
-    "image_with_text_fxNMYA"
+    "image_with_text_fxNMYA",
+    "image_with_text_97B4b4"
   ]
 }
