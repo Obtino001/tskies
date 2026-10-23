@@ -1,0 +1,50 @@
+{%- liquid
+  assign redirect_product = section.settings.product
+  assign redirect_url = redirect_product.url
+  if section.settings.custom_url != blank
+    assign redirect_url = section.settings.custom_url
+  endif
+-%}
+
+{%- if redirect_url != blank -%}
+  {%- if request.design_mode -%}
+    <div class="page-width" style="padding: 2rem 0; text-align: center;">
+      <p style="margin: 0; padding: 1.2rem; border: 1px dashed currentColor;">
+        Redirect active: visitors to the homepage are sent to {{ redirect_url }}. This notice is only visible in the theme editor.
+      </p>
+    </div>
+  {%- elsif request.page_type == 'index' -%}
+    <script>
+      window.location.replace({{ redirect_url | json }} + window.location.search);
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url={{ redirect_url }}">
+    </noscript>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Homepage redirect",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Sends everyone who opens the homepage straight to the chosen page. Leave both fields empty to keep the normal homepage. The redirect does not run in the theme editor."
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "url",
+      "id": "custom_url",
+      "label": "Or another page",
+      "info": "Used instead of the product when filled in."
+    }
+  ],
+  "presets": [{ "name": "Homepage redirect" }]
+}
+{% endschema %}
