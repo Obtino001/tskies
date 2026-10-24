@@ -160,12 +160,12 @@
           {%- else -%}
             {%- capture hero_fallback -%}
               {%- case forloop.index -%}
-                {%- when 1 -%}hero_slide_1_real_turquoise.jpg
-                {%- when 2 -%}hero_slide_2_native_american.jpg
-                {%- when 3 -%}hero_slide_3_turquoise_rings.jpg
-                {%- when 4 -%}hero_slide_4_radiante.jpg
-                {%- when 5 -%}hero_slide_5_stamp_dancer.jpg
-                {%- else -%}hero_slide_1_real_turquoise.jpg
+                {%- when 1 -%}hero_slide_1_real_turquoise.webp
+                {%- when 2 -%}hero_slide_2_native_american.webp
+                {%- when 3 -%}hero_slide_3_turquoise_rings.webp
+                {%- when 4 -%}hero_slide_4_radiante.webp
+                {%- when 5 -%}hero_slide_5_stamp_dancer.webp
+                {%- else -%}hero_slide_1_real_turquoise.webp
               {%- endcase -%}
             {%- endcapture -%}
             {%- assign hero_fallback = hero_fallback | strip -%}
