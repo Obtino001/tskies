@@ -1574,3 +1574,18 @@ h1, h2, h3, h4, h5, h6,
 /* Payment icons in the cart (drawer and cart page). */
 #CartDrawer .cart-drawer__payment { padding: 0 2rem 2rem; }
 .cart__payment { margin: 1.6rem 0; }
+
+/* Payment icons: beat Dawn's desktop `justify-content: flex-end` on .list-payment (its stylesheet loads later). */
+.list-payment.tskies-payment-icons {
+  margin: 0;
+  padding: 0;
+}
+
+.list-payment.tskies-payment-icons--center { justify-content: center; }
+.list-payment.tskies-payment-icons--start { justify-content: flex-start; }
+
+/* Empty cart drawer: show only Dawn's centred empty state (its own close button), not the item-list header at the bottom. */
+cart-drawer.is-empty #CartDrawer .drawer__header,
+cart-drawer.is-empty #CartDrawer .cart-drawer__payment {
+  display: none;
+}
