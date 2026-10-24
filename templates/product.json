@@ -51,7 +51,7 @@
         "gift_line": {
           "type": "text",
           "settings": {
-            "text": "Én til hende, én til dig · 1.250 kr.",
+            "text": "<strong>Én til hende, én til dig · 1.250 kr.</strong>",
             "text_style": "body"
           }
         },
