@@ -477,7 +477,7 @@
                   {% render 'product-bundle-save', product: product %}
                 {%- when 'payment_icons' -%}
                   <div class="tskies-pdp-payment-icons" {{ block.shopify_attributes }}>
-                    {% render 'payment-icons', types: block.settings.payment_types, greyscale: block.settings.greyscale %}
+                    {% render 'payment-icons' %}
                   </div>
                 {%- when 'trust_badges' -%}
                   {% render 'product-trust-badges', block: block %}
@@ -752,21 +752,7 @@
     {
       "type": "payment_icons",
       "name": "Payment icons",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "payment_types",
-          "label": "Payment icons",
-          "info": "Comma-separated payment types to show, for example: visa, master, paypal, apple_pay. Leave blank to show the methods enabled in Shopify payment settings."
-        },
-        {
-          "type": "checkbox",
-          "id": "greyscale",
-          "label": "Greyscale icons",
-          "default": true
-        }
-      ]
+      "limit": 1
     },
     {
       "type": "trust_badges",

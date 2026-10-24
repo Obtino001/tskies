@@ -1482,6 +1482,28 @@
     ]
   },
   {
+    "name": "Payment icons",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "These icons are shown in the footer, on product pages and in the cart, so they are always the same everywhere."
+      },
+      {
+        "type": "text",
+        "id": "payment_icon_types",
+        "label": "Payment icons",
+        "info": "Comma-separated payment types, for example: visa, master, paypal, apple_pay, google_pay, mobilepay. Leave blank to show the methods enabled in Shopify payment settings.",
+        "default": "mobilepay, master, visa, apple_pay, google_pay, paypal"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_icon_greyscale",
+        "label": "Greyscale icons",
+        "default": true
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.customer_accounts.name",
     "settings": [
       {

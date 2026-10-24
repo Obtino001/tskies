@@ -71,10 +71,7 @@
         },
         "payment_icons": {
           "type": "payment_icons",
-          "settings": {
-            "payment_types": "mobilepay, master, visa, apple_pay, google_pay, paypal",
-            "greyscale": true
-          }
+          "settings": {}
         },
         "trust_badges": {
           "type": "trust_badges",

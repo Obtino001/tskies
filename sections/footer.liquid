@@ -286,7 +286,7 @@
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            {% render 'payment-icons', types: section.settings.payment_types, greyscale: section.settings.payment_greyscale %}
+            {% render 'payment-icons' %}
           </div>
         {%- endif -%}
       </div>
@@ -478,18 +478,6 @@
       "id": "payment_enable",
       "default": true,
       "label": "t:sections.footer.settings.payment_enable.label"
-    },
-    {
-      "type": "text",
-      "id": "payment_types",
-      "label": "Payment icons",
-      "info": "Comma-separated payment types to show, for example: visa, master, paypal, apple_pay. Leave blank to show the methods enabled in Shopify payment settings."
-    },
-    {
-      "type": "checkbox",
-      "id": "payment_greyscale",
-      "label": "Greyscale payment icons",
-      "default": true
     },
     {
       "type": "checkbox",

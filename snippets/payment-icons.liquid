@@ -1,23 +1,23 @@
 {%- doc -%}
   Renders payment method icons using Shopify's built-in payment icons.
 
-  @param {string} [types] - Comma-separated payment type handles (for example `visa, master, paypal`). When blank, the payment methods enabled for the store are shown.
-  @param {boolean} [greyscale] - Whether to render the icons in greyscale. Defaults to false.
+  @param {string} [types] - Optional comma-separated payment type handles. When blank, the "Payment icons" theme setting is used, and when that is blank too, the payment methods enabled for the store are shown.
   @param {string} [alignment] - `center` or `start`. Defaults to `center`.
 
   @example
-  {% render 'payment-icons', types: 'visa, master, paypal', greyscale: true %}
+  {% render 'payment-icons' %}
 {%- enddoc -%}
 {%- liquid
-  if types != blank
-    assign payment_types = types | remove: ' ' | split: ','
+  assign configured_types = types | default: settings.payment_icon_types
+  if configured_types != blank
+    assign payment_types = configured_types | remove: ' ' | split: ','
   else
     assign payment_types = shop.enabled_payment_types
   endif
 -%}
 {%- if payment_types.size > 0 -%}
   <ul
-    class="list list-payment tskies-payment-icons tskies-payment-icons--{{ alignment | default: 'center' }}{% if greyscale %} tskies-payment-icons--greyscale{% endif %}"
+    class="list list-payment tskies-payment-icons tskies-payment-icons--{{ alignment | default: 'center' }}{% if settings.payment_icon_greyscale %} tskies-payment-icons--greyscale{% endif %}"
     role="list"
   >
     {%- for type in payment_types -%}
