@@ -353,6 +353,14 @@
     "image_with_text_EGyckT": {
       "type": "image-with-text",
       "blocks": {
+        "button_qMMJmA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find hendes sten",
+            "button_link": "shopify://products/sassuma-arnaa",
+            "button_style_secondary": false
+          }
+        },
         "heading_WLg8mY": {
           "type": "heading",
           "settings": {
@@ -369,6 +377,7 @@
         }
       },
       "block_order": [
+        "button_qMMJmA",
         "heading_WLg8mY",
         "text_bRraVy"
       ],
