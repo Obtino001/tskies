@@ -166,6 +166,45 @@
         "padding_bottom": 24
       }
     },
+    "image_with_text_dqEiGT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_yjPyqy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Min mor fortalte mig om Sassuma Arnaa",
+            "heading_size": "h1"
+          }
+        },
+        "text_eFcnhE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Min mor fortalte mig om Sassuma Arnaa, Havets Moder, der gav alt og sad alene i mørket, til nogen kom ned til hende.</p><p>Jeg forstod først, at hun fortalte om sig selv, da jeg sad ved hendes hospitalsseng.</p><p>Nu laver jeg armbåndet til alle dem, der aldrig bliver set. Så du kan sige det, mens hun stadig kan høre det.<br/><br/>Min mor og mig. Nationaldag, 1989</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yjPyqy",
+        "text_eFcnhE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hf_20261023_224429_db5628e5-b6b3-4ae0-a000-91f9a3f62f31_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_ME8wV7": {
       "type": "image-with-text",
       "blocks": {
@@ -248,43 +287,6 @@
         "button_style_secondary": false,
         "image_layout": "overlap",
         "text_position": "left",
-        "text_alignment": "left",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "confidence": {
-      "type": "tskies-story",
-      "blocks": {
-        "image_1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/hf_20261022_084527_68bb152b-dde4-4dda-b076-f97191a93dbd.jpg",
-            "link": ""
-          }
-        },
-        "image_2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/hf_20261022_081741_e09466d2-892c-4c45-b149-cf764f36b34b_1.jpg",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_1",
-        "image_2"
-      ],
-      "settings": {
-        "eyebrow": "",
-        "heading": "Min mor fortalte mig om Sassuma Arnaa",
-        "text": "<p>Min mor fortalte mig om Sassuma Arnaa, Havets Moder, der gav alt og sad alene i mørket, til nogen kom ned til hende.</p><p>Jeg forstod først, at hun fortalte om sig selv, da jeg sad ved hendes hospitalsseng.</p><p>Nu laver jeg armbåndet til alle dem, der aldrig bliver set. Så du kan sige det, mens hun stadig kan høre det.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style_secondary": false,
-        "image_layout": "overlap",
-        "text_position": "right",
         "text_alignment": "left",
         "color_scheme": "scheme-1",
         "padding_top": 36,
@@ -390,9 +392,9 @@
   },
   "order": [
     "main",
+    "image_with_text_dqEiGT",
     "image_with_text_ME8wV7",
     "give_back",
-    "confidence",
     "related-products",
     "image_with_text_g3cTGq",
     "image_with_text_EGyckT"
