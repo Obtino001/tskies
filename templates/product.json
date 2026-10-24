@@ -39,7 +39,7 @@
         "size_info": {
           "type": "text",
           "settings": {
-            "text": "En størrelse · Justerbar · Passer håndled fra 14 til 24 cm",
+            "text": "",
             "text_style": "body"
           }
         },
@@ -51,7 +51,7 @@
         "gift_line": {
           "type": "text",
           "settings": {
-            "text": "<strong>Én til hende, én til dig · 1.250 kr.</strong>",
+            "text": "Én til hende, én til dig. I lyser op samtidig",
             "text_style": "body"
           }
         },
@@ -65,7 +65,14 @@
         "order_note": {
           "type": "text",
           "settings": {
-            "text": "Bestil i dag, så sender vi i morgen",
+            "text": "Bestil i dag, så sender jeg i morgen",
+            "text_style": "body"
+          }
+        },
+        "text_CC6Wrn": {
+          "type": "text",
+          "settings": {
+            "text": "En størrelse · Justerbar · Passer håndled fra 14 til 24 cm",
             "text_style": "body"
           }
         },
@@ -133,6 +140,7 @@
         "gift_line",
         "buy_buttons",
         "order_note",
+        "text_CC6Wrn",
         "payment_icons",
         "trust_badges",
         "description",
