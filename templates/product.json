@@ -65,14 +65,14 @@
         "order_note": {
           "type": "text",
           "settings": {
-            "text": "Bestil i dag, så sender jeg i morgen",
+            "text": "Hver sten er samlet i hånden på kysten. Der er 43 tilbage i denne samling. En størrelse · Justerbar · 14–24 cm",
             "text_style": "body"
           }
         },
         "text_CC6Wrn": {
           "type": "text",
           "settings": {
-            "text": "En størrelse · Justerbar · Passer håndled fra 14 til 24 cm",
+            "text": "",
             "text_style": "body"
           }
         },
