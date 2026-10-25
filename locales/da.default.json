@@ -549,6 +549,9 @@
         "totals": {
           "subtotal": "Total"
         }
+      },
+      "shipping_errors": {
+        "empty_state": "Gratis levering"
       }
     }
   },
