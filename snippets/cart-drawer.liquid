@@ -510,6 +510,19 @@
           </details>
         {%- endif -%}
 
+        <!-- Trust lines -->
+        <ul class="tskies-cart-trust list-unstyled" role="list">
+          {%- assign tskies_trust_lines = 'Fri levering|Gaveæske og håndskrevet kort inkluderet|Sendes i morgen · 30 dages returret' | split: '|' -%}
+          {%- for line in tskies_trust_lines -%}
+            <li class="tskies-cart-trust__item">
+              <svg class="tskies-cart-trust__check" aria-hidden="true" focusable="false" viewBox="0 0 12 12" fill="none">
+                <path d="M2 6.4l2.6 2.6L10 3.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>{{ line }}</span>
+            </li>
+          {%- endfor -%}
+        </ul>
+
         <!-- Start blocks -->
         <!-- Subtotals -->
 
@@ -526,6 +539,11 @@
                 {%- endfor -%}
               </ul>
             {%- endif -%}
+          </div>
+
+          <div class="tskies-cart-shipping">
+            <span class="tskies-cart-shipping__label">Levering</span>
+            <span class="tskies-cart-shipping__value">Gratis</span>
           </div>
 
           <div class="totals" role="status">

@@ -1425,6 +1425,47 @@ h1, h2, h3, h4, h5, h6,
 #CartDrawer .totals__total-value { font-size: 1.6rem; font-weight: 600; }
 #CartDrawer .tax-note { display: none; }
 
+/* Trust lines: sit above the footer divider, filling the empty space without moving the item or totals. */
+#CartDrawer .tskies-cart-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0 2rem 1.6rem;
+}
+
+#CartDrawer .tskies-cart-trust__item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: rgba(28, 29, 29, 0.68);
+}
+
+#CartDrawer .tskies-cart-trust__check {
+  flex-shrink: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* "Levering: Gratis" - same layout and size as the Total row, regular weight and muted. */
+#CartDrawer .tskies-cart-shipping {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: rgba(28, 29, 29, 0.68);
+}
+
+#CartDrawer .tskies-cart-shipping__label {
+  font-family: var(--font-heading-family);
+  letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
+}
+
+#CartDrawer .tskies-cart-shipping + .totals { margin-top: 0.6rem; }
+
 #CartDrawer .cart__ctas { padding: 1.2rem 2rem 2rem; }
 
 #CartDrawer .cart__checkout-button {
