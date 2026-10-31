@@ -1574,8 +1574,8 @@ h1, h2, h3, h4, h5, h6,
 /* Header (mobile): logo left; search, menu and cart on the right (reference layout). */
 @media screen and (max-width: 989px) {
   header.header {
-    grid-template-areas: 'heading search menu cart';
-    grid-template-columns: 1fr auto auto auto;
+    grid-template-areas: 'heading flag search menu cart';
+    grid-template-columns: 1fr auto auto auto auto;
     column-gap: 0.2rem;
     align-items: center;
   }
@@ -1589,6 +1589,7 @@ h1, h2, h3, h4, h5, h6,
   }
 
   header.header .header__icons { display: contents; }
+  header.header .header__icons > .header__icon--flag { grid-area: flag; margin-right: 0.8rem; }
   header.header .header__icons > .header__search { grid-area: search; display: inline-flex; }
   header.header header-drawer { grid-area: menu; justify-self: end; margin-left: 0; }
   header.header .header__icons > .header__icon--cart { grid-area: cart; margin-right: -1.2rem; }
