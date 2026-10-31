@@ -285,15 +285,10 @@
         {% render 'header-search', input_id: 'Search-In-Modal' %}
       {%- endif -%}
 
-      {%- if shop.customer_accounts_enabled -%}
-        <shopify-account
-          menu="{{ settings.customer_account_menu | default: 'customer-account-main-menu' }}"
-          class="header__icon header__icon--account link focus-inset"
-        >
-          <span slot="signed-out-avatar" class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-          <span slot="signed-out-avatar" class="visually-hidden">{{ 'customer.log_in' | t }}</span>
-        </shopify-account>
-      {%- endif -%}
+      <span class="header__icon header__icon--flag">
+        <span class="svg-wrapper">{{ 'icon-greenland-flag.svg' | inline_asset_content }}</span>
+        <span class="visually-hidden">Grønland</span>
+      </span>
 
       {%- for block in section.blocks -%}
         {%- case block.type -%}

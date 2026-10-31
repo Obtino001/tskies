@@ -1314,6 +1314,11 @@ h1, h2, h3, h4, h5, h6,
   width: 2.4rem;
 }
 
+.header__icon--flag .icon {
+  width: 3.2rem;
+  height: 2.1rem;
+}
+
 /* ---- Cart drawer: reference layout (compact rows, no column headings, subtotal + lock checkout) ---- */
 #CartDrawer .drawer__inner {
   width: min(100vw, 480px);
